@@ -1,0 +1,10 @@
+{
+  "name": "repenser-la-famille",
+  "version": "0.1.0",
+  "dependencies": {
+    "less": "^3.12.2"
+  },
+  "scripts": {
+    "build-dev": "nodemon --exec ./render.sh -e less"
+  }
+}
