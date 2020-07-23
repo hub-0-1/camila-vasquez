@@ -2,6 +2,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 10px 20px;
+  height: 50px;
 }
 header #logo {
   height: 100%;
@@ -10,5 +11,13 @@ header nav {
   width: 40%;
   display: flex;
   justify-content: space-between;
-  background-color: red;
+  align-items: center;
+}
+header nav img {
+  height: 50%;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  padding: 10px 20px;
 }
