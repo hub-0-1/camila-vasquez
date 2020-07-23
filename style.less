@@ -1,15 +1,29 @@
+@hauteur-header: 50px;
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
 header {
   display: flex;
   justify-content: space-between;
-  padding: 10px 20px;
-  height: 50px;
+  align-items: center;
+  padding: 0 20px;
+  height: @hauteur-header;
 
-  #logo {
-    height: 100%;
+  a {
+    display: block;
+    height: 75%;
+
+    #logo {
+      height: 100%;
+    }
   }
 
   nav {
     width: 40%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,8 +34,19 @@ header {
   }
 }
 
+main {
+  video {
+    position: fixed;
+    top: @hauteur-header;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+
 footer {
   position: fixed;
   bottom: 0;
   padding: 10px 20px;
+  color: white;
 }
