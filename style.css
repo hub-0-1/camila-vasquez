@@ -41,6 +41,13 @@ main video {
   right: 0;
   bottom: 0;
 }
+main #animation-accueil {
+  position: fixed;
+  top: 75px;
+  left: 0;
+  right: 0;
+  bottom: 75px;
+}
 main #animation-design-typographique {
   position: fixed;
   top: 75px;

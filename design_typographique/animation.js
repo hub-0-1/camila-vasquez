@@ -1,3 +1,5 @@
 window.onload = function () {
-  document.getElementById("animation-design-typographique").addEventListener("click", function (e) { console.log(e); })
+  document.getElementById("animation-design-typographique").addEventListener("wheel", function (e) { 
+    console.log(e); 
+  })
 }
