@@ -47,10 +47,10 @@ main #animation-accueil {
   left: 0;
   right: 0;
   bottom: 75px;
+  overflow: hidden;
 }
 main #animation-accueil .image-flottante {
   position: absolute;
-  width: 300px;
 }
 main #animation-design-typographique {
   position: fixed;

@@ -1,4 +1,7 @@
 var config = {
+  largeur: 0,
+  hauteur: 0,
+  scale_ext_canva: 3,
   images_src: [
     'madonna1.jpg',
     'madonna2.jpg',
@@ -33,15 +36,21 @@ var config = {
 
 window.onload = function () {
 
-  config.canva = document.getElementById("animation-accueil");
-  config.bounding_rect_animation = config.canva.getBoundingClientRect();
+  // Element
+  let canva = document.getElementById("animation-accueil");
+  config.canva = canva;
+
+  // Dimensions animation
+  let bounding = canva.getBoundingClientRect();
+  config.largeur = bounding.width;
+  config.hauteur = bounding.height;
 
   // Appliquer une transformation sur chaque image
-  config.canva.addEventListener("wheel", translation_images);
+  canva.addEventListener("wheel", translation_images);
 
   // Creer les premieres images
   for(let i = 0; i < config.nb_images_initiales; ++i) {
-    config.canva.appendChild(creer_image());
+    canva.appendChild(creer_image());
   }
 
   // Lancer l'animation
@@ -65,8 +74,8 @@ function translation_images (ev) {
   ev.stopPropagation();
   ev.preventDefault();
 
-  config.translate.x += Math.sign(ev.deltaX) * config.vitesse_translation;
-  config.translate.y += Math.sign(ev.deltaY) * config.vitesse_translation;
+  config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation;
+  config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation;
 
   config.images.forEach((image) => {
     image.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px)"
@@ -81,6 +90,7 @@ function creer_image () {
   img.src = "images/" + src_image_aleatoire();
   img.className = "image-flottante"
   img.alt = "Madonna";
+  img.style.width = Math.round(config.largeur / 5) + "px;"
 
   // Position initiale
   positionner_image(img);
@@ -95,7 +105,16 @@ function creer_image () {
 }
 
 function positionner_image (image) {
-  let coordonnees = { x: 10, y: 10 };
+  let coordonnees = { };
+  let pos_init = config.positionnements[config.positionnement_actuel];
+
+  if(pos_init.x == -1) { coordonnees.x = Math.round(Math.random() * -1 * config.largeur * config.scale_ext_canva) - config.largeur; }
+  else if(pos_init.x == 0) { coordonnees.x = Math.round(Math.random() * config.largeur); }
+  else if(pos_init.x == 1) { coordonnees.x = Math.round(Math.random() * 1 * config.largeur * config.scale_ext_canva) + config.largeur; }
+
+  if(pos_init.y == -1) { coordonnees.x = Math.round(Math.random() * -1 * config.hauteur * config.scale_ext_canva) - config.hauteur; }
+  else if(pos_init.y == 0) { coordonnees.x = Math.round(Math.random() * config.hauteur); }
+  else if(pos_init.y == 1) { coordonnees.x = Math.round(Math.random() * 1 * config.hauteur * config.scale_ext_canva) + config.hauteur; }
 
   image.style.top = coordonnees.y + "px";
   image.style.left = coordonnees.x + "px";
@@ -112,8 +131,6 @@ function determiner_vecteur_deplacement (image) {
   if(pos_init.y == -1) { vecteur.y = round_decimal(Math.random() - 0); }
   else if(pos_init.y == 0) { vecteur.y = round_decimal(Math.random() - 0.5); }
   else if(pos_init.y == 1) { vecteur.y = round_decimal(Math.random() - 1); }
-
-  console.log(vecteur);
 
   image.setAttribute("data-vecteur-x", vecteur.x);
   image.setAttribute("data-vecteur-y", vecteur.y);
