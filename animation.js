@@ -1,7 +1,8 @@
 var config = {
   largeur: 0,
   hauteur: 0,
-  scale_ext_canva: 3,
+  rapport_image_ecran: 6,
+  scale_ext_canva: 2,
   images_src: [
     'madonna1.jpg',
     'madonna2.jpg',
@@ -19,7 +20,10 @@ var config = {
   images: [],
   translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
-  ms_animation: 45,
+  ms_animation: 40,
+  delais_apparition_image: 150,
+  delais_suppression_image: 1000 * 30, // 30 secondes
+  multiplicateur_vecteur: 3,
   positionnements: [
     { x: -1, y: -1 },
     { x: 0, y: -1 },
@@ -31,7 +35,7 @@ var config = {
     { x: -1, y: 0 }
   ],
   positionnement_actuel: 0,
-  nb_images_initiales: 25
+  nb_images_initiales: 40 
 }
 
 window.onload = function () {
@@ -55,6 +59,9 @@ window.onload = function () {
 
   // Lancer l'animation
   window.setInterval(animer_images, config.ms_animation);
+  window.setInterval(function () { 
+    canva.appendChild(creer_image());
+  }, config.delais_apparition_image);
 }
 
 function animer_images () {
@@ -90,7 +97,7 @@ function creer_image () {
   img.src = "images/" + src_image_aleatoire();
   img.className = "image-flottante"
   img.alt = "Madonna";
-  img.style.width = Math.round(config.largeur / 5) + "px;"
+  img.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
 
   // Position initiale
   positionner_image(img);
@@ -101,6 +108,12 @@ function creer_image () {
   // Prochaine position d'apparition
   config.positionnement_actuel = (config.positionnement_actuel + 1) % config.positionnements.length 
   
+  // Supression de l'image apres un certain temps
+  window.setTimeout(function () {
+    img.remove();
+    delete img;
+  }, config.delais_suppression_image);
+
   return img; 
 }
 
@@ -112,28 +125,28 @@ function positionner_image (image) {
   else if(pos_init.x == 0) { coordonnees.x = Math.round(Math.random() * config.largeur); }
   else if(pos_init.x == 1) { coordonnees.x = Math.round(Math.random() * 1 * config.largeur * config.scale_ext_canva) + config.largeur; }
 
-  if(pos_init.y == -1) { coordonnees.x = Math.round(Math.random() * -1 * config.hauteur * config.scale_ext_canva) - config.hauteur; }
-  else if(pos_init.y == 0) { coordonnees.x = Math.round(Math.random() * config.hauteur); }
-  else if(pos_init.y == 1) { coordonnees.x = Math.round(Math.random() * 1 * config.hauteur * config.scale_ext_canva) + config.hauteur; }
+  if(pos_init.y == -1) { coordonnees.y = Math.round(Math.random() * -1 * config.hauteur * config.scale_ext_canva) - config.hauteur; }
+  else if(pos_init.y == 0) { coordonnees.y = Math.round(Math.random() * config.hauteur); }
+  else if(pos_init.y == 1) { coordonnees.y = Math.round(Math.random() * 1 * config.hauteur * config.scale_ext_canva) + config.hauteur; }
 
-  image.style.top = coordonnees.y + "px";
   image.style.left = coordonnees.x + "px";
+  image.style.top = coordonnees.y + "px";
 }
 
 function determiner_vecteur_deplacement (image) {
   let vecteur = { };
   let pos_init = config.positionnements[config.positionnement_actuel];
 
-  if(pos_init.x == -1) { vecteur.x = round_decimal(Math.random() - 0); }
-  else if(pos_init.x == 0) { vecteur.x = round_decimal(Math.random() - 0.5); }
-  else if(pos_init.x == 1) { vecteur.x = round_decimal(Math.random() - 1); }
+  if(pos_init.x == -1) { vecteur.x = round_decimal((Math.random() / 2) + 0.5); } // [0.5, 1]
+  else if(pos_init.x == 0) { vecteur.x = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; } // [-1, -0.5], [0.5, 1]
+  else if(pos_init.x == 1) { vecteur.x = round_decimal((Math.random() / 2) - 1); } // [-1, -0.5]
 
-  if(pos_init.y == -1) { vecteur.y = round_decimal(Math.random() - 0); }
-  else if(pos_init.y == 0) { vecteur.y = round_decimal(Math.random() - 0.5); }
-  else if(pos_init.y == 1) { vecteur.y = round_decimal(Math.random() - 1); }
+  if(pos_init.y == -1) { vecteur.y = round_decimal((Math.random() / 2) + 0.5); }
+  else if(pos_init.y == 0) { vecteur.y = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; }
+  else if(pos_init.y == 1) { vecteur.y = round_decimal((Math.random() / 2) - 1); }
 
-  image.setAttribute("data-vecteur-x", vecteur.x);
-  image.setAttribute("data-vecteur-y", vecteur.y);
+  image.setAttribute("data-vecteur-x", vecteur.x * config.multiplicateur_vecteur);
+  image.setAttribute("data-vecteur-y", vecteur.y * config.multiplicateur_vecteur);
 }
 
 function src_image_aleatoire () {
