@@ -31,6 +31,22 @@ window.onload = function () {
   let image = creer_image();
   positionner_image(image, generer_coordonnees_source());
   config.canva.appendChild(image);
+
+  // Lancer l'animation
+  window.setInterval(animer_images, 45);
+}
+
+function animer_images () {
+  config.images.forEach((image) => {
+    let top_px = parseInt(image.style.top.slice(0, -2));
+    let left_px = parseInt(image.style.left.slice(0, -2));
+
+    let deltaX = parseInt(image.getAttribute("data-vecteur-x"));
+    let deltaY = parseInt(image.getAttribute("data-vecteur-y"));
+
+    image.style.top = (top_px + deltaY) + "px";
+    image.style.left = (left_px + deltaX) + "px";
+  });
 }
 
 function translation_images (ev) {
@@ -56,9 +72,20 @@ function creer_image () {
   img.className = "image-flottante"
   img.alt = "Madonna";
 
+  let vecteur_deplacement = creer_vecteur_deplacement();
+  img.setAttribute("data-vecteur-x", vecteur_deplacement.x);
+  img.setAttribute("data-vecteur-y", vecteur_deplacement.y);
+
   config.images.push(img);
 
   return img; 
+}
+
+function creer_vecteur_deplacement () {
+  return {
+    x: 1,
+    y: 1
+  }
 }
 
 function src_image_aleatoire () {
