@@ -1,5 +1,5 @@
 var config = {
-  images: [
+  images_src: [
     'madonna1.jpg',
     'madonna2.jpg',
     'madonna3.jpg',
@@ -10,39 +10,60 @@ var config = {
     'madonna8.jpg',
     'madonna9.jpg',
     'madonna10.jpg'
-  ]
+  ],
+  images: [],
+  translate: {
+    x: 0,
+    y: 0
+  },
+  vitesse_translation: 1.3
 }
 
 window.onload = function () {
 
-  let canva = document.getElementById("animation-accueil");
+  config.canva = document.getElementById("animation-accueil");
+  config.bounding_rect_animation = config.canva.getBoundingClientRect();
 
-  canva.addEventListener("wheel", function (e) { 
-    let bounding_rect_animation = e.target.getBoundingClientRect();
+  // Appliquer une transformation sur chaque image
+  config.canva.addEventListener("wheel", translation_images);
 
-    let image = creer_image(src_image_aleatoire());
-    positionner_image(canva, image, generer_coordonnees_source());
+  // Creer les premieres images
+  let image = creer_image();
+  positionner_image(image, generer_coordonnees_source());
+  config.canva.appendChild(image);
+}
+
+function translation_images (ev) {
+  ev.stopPropagation();
+  ev.preventDefault();
+
+  config.translate.x += Math.sign(ev.deltaX) * config.vitesse_translation;
+  config.translate.y += Math.sign(ev.deltaY) * config.vitesse_translation;
+
+  config.images.forEach((image) => {
+    image.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px)"
   });
 }
 
-function positionner_image (el_parent, image, coordonnes) {
+function positionner_image (image, coordonnes) {
   image.style.top = coordonnes.y + "px";
   image.style.left = coordonnes.x + "px";
-  el_parent.appendChild(image);
 }
 
-function creer_image (src) {
+function creer_image () {
   let img = document.createElement("img");
-  img.src = "images/" + src;
+  img.src = "images/" + src_image_aleatoire();
   img.className = "image-flottante"
   img.alt = "Madonna";
+
+  config.images.push(img);
 
   return img; 
 }
 
 function src_image_aleatoire () {
-  let index = Math.round(Math.random() * (config.images.length - 1));
-  return config.images[index];
+  let index = Math.round(Math.random() * (config.images_src.length - 1));
+  return config.images_src[index];
 }
 
 function generer_coordonnees_source (x0, y0) {
