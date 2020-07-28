@@ -9,14 +9,14 @@ var config = {
     'madonna7.jpg',
     'madonna8.jpg',
     'madonna9.jpg',
-    'madonna10.jpg'
+    'madonna10.jpg',
+    'madonna11.jpg',
+    'madonna12.jpg'
   ],
   images: [],
-  translate: {
-    x: 0,
-    y: 0
-  },
-  vitesse_translation: 1.3
+  translate: { x: 0, y: 0 },
+  vitesse_translation: 1.3,
+  ms_animation: 45
 }
 
 window.onload = function () {
@@ -28,12 +28,10 @@ window.onload = function () {
   config.canva.addEventListener("wheel", translation_images);
 
   // Creer les premieres images
-  let image = creer_image();
-  positionner_image(image, generer_coordonnees_source());
-  config.canva.appendChild(image);
+  config.canva.appendChild(creer_image());
 
   // Lancer l'animation
-  window.setInterval(animer_images, 45);
+  window.setInterval(animer_images, config.ms_animation);
 }
 
 function animer_images () {
@@ -61,31 +59,36 @@ function translation_images (ev) {
   });
 }
 
-function positionner_image (image, coordonnes) {
-  image.style.top = coordonnes.y + "px";
-  image.style.left = coordonnes.x + "px";
-}
-
 function creer_image () {
   let img = document.createElement("img");
+  config.images.push(img);
+
+  // Info de base
   img.src = "images/" + src_image_aleatoire();
   img.className = "image-flottante"
   img.alt = "Madonna";
 
-  let vecteur_deplacement = creer_vecteur_deplacement();
-  img.setAttribute("data-vecteur-x", vecteur_deplacement.x);
-  img.setAttribute("data-vecteur-y", vecteur_deplacement.y);
+  // Position initiale
+  positionner_image(img);
 
-  config.images.push(img);
+  // Deplacement
+  determiner_vecteur_deplacement(img);
 
   return img; 
 }
 
-function creer_vecteur_deplacement () {
-  return {
-    x: 1,
-    y: 1
-  }
+function positionner_image (image) {
+  let coordonnees = { x: 10, y: 10 };
+
+  image.style.top = coordonnees.y + "px";
+  image.style.left = coordonnees.x + "px";
+}
+
+function determiner_vecteur_deplacement (image) {
+  let vecteur = { x: 1, y: 1 };
+
+  image.setAttribute("data-vecteur-x", vecteur.x);
+  image.setAttribute("data-vecteur-y", vecteur.y);
 }
 
 function src_image_aleatoire () {
@@ -93,9 +96,3 @@ function src_image_aleatoire () {
   return config.images_src[index];
 }
 
-function generer_coordonnees_source (x0, y0) {
-  return {
-    x: 10,
-    y: 10
-  }
-}
