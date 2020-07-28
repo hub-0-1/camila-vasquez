@@ -16,7 +16,19 @@ var config = {
   images: [],
   translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
-  ms_animation: 45
+  ms_animation: 45,
+  positionnements: [
+    { x: -1, y: -1 },
+    { x: 0, y: -1 },
+    { x: 1, y: -1 },
+    { x: 1, y: 0 },
+    { x: 1, y: 1 },
+    { x: 0, y: 1 },
+    { x: -1, y: 1 },
+    { x: -1, y: 0 }
+  ],
+  positionnement_actuel: 0,
+  nb_images_initiales: 25
 }
 
 window.onload = function () {
@@ -28,7 +40,9 @@ window.onload = function () {
   config.canva.addEventListener("wheel", translation_images);
 
   // Creer les premieres images
-  config.canva.appendChild(creer_image());
+  for(let i = 0; i < config.nb_images_initiales; ++i) {
+    config.canva.appendChild(creer_image());
+  }
 
   // Lancer l'animation
   window.setInterval(animer_images, config.ms_animation);
@@ -36,11 +50,11 @@ window.onload = function () {
 
 function animer_images () {
   config.images.forEach((image) => {
-    let top_px = parseInt(image.style.top.slice(0, -2));
-    let left_px = parseInt(image.style.left.slice(0, -2));
+    let top_px = parseFloat(image.style.top.slice(0, -2));
+    let left_px = parseFloat(image.style.left.slice(0, -2));
 
-    let deltaX = parseInt(image.getAttribute("data-vecteur-x"));
-    let deltaY = parseInt(image.getAttribute("data-vecteur-y"));
+    let deltaX = parseFloat(image.getAttribute("data-vecteur-x"));
+    let deltaY = parseFloat(image.getAttribute("data-vecteur-y"));
 
     image.style.top = (top_px + deltaY) + "px";
     image.style.left = (left_px + deltaX) + "px";
@@ -74,6 +88,9 @@ function creer_image () {
   // Deplacement
   determiner_vecteur_deplacement(img);
 
+  // Prochaine position d'apparition
+  config.positionnement_actuel = (config.positionnement_actuel + 1) % config.positionnements.length 
+  
   return img; 
 }
 
@@ -85,7 +102,18 @@ function positionner_image (image) {
 }
 
 function determiner_vecteur_deplacement (image) {
-  let vecteur = { x: 1, y: 1 };
+  let vecteur = { };
+  let pos_init = config.positionnements[config.positionnement_actuel];
+
+  if(pos_init.x == -1) { vecteur.x = round_decimal(Math.random() - 0); }
+  else if(pos_init.x == 0) { vecteur.x = round_decimal(Math.random() - 0.5); }
+  else if(pos_init.x == 1) { vecteur.x = round_decimal(Math.random() - 1); }
+
+  if(pos_init.y == -1) { vecteur.y = round_decimal(Math.random() - 0); }
+  else if(pos_init.y == 0) { vecteur.y = round_decimal(Math.random() - 0.5); }
+  else if(pos_init.y == 1) { vecteur.y = round_decimal(Math.random() - 1); }
+
+  console.log(vecteur);
 
   image.setAttribute("data-vecteur-x", vecteur.x);
   image.setAttribute("data-vecteur-y", vecteur.y);
@@ -96,3 +124,6 @@ function src_image_aleatoire () {
   return config.images_src[index];
 }
 
+function round_decimal (nb) {
+  return Math.round(nb * 10) / 10;
+}
