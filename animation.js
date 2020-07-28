@@ -21,12 +21,14 @@ window.onload = function () {
     let bounding_rect_animation = e.target.getBoundingClientRect();
 
     let image = creer_image(src_image_aleatoire());
-    image.style.top = 10 + "px";
-    image.style.left = 10 + "px";
-
-    canva.appendChild(image);
-    console.log(e);
+    positionner_image(canva, image, generer_coordonnees_source());
   });
+}
+
+function positionner_image (el_parent, image, coordonnes) {
+  image.style.top = coordonnes.y + "px";
+  image.style.left = coordonnes.x + "px";
+  el_parent.appendChild(image);
 }
 
 function creer_image (src) {
@@ -41,4 +43,11 @@ function creer_image (src) {
 function src_image_aleatoire () {
   let index = Math.round(Math.random() * (config.images.length - 1));
   return config.images[index];
+}
+
+function generer_coordonnees_source (x0, y0) {
+  return {
+    x: 10,
+    y: 10
+  }
 }
