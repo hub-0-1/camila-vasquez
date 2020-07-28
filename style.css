@@ -48,6 +48,10 @@ main #animation-accueil {
   right: 0;
   bottom: 75px;
 }
+main #animation-accueil .image-flottante {
+  position: absolute;
+  width: 300px;
+}
 main #animation-design-typographique {
   position: fixed;
   top: 75px;
