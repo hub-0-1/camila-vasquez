@@ -40,6 +40,9 @@ var config = {
 
 window.onload = function () {
 
+  // Traduire les elements texte
+  init_traduction();
+
   // Element
   let canva = document.getElementById("animation-accueil");
   config.canva = canva;
