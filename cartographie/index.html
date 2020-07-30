@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Camila Vasquez - Repenser la famille">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Camila Vasquez - Repenser la famille">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Camila Vasquez - Repenser la famille</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
+
+    <script src="https://unpkg.com/iv-viewer/dist/iv-viewer.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/iv-viewer/dist/iv-viewer.css">
+  </head>
+  <body>
+    <header>
+      <a href="/"><img id="logo" class="icone" src="../images/madonna1.jpg"></a>
+      <nav>
+        <div class="item-menu">Dictionnaire d'images</div>
+        <div class="item-menu"><a href="#">Design typographique</a></div>
+        <div class="item-menu">Cartographie interactive</div>
+        <img id="hamburger" class="item-menu-mobile" src="images/hamburger.png">
+      </nav>
+    </header>
+    <main>
+      <div id="animation-cartographie">
+        <img src="../images/1_30p.jpg" data-high-res-src="../images/1_100p.jpg">
+      </div>
+    </main>
+    <footer>
+      <p id="copyright">@2020 Camila Vasquez. Tous droits réservés.</p>
+    </footer>
+  <script>
+    const viewer = new ImageViewer(document.querySelector("#animation-cartographie img"), { 
+      snapView: false,
+    });
+  </script>
+  </body>
+</html>
