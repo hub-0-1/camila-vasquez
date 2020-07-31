@@ -29,7 +29,7 @@
     </header>
     <main>
       <div id="animation-cartographie">
-        <img src="../images/1_30p.jpg" data-high-res-src="../images/1_100p.jpg">
+        <img src="../images/1_100p.jpg" class="image">
       </div>
     </main>
     <footer>
@@ -38,6 +38,7 @@
   <script>
     const viewer = new ImageViewer(document.querySelector("#animation-cartographie img"), { 
       snapView: false,
+      maxZoom: 10000
     });
   </script>
   </body>

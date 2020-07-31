@@ -79,6 +79,9 @@ main #animation-design-typographique p {
 main #animation-design-typographique p::-webkit-scrollbar {
   display: none;
 }
+main #animation-cartographie .image {
+  width: 100%;
+}
 footer {
   position: fixed;
   bottom: 0;
