@@ -63,11 +63,11 @@ main #animation-design-typographique {
   justify-content: space-evenly;
   align-items: center;
 }
-main #animation-design-typographique p {
+main #animation-design-typographique #texte {
+  position: relative;
   margin: 0 15%;
   overflow-x: scroll;
-  column-width: 200px;
-  height: 150px;
+  height: 50px;
   width: 70%;
   /* Hide scrollbar for Chrome, Safari and Opera */
   /* Hide scrollbar for IE, Edge and Firefox */
@@ -76,8 +76,13 @@ main #animation-design-typographique p {
   scrollbar-width: none;
   /* Firefox */
 }
-main #animation-design-typographique p::-webkit-scrollbar {
+main #animation-design-typographique #texte::-webkit-scrollbar {
   display: none;
+}
+main #animation-design-typographique #texte .element-texte {
+  position: absolute;
+  column-width: 200px;
+  height: inherit;
 }
 footer {
   position: fixed;
