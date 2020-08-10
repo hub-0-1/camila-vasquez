@@ -44,6 +44,11 @@ header {
     align-items: center;
     flex-direction: row-reverse;
 
+
+    &:hover > .item-menu{
+      display: initial;
+    }
+
     .item-menu {
       display: none;
       padding: 0 10px;
@@ -55,9 +60,6 @@ header {
 
     #hamburger {
       filter: invert();
-      &:hover ~ .item-menu{
-        display: initial;
-      }
     }
 
     #langue {
@@ -117,7 +119,7 @@ main {
       } 
     }
   }
-  
+
   #animation-cartographie {
     .image {
       width: 100%;
