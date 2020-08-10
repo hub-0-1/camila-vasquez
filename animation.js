@@ -21,21 +21,22 @@ var config = {
   translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
   ms_animation: 40,
-  delais_apparition_image: 150,
+  delais_apparition_image: 1500,
   delais_suppression_image: 1000 * 30, // 30 secondes
   multiplicateur_vecteur: 3,
   positionnements: [
-    { x: -1, y: -1 },
-    { x: 0, y: -1 },
-    { x: 1, y: -1 },
+    { x: 0, y: 0 },
+    //{ x: -1, y: -1 },
+    //{ x: 0, y: -1 },
+    //{ x: 1, y: -1 },
     { x: 1, y: 0 },
     { x: 1, y: 1 },
     { x: 0, y: 1 },
-    { x: -1, y: 1 },
+    //{ x: -1, y: 1 },
     { x: -1, y: 0 }
   ],
   positionnement_actuel: 0,
-  nb_images_initiales: 40 
+  nb_images_initiales: 6 
 }
 
 window.onload = function () {
@@ -148,6 +149,8 @@ function determiner_vecteur_deplacement (image) {
   if(pos_init.y == -1) { vecteur.y = round_decimal((Math.random() / 2) + 0.5); }
   else if(pos_init.y == 0) { vecteur.y = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; }
   else if(pos_init.y == 1) { vecteur.y = round_decimal((Math.random() / 2) - 1); }
+
+  vecteur = { x: -1, y: -1 }
 
   image.setAttribute("data-vecteur-x", vecteur.x * config.multiplicateur_vecteur);
   image.setAttribute("data-vecteur-y", vecteur.y * config.multiplicateur_vecteur);
