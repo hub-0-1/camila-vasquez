@@ -99,6 +99,41 @@ main {
     .image-flottante {
       position: absolute;
     }
+
+    & + #modal {
+      display: none;
+      position: fixed;
+      z-index: 2;
+      top: 10%;
+      bottom: 10%;
+      left: 10%;
+      right: 10%;
+
+      background-color: rgba(0,0,0,0.2);
+
+      &.active {
+        display: initial;
+      }
+
+      #container-contenu-modal {
+        margin: 5%;
+        width: 90%;
+        height: 90%;
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+        justify-items: space-evenly;
+        align-items: center;
+
+        color: white;
+
+        img {
+          width: 40%;
+          max-height: 75%;
+        }
+      }
+    }
   }
 
   #animation-design-typographique {

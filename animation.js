@@ -62,6 +62,8 @@ window.onload = function () {
     canva.appendChild(creer_image());
   }
 
+  document.getElementById("modal").addEventListener("click", hide_modal);
+
   // Lancer l'animation
   window.setInterval(animer_images, config.ms_animation);
   window.setInterval(function () { 
@@ -103,6 +105,9 @@ function creer_image () {
   img.className = "image-flottante"
   img.alt = "Madonna";
   img.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
+  img.addEventListener("click", (e) => {
+    show_modal(e.target.src);
+  });
 
   // Position initiale
   positionner_image(img);
@@ -163,4 +168,16 @@ function src_image_aleatoire () {
 
 function round_decimal (nb) {
   return Math.round(nb * 10) / 10;
+}
+
+
+function hide_modal () {
+  let modal = document.getElementById("modal");
+  modal.classList.remove("active");
+}
+
+function show_modal (image_url) {
+  let modal = document.getElementById("modal");
+  modal.classList.add("active");
+  modal.querySelector("img").src = image_url;
 }

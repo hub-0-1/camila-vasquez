@@ -80,6 +80,34 @@ main #animation-accueil {
 main #animation-accueil .image-flottante {
   position: absolute;
 }
+main #animation-accueil + #modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  top: 10%;
+  bottom: 10%;
+  left: 10%;
+  right: 10%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+main #animation-accueil + #modal.active {
+  display: initial;
+}
+main #animation-accueil + #modal #container-contenu-modal {
+  margin: 5%;
+  width: 90%;
+  height: 90%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-items: space-evenly;
+  align-items: center;
+  color: white;
+}
+main #animation-accueil + #modal #container-contenu-modal img {
+  width: 40%;
+  max-height: 75%;
+}
 main #animation-design-typographique {
   display: flex;
   flex-direction: column;
