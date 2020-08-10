@@ -15,7 +15,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
 
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
-    <script src="traduction.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/traduction.js"></script>
     <script src="animation.js"></script>
   </head>
   <body>
@@ -23,22 +24,18 @@
       <a href="/"><img id="logo" class="icone" src="images/madonna1.jpg"></a>
       <nav>
         <div class="item-menu">Dictionnaire d'images</div>
-        <div class="item-menu"><a href="design_typographique/index.html">Design typographique</a></div>
-        <div class="item-menu"><a href="cartographie/index.html">Cartographie interactive</a></div>
-        <img id="hamburger" class="item-menu-mobile" src="images/hamburger.png">
+        <div class="item-menu"><a href="dictionnaire/index.html" data-i18n="header.dictionnaire"></a></div>
+        <div class="item-menu"><a href="design_typographique/index.html" data-i18n="header.design_typo"></a></div>
+        <div class="item-menu"><a href="cartographie/index.html" data-i18n="header.cartographie"></a></div>
+        <img id="hamburger" src="images/hamburger.png">
+        <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
       </nav>
     </header>
     <main>
       <video autoplay muted loop id="video-background">
         <source src="videos/background.mp4" type="video/mp4">
       </video>
-      <div id="animation-accueil">
-
-      </div>
+      <div id="animation-accueil" class="animation"> </div>
     </main>
-    <footer>
-      <p id="copyright" data-i18n="footer.copyright"></p>
-      <div id="langue" data-i18n="footer.autre_langue" data-langue="fr"></div>
-    </footer>
   </body>
 </html>

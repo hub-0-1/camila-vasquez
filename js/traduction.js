@@ -30,16 +30,20 @@ async function traduire (lng) {
 var traduction = {
   fr: {
     translation: {
-      footer: {
-        copyright: "@2020 Camila Vasquez. Tous droits réservés.",
+      header: {
+        design_typo: "Design typographique",
+        dictionnaire: "Dictionnaire",
+        cartographie: "Cartographie",
         autre_langue: "EN"
       }
     }
   },
   en: {
     translation: {
-      footer: {
-        copyright: "@2020 Camila Vasquez. All rights reserved.",
+      header: {
+        design_typo: "Design typo EN",
+        dictionnaire: "Dictionnairy",
+        cartographie: "Cartography",
         autre_langue: "FR"
       }
     }

@@ -1,5 +1,4 @@
 @hauteur-header: 75px;
-@hauteur-footer: 75px;
 
 body {
   padding: 0;
@@ -13,15 +12,24 @@ body {
 }
 
 header {
+  position: fixed;
+  z-index: 1;
+  width: 95vw;
+  height: @hauteur-header;
+  padding: 0 20px;
+  margin: 0 auto;
+  background-color: transparent;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  height: @hauteur-header;
+
+  color: white;
 
   a {
     display: block;
     height: 75%;
+    color: white;
 
     #logo {
       height: 100%;
@@ -29,15 +37,28 @@ header {
   }
 
   nav {
-    width: 50%;
+    width: 75%;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
 
-    .item-menu { }
-    .item-menu-mobile {
+    .item-menu {
       display: none;
+      padding: 0 10px;
+
+      &.show, &:hover {
+        display: initial;
+      }
+    }
+
+    #hamburger {
+      filter: invert();
+    }
+
+    #langue {
+      color: white;
+      margin-left: 2%;
     }
 
     img {
@@ -47,35 +68,25 @@ header {
 }
 
 main {
-  video {
+  width: 100vw;
+  height: 100vh;
+
+  .animation {
     position: fixed;
-    top: @hauteur-header;
+    top: 0;
     left: 0;
     right: 0;
     bottom: 0;
   }
 
   #animation-accueil {
-    position: fixed;
-    top: @hauteur-header;
-    left: 0;
-    right: 0;
-    bottom: @hauteur-footer;
-
     overflow: hidden;
-
     .image-flottante {
       position: absolute;
     }
   }
 
   #animation-design-typographique {
-    position: fixed;
-    top: @hauteur-header;
-    left: 0;
-    right: 0;
-    bottom: @hauteur-footer;
-
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -110,26 +121,7 @@ main {
   }
 }
 
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 96%;
-  height: @hauteur-footer;
-  padding: 0 2%;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  background-color: black;
-  color: white;
-}
-
 @media only screen and (max-width: 600px) {
-
-  .item-menu {
-    display: none;
-  }
 
   header {
     nav {
