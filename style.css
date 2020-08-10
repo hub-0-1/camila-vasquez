@@ -34,17 +34,20 @@ header nav {
   display: flex;
   justify-content: end;
   align-items: center;
+  flex-direction: row-reverse;
 }
 header nav .item-menu {
   display: none;
   padding: 0 10px;
 }
-header nav .item-menu.show,
-header nav .item-menu:hover {
+header nav .item-menu.show {
   display: initial;
 }
 header nav #hamburger {
   filter: invert();
+}
+header nav #hamburger:hover ~ .item-menu {
+  display: initial;
 }
 header nav #langue {
   color: white;
