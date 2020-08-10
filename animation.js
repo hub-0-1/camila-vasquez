@@ -73,6 +73,7 @@ window.onload = function () {
 
 function animer_images () {
   config.images.forEach((image) => {
+    // Flotement - translation
     let top_px = parseFloat(image.style.top.slice(0, -2));
     let left_px = parseFloat(image.style.left.slice(0, -2));
 
@@ -81,6 +82,22 @@ function animer_images () {
 
     image.style.top = (top_px + deltaY) + "px";
     image.style.left = (left_px + deltaX) + "px";
+
+    // Flotement - rotation
+    let delta_rotation = parseInt(image.getAttribute("data-rotation"));
+    if(image.style.transform.match(/rotate/)) {
+
+      // Avant les modifications a la rotation
+      let translate_orginal = (image.style.transform.match(/translate\(.+\)/) || "");
+      if(translate_orginal) translate_orginal = translate_orginal[0];
+      
+      // Faire la rotation
+      let rotation_originale = parseInt(image.style.transform.match(/[-\d]+/)[0]);
+      image.style.transform = translate_orginal + image.style.transform.replace(/rotate\([\d-]+deg\)/, "rotate(" + (rotation_originale + delta_rotation) + "deg)");
+    }
+    else {
+      image.style.transform += "rotate(" + delta_rotation + "deg)";
+    }
   });
 }
 
@@ -114,6 +131,9 @@ function creer_image () {
 
   // Deplacement
   determiner_vecteur_deplacement(img);
+
+  // Rotation
+  determiner_sens_rotation(img);
 
   // Prochaine position d'apparition
   config.positionnement_actuel = (config.positionnement_actuel + 1) % config.positionnements.length 
@@ -159,6 +179,10 @@ function determiner_vecteur_deplacement (image) {
 
   image.setAttribute("data-vecteur-x", vecteur.x * config.multiplicateur_vecteur);
   image.setAttribute("data-vecteur-y", vecteur.y * config.multiplicateur_vecteur);
+}
+
+function determiner_sens_rotation (image) {
+  image.setAttribute("data-rotation", (Math.random() > 0.5 ? 1 : -1));
 }
 
 function src_image_aleatoire () {
