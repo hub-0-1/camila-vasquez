@@ -36,6 +36,13 @@ header nav {
   align-items: center;
   flex-direction: row-reverse;
 }
+header nav.inverse #langue,
+header nav.inverse .item-menu > a {
+  color: black;
+}
+header nav.inverse #hamburger {
+  filter: none;
+}
 header nav:hover > .item-menu {
   display: initial;
 }
@@ -76,7 +83,7 @@ main #animation-accueil .image-flottante {
 main #animation-design-typographique {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
 }
 main #animation-design-typographique p {
@@ -86,6 +93,7 @@ main #animation-design-typographique p {
   /*height: 150px;*/
   white-space: nowrap;
   width: 70%;
+  font-size: 2em;
   /* Hide scrollbar for Chrome, Safari and Opera */
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;
@@ -95,6 +103,16 @@ main #animation-design-typographique p {
 }
 main #animation-design-typographique p::-webkit-scrollbar {
   display: none;
+}
+main #animation-design-typographique #cercle-scroll-bar {
+  position: fixed;
+  top: calc(75% - 50px);
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+}
+main #animation-design-typographique #cercle-scroll-bar img {
+  width: 100%;
 }
 main #animation-cartographie .image {
   width: 100%;

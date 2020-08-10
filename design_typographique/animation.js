@@ -5,7 +5,11 @@ var dernier_x = 0;
 
 window.onload = function () {
 
+
   // Init
+  init_traduction();
+  init_menu();
+
   let texte = document.getElementById("texte");
   texte.scroll({ left: 0, top: 0 });
 
@@ -46,10 +50,9 @@ function deplacer_scroller (e) {
   }
 
   dernier_x = e.currentTarget.scrollLeft;
-
 }
 
 function set_rotation (rotation) {
-  document.getElementById("element-transformation").setAttribute("transform", 
-    "rotate(" + rotation * vitesse_rotation + ", 60, 60)");
+  document.getElementById("spinner").setAttribute("style", 
+    "transform: rotate(" + rotation * vitesse_rotation + "deg)");
 }

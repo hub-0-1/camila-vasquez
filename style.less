@@ -44,6 +44,15 @@ header {
     align-items: center;
     flex-direction: row-reverse;
 
+    &.inverse {
+      #langue, .item-menu > a {
+        color: black;
+      }
+
+      #hamburger {
+        filter: none;
+      }
+    }
 
     &:hover > .item-menu{
       display: initial;
@@ -95,7 +104,7 @@ main {
   #animation-design-typographique {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 
     p {
@@ -105,6 +114,8 @@ main {
       /*height: 150px;*/
       white-space: nowrap;
       width: 70%;
+
+      font-size: 2em;
 
       /* Hide scrollbar for Chrome, Safari and Opera */
       &::-webkit-scrollbar {
@@ -117,6 +128,19 @@ main {
         scrollbar-width: none;  /* Firefox */
 
       } 
+    }
+
+    #cercle-scroll-bar {
+      position: fixed;
+      top: calc(75% - 50px);
+      left: calc(50% - 50px);
+
+      width: 100px;
+      height: 100px;
+
+      img {
+        width: 100%;
+      }
     }
   }
 

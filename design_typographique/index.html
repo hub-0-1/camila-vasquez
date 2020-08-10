@@ -14,35 +14,33 @@
     <link rel="stylesheet" href="../style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
 
+    <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/traduction.js"></script>
+
     <script src="animation.js"></script>
   </head>
   <body>
     <header>
       <a href="/"><img id="logo" class="icone" src="../images/madonna1.jpg"></a>
-      <nav>
-        <div class="item-menu">Dictionnaire d'images</div>
-        <div class="item-menu"><a href="#">Design typographique</a></div>
-        <div class="item-menu">Cartographie interactive</div>
-        <img id="hamburger" class="item-menu-mobile" src="images/hamburger.png">
+      <nav class="inverse">
+        <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
+        <img id="hamburger" src="../images/hamburger.png">
+        <div class="item-menu"><a href="../dictionnaire/index.html" data-i18n="header.dictionnaire"></a></div>
+        <div class="item-menu"><a href="../design_typographique/index.html" data-i18n="header.design_typo"></a></div>
+        <div class="item-menu"><a href="../cartographie/index.html" data-i18n="header.cartographie"></a></div>
       </nav>
     </header>
     <main>
-      <div id="animation-design-typographique">
+      <div id="animation-design-typographique" class="animation">
         <p id="texte">
         <span id="1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vitae porta justo, iaculis blandit nisl. Suspendisse potenti. Quisque aliquam lacus a pharetra rhoncus. Quisque eros justo, egestas quis sodales suscipit, molestie sit amet turpis. In sit amet posuere dolor, ut bibendum dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur hendrerit, tortor vitae mollis condimentum, turpis eros semper neque, nec sollicitudin nunc lectus quis ante. Cras feugiat condimentum justo nec aliquam. Fusce accumsan semper massa, nec ultrices diam suscipit at. In at purus sed tortor dignissim scelerisque non id magna. Ut sem elit, mollis eget metus vel, efficitur feugiat tortor. Praesent ultricies lectus nec metus aliquet, at vestibulum risus scelerisque.  Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam vitae condimentum metus, nec egestas est. Nulla sit amet metus cursus, semper quam quis, blandit orci. Vivamus porta velit erat, quis feugiat sapien commodo tincidunt. Sed venenatis scelerisque est a scelerisque. Integer quis semper nibh. Vestibulum tortor neque, sollicitudin sed fringilla non, mattis ut ligula. Integer egestas quam id risus feugiat, a blandit nisl sollicitudin. Suspendisse maximus ipsum nunc, euismod fermentum ante vestibulum eget. Nam at purus ac ante pretium suscipit. Curabitur ac turpis a odio feugiat imperdiet. Donec id arcu volutpat nisl tincidunt sagittis vitae vel odio. Fusce eleifend odio sit amet felis sagittis elementum.  Sed in finibus ex. Pellentesque porta ju</span>
         <span id="2" style="color: red;">Kahlo's interests in politics and art led her to join the Mexican Communist Party in 1927,[1] through which she met fellow Mexican artist Diego Rivera. The couple married in 1929,[1][4] and spent the late 1920s and early 1930s travelling in Mexico and the United States together. During this time, she developed her artistic style, drawing her main inspiration from Mexican folk culture, and painted mostly small self-portraits which mixed elements from pre-Columbian and Catholic beliefs. Her paintings raised the interest of Surrealist artist André Breton, who arranged for Kahlo's first solo exhibition at the Julien Levy Gallery in New York in 1938; the exhibition was a success, and was followed by another in Paris in 1939. While the French exhibition was less successful, the Louvre purchased a painting from Kahlo, The Frame, making her the first Mexican artist to be featured in their collection.[1] Throughout the 1940s, Kahlo participated in exhibitions in Mexico and the United States and worked as an art teacher. She taught at the Escuela Nacional de Pintura, Escultura y Grabado ("La Esmeralda") and was a founding member of the Seminario de Cultura Mexicana. Kahlo's always-fragile health began to decline in the same decade. She had her first solo exhibition in Mexico in 1953, shortly before her death in 1954 at the age of 47. </span>
         </p>
         <div id="cercle-scroll-bar">
-          <svg height="120" width="120">
-            <circle cx="60" cy="60" r="40" stroke="black" stroke-width="2" fill="rgba(0,0,0,0)" />
-            <g id="element-transformation" transform="rotate(0, 50, 50)">
-            <circle cx="60" cy="20" r="10" stroke="black" stroke-width="2" fill="rgba(0,0,0,1)" /></g>
-          </svg> 
+          <img id="spinner" src="../images/spinner.png" alt="spinner">
         </div>
       </div>
     </main>
-    <footer>
-      <p id="copyright">@2020 Camila Vasquez. Tous droits réservés.</p>
-    </footer>
   </body>
 </html>
