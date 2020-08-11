@@ -77,27 +77,18 @@ function animer_images () {
     let top_px = parseFloat(image.style.top.slice(0, -2));
     let left_px = parseFloat(image.style.left.slice(0, -2));
 
-    let deltaX = parseFloat(image.getAttribute("data-vecteur-x"));
-    let deltaY = parseFloat(image.getAttribute("data-vecteur-y"));
+    let deltaX = parseFloat(image.getAttribute("data-dx"));
+    let deltaY = parseFloat(image.getAttribute("data-dy"));
 
     image.style.top = (top_px + deltaY) + "px";
     image.style.left = (left_px + deltaX) + "px";
 
     // Flotement - rotation
-    let delta_rotation = parseInt(image.getAttribute("data-rotation"));
-    if(image.style.transform.match(/rotate/)) {
+    let delta_rotation = parseInt(image.getAttribute("data-dr"));
+    let rotation_originale = parseInt(image.getAttribute("data-r"));
+    image.setAttribute("data-r", rotation_originale + delta_rotation);
 
-      // Avant les modifications a la rotation
-      let translate_orginal = (image.style.transform.match(/translate\(.+\)/) || "");
-      if(translate_orginal) translate_orginal = translate_orginal[0];
-      
-      // Faire la rotation
-      let rotation_originale = parseInt(image.style.transform.match(/[-\d]+/)[0]);
-      image.style.transform = translate_orginal + image.style.transform.replace(/rotate\([\d-]+deg\)/, "rotate(" + (rotation_originale + delta_rotation) + "deg)");
-    }
-    else {
-      image.style.transform += "rotate(" + delta_rotation + "deg)";
-    }
+    appliquer_transform(image);
   });
 }
 
@@ -108,9 +99,11 @@ function translation_images (ev) {
   config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation;
   config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation;
 
-  config.images.forEach((image) => {
-    image.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px)"
-  });
+  config.images.forEach((image) => { appliquer_transform(image); });
+}
+
+function appliquer_transform (image) {
+  image.style.transform = "translate(" + config.translate.x + ", " + config.translate.y + ") rotate(" + image.getAttribute("data-r") + "deg)";
 }
 
 function creer_image () {
@@ -125,6 +118,7 @@ function creer_image () {
   img.addEventListener("click", (e) => {
     show_modal(e.target.src);
   });
+  img.setAttribute("data-r", 0);
 
   // Position initiale
   positionner_image(img);
@@ -177,12 +171,12 @@ function determiner_vecteur_deplacement (image) {
 
   vecteur = { x: -1, y: -1 }
 
-  image.setAttribute("data-vecteur-x", vecteur.x * config.multiplicateur_vecteur);
-  image.setAttribute("data-vecteur-y", vecteur.y * config.multiplicateur_vecteur);
+  image.setAttribute("data-dx", vecteur.x * config.multiplicateur_vecteur);
+  image.setAttribute("data-dy", vecteur.y * config.multiplicateur_vecteur);
 }
 
 function determiner_sens_rotation (image) {
-  image.setAttribute("data-rotation", (Math.random() > 0.5 ? 1 : -1));
+  image.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1));
 }
 
 function src_image_aleatoire () {
