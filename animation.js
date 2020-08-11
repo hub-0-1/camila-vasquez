@@ -103,7 +103,7 @@ function translation_images (ev) {
 }
 
 function appliquer_transform (image) {
-  image.style.transform = "translate(" + config.translate.x + ", " + config.translate.y + ") rotate(" + image.getAttribute("data-r") + "deg)";
+  image.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) rotate(" + image.getAttribute("data-r") + "deg)";
 }
 
 function creer_image () {
