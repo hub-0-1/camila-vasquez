@@ -1,4 +1,5 @@
 var config = {
+  souris: { x: null, y: null },
   largeur: 0,
   hauteur: 0,
   rapport_image_ecran: 6,
@@ -55,7 +56,9 @@ window.onload = function () {
   config.hauteur = bounding.height;
 
   // Appliquer une transformation sur chaque image
-  canva.addEventListener("wheel", translation_images);
+  canva.addEventListener("wheel", translation_scroll);
+  canva.addEventListener("mousedown", commencer_translation);
+  canva.addEventListener("mouseup", terminer_translation);
 
   // Creer les premieres images
   for(let i = 0; i < config.nb_images_initiales; ++i) {
@@ -92,7 +95,7 @@ function animer_images () {
   });
 }
 
-function translation_images (ev) {
+function translation_scroll (ev) {
   ev.stopPropagation();
   ev.preventDefault();
 
@@ -198,4 +201,36 @@ function show_modal (image_url) {
   let modal = document.getElementById("modal");
   modal.classList.add("active");
   modal.querySelector("img").src = image_url;
+}
+
+function commencer_translation (e) {
+  config.souris.x = null;
+  config.souris.y = null;
+
+  config.canva.addEventListener("mousemove", translation);
+}
+
+function terminer_translation (e) {
+  config.canva.removeEventListener("mousemove", translation);
+}
+
+function translation (e) {
+
+  let x0 = config.souris.x;
+  let y0 = config.souris.y;
+
+  config.souris.x = e.clientX;
+  config.souris.y = e.clientY;
+
+  if(x0 == null && y0 == null) return;
+
+  let delta_x = config.souris.x - x0;
+  let delta_y = config.souris.y - y0;
+
+  console.log(delta_x, delta_y);
+
+  config.translate.x += delta_x * config.vitesse_translation;
+  config.translate.y += delta_y * config.vitesse_translation;
+
+  config.images.forEach((image) => { appliquer_transform(image); });
 }
