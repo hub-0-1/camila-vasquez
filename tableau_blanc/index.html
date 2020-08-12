@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Camila Vasquez - Repenser la famille">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Camila Vasquez - Repenser la famille">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Camila Vasquez - Repenser la famille</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
+
+    <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/traduction.js"></script>
+
+    <script src="animation.js"></script>
+  </head>
+  <body>
+    <header>
+      <a href="/"><img id="logo" class="icone" src="../images/madonna1.jpg"></a>
+      <nav class="inverse">
+        <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
+        <img id="hamburger" src="../images/hamburger.png">
+        <div class="item-menu"><a href="../dictionnaire/index.html" data-i18n="header.dictionnaire"></a></div>
+        <div class="item-menu"><a href="../design_typographique/index.html" data-i18n="header.design_typo"></a></div>
+        <div class="item-menu"><a href="../cartographie/index.html" data-i18n="header.cartographie"></a></div>
+      </nav>
+    </header>
+    <main>
+      <div id="animation-tableau-blanc" class="animation">
+        <canvas id="canvas-tableau">
+          <svg xmlns="http://www.w3.org/2000/svg" id="dessin" height="210" width="400"> 
+            <rect width="400" height="110" style="fill:rgb(0,0,255);" />
+          </svg>
+        </canvas>
+      </div>
+    </main>
+  </body>
+</html>
