@@ -1,5 +1,6 @@
 var config = {
   souris: { x: null, y: null },
+  touch: { x: null, y: null },
   largeur: 0,
   hauteur: 0,
   rapport_image_ecran: 6,
@@ -59,6 +60,8 @@ window.onload = function () {
   canva.addEventListener("wheel", translation_scroll);
   canva.addEventListener("mousedown", commencer_translation);
   canva.addEventListener("mouseup", terminer_translation);
+  canva.addEventListener("touchstart", commencer_translation_touch);
+  canva.addEventListener("touchend", terminer_translation_touch);
 
   // Creer les premieres images
   for(let i = 0; i < config.nb_images_initiales; ++i) {
@@ -210,8 +213,40 @@ function commencer_translation (e) {
   config.canva.addEventListener("mousemove", translation);
 }
 
+function commencer_translation_touch (e) {
+  config.touch.x = null;
+  config.touch.y = null;
+
+  config.canva.addEventListener("touchmove", translation_touch);
+}
+
 function terminer_translation (e) {
   config.canva.removeEventListener("mousemove", translation);
+}
+
+function terminer_translation_touch (e) {
+  config.canva.removeEventListener("touchmove", translation);
+}
+
+function translation_touch (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  let x0 = config.touch.x;
+  let y0 = config.touch.y;
+
+  config.touch.x = e.touches[0].screenX;
+  config.touch.y = e.touches[0].screenY;
+
+  if(x0 == null && y0 == null) return;
+
+  let delta_x = config.touch.x - x0;
+  let delta_y = config.touch.y - y0;
+
+  config.translate.x += delta_x * config.vitesse_translation;
+  config.translate.y += delta_y * config.vitesse_translation;
+
+  config.images.forEach((image) => { appliquer_transform(image); });
 }
 
 function translation (e) {
@@ -226,8 +261,6 @@ function translation (e) {
 
   let delta_x = config.souris.x - x0;
   let delta_y = config.souris.y - y0;
-
-  console.log(delta_x, delta_y);
 
   config.translate.x += delta_x * config.vitesse_translation;
   config.translate.y += delta_y * config.vitesse_translation;
