@@ -34,7 +34,6 @@ function terminer_dessin (e) {
   config.svg.removeEventListener("mousemove", capter);
   config.svg.removeEventListener("touchmove", capter);
 
-  console.log(config.prochain_path);
   config.prochain_path = [];
   config.index_path += 1;
 }
