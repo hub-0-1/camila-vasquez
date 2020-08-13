@@ -11,20 +11,19 @@ window.onload = function () {
   init_traduction();
   init_menu();
 
-  config.canva = document.getElementById("canvas-tableau");
   config.svg = document.getElementById("dessin");
 
-  config.canva.addEventListener("mousedown", commencer_dessin);
-  config.canva.addEventListener("mouseup", terminer_dessin);
-  config.canva.addEventListener("touchstart", commencer_dessin);
-  config.canva.addEventListener("touchend", terminer_dessin);
+  config.svg.addEventListener("mousedown", commencer_dessin);
+  config.svg.addEventListener("mouseup", terminer_dessin);
+  config.svg.addEventListener("touchstart", commencer_dessin);
+  config.svg.addEventListener("touchend", terminer_dessin);
 }
 
 function commencer_dessin (e) {
-  config.canva.addEventListener("mousemove", capter);
-  config.canva.addEventListener("touchmove", capter);
+  config.svg.addEventListener("mousemove", capter);
+  config.svg.addEventListener("touchmove", capter);
 
-  let path = document.createElement("path");
+  let path = document.createElementNS("http://www.w3.org/2000/svg", "path");
   path.id = "path" + config.index_path;
 
   config.svg.appendChild(path);
@@ -32,8 +31,8 @@ function commencer_dessin (e) {
 }
 
 function terminer_dessin (e) {
-  config.canva.removeEventListener("mousemove", capter);
-  config.canva.removeEventListener("touchmove", capter);
+  config.svg.removeEventListener("mousemove", capter);
+  config.svg.removeEventListener("touchmove", capter);
 
   console.log(config.prochain_path);
   config.prochain_path = [];
