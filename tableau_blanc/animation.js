@@ -56,7 +56,13 @@ function capter (e) {
   config.prochain_path.push(coordonnees);
 
   // Dessiner
-  config.path_actuel.setAttribute("d", "M150 0 L75 200 L225 200 Z");
+  let string_path = "";
+  config.prochain_path.forEach((coordonnee) => {
+    string_path += (string_path == "" ? "M" : " L") + coordonnee.x + " " + coordonnee.y;
+  });
+
+  config.path_actuel.setAttribute("d", string_path);
+  config.path_actuel.setAttribute("fill", "none");
   config.path_actuel.setAttribute("stroke-width", "5");
   config.path_actuel.setAttribute("stroke", "black");
 }

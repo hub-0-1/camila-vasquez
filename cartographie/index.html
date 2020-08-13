@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="../style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
 
+    <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/traduction.js"></script>
+
     <script src="https://unpkg.com/iv-viewer/dist/iv-viewer.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/iv-viewer/dist/iv-viewer.css">
   </head>
@@ -21,10 +25,11 @@
     <header>
       <a href="/"><img id="logo" class="icone" src="../images/madonna1.jpg"></a>
       <nav>
-        <div class="item-menu">Dictionnaire d'images</div>
-        <div class="item-menu"><a href="#">Design typographique</a></div>
-        <div class="item-menu">Cartographie interactive</div>
-        <img id="hamburger" class="item-menu-mobile" src="images/hamburger.png">
+        <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
+        <img id="hamburger" src="../images/hamburger.png">
+        <div class="item-menu"><a href="../dictionnaire/index.html" data-i18n="header.dictionnaire"></a></div>
+        <div class="item-menu"><a href="../tableau_blanc/index.html" data-i18n="header.tableau_blanc"></a></div>
+        <div class="item-menu"><a href="../design_typographique/index.html" data-i18n="header.design_typo"></a></div>
       </nav>
     </header>
     <main>
