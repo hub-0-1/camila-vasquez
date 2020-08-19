@@ -62,6 +62,6 @@ function capter (e) {
 
   config.path_actuel.setAttribute("d", string_path);
   config.path_actuel.setAttribute("fill", "none");
-  config.path_actuel.setAttribute("stroke-width", "5");
-  config.path_actuel.setAttribute("stroke", "black");
+  config.path_actuel.setAttribute("stroke-width", "7");
+  config.path_actuel.setAttribute("stroke", "#f19731");
 }
