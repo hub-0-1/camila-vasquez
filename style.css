@@ -115,12 +115,10 @@ main #animation-design-typographique {
   align-items: center;
 }
 main #animation-design-typographique p {
-  margin: 0 15%;
   overflow-x: scroll;
   /*column-width: 200px;*/
   /*height: 150px;*/
   white-space: nowrap;
-  width: 70%;
   font-size: 2em;
   /* Hide scrollbar for Chrome, Safari and Opera */
   /* Hide scrollbar for IE, Edge and Firefox */
