@@ -32,7 +32,7 @@ var traduction = {
     translation: {
       header: {
         design_typo: "Design typographique",
-        dictionnaire: "Lexique",
+        lexique: "Lexique",
         tableau_blanc: "Tableau blanc",
         cartographie: "Cartographie",
         autre_langue: "EN"
@@ -43,7 +43,7 @@ var traduction = {
     translation: {
       header: {
         design_typo: "Design typo EN",
-        dictionnaire: "Lexique",
+        lexique: "Lexique",
         tableau_blanc: "White board",
         cartographie: "Cartography",
         autre_langue: "FR"
