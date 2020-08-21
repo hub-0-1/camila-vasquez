@@ -6,10 +6,8 @@ var config = {
 
 window.onload = function () {
 
-
   // Init
   init_traduction();
-  init_menu();
 
   config.svg = document.getElementById("dessin");
 

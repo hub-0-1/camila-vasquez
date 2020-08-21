@@ -8,7 +8,6 @@ window.onload = function () {
 
   // Init
   init_traduction();
-  init_menu();
 
   let texte = document.getElementById("texte");
   texte.scroll({ left: 0, top: 0 });
