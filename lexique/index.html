@@ -11,30 +11,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Camila Vasquez - Repenser la famille</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
 
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
-    <script src="../js/traduction.js"></script>
+    <script src="js/traduction.js"></script>
 
     <script src="animation.js"></script>
   </head>
   <body>
     <header>
-      <a href="/"><img id="logo" class="icone" src="../images/madonna1.jpg"></a>
-      <nav class="inverse">
+      <a href="/"><img id="logo" class="icone" src="images/madonna1.jpg"></a>
+      <nav>
         <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
+        <img id="hamburger" src="images/hamburger.png">
       </nav>
     </header>
     <main>
-      <div id="animation-tableau-blanc" class="animation">
-        <svg id="dessin"></svg> 
+      <div id="animation-lexique" class="animation"> </div>
+      <div id="modal-interpretation">
+        <div id="container-contenu-modal-interpretation">
+          <img src="#">
+          <p>Texte concernant l'image</p>
+        </div>
       </div>
-      <div id="consignes">
-        <p>Consignes</p>
-        <audio id="ambiance">
-          <source src="../audio/madonna.mp3" type="audio/mpeg">
-        </audio> 
+      <div id="modal-officiel">
+        <div id="container-contenu-modal-officiel">
+          <img src="#">
+          <p>Texte concernant l'image</p>
+        </div>
       </div>
     </main>
   </body>

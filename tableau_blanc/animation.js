@@ -15,6 +15,11 @@ window.onload = function () {
   config.svg.addEventListener("mouseup", terminer_dessin);
   config.svg.addEventListener("touchstart", commencer_dessin);
   config.svg.addEventListener("touchend", terminer_dessin);
+
+  document.getElementById("consignes").addEventListener("click", (e) => {
+    document.getElementById("ambiance").play();
+    e.target.style.display = "none";
+  })
 }
 
 function commencer_dessin (e) {
