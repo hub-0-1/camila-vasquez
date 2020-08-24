@@ -10,7 +10,7 @@ window.onload = function () {
   init_traduction();
 
   let texte = document.getElementById("texte");
-  texte.scroll({ left: 0, top: 0 });
+  texte.scroll({ left: 1, top: 0 });
 
   document.getElementById("texte").addEventListener("scroll", function (e) { 
     deplacement_span_infini(e);
