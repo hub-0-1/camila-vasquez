@@ -225,7 +225,7 @@ function terminer_translation (e) {
 }
 
 function terminer_translation_touch (e) {
-  config.canva.removeEventListener("touchmove", translation);
+  config.canva.removeEventListener("touchmove", translation_touch);
 }
 
 function translation_touch (e) {
