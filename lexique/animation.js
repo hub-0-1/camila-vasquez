@@ -55,7 +55,7 @@ window.onload = function () {
   config.hauteur = bounding.height;
 
   // Appliquer une transformation sur chaque image
-  //canva.addEventListener("wheel", translation_scroll);
+  canva.addEventListener("wheel", translation_scroll);
   canva.addEventListener("mousedown", commencer_translation);
   canva.addEventListener("mouseup", terminer_translation);
   canva.addEventListener("touchstart", commencer_translation_touch);
@@ -64,6 +64,7 @@ window.onload = function () {
   // Creer la premiere tuile
   let tuile = creer_tuile();
   config.canva.appendChild(tuile);
+
 }
 
 function creer_tuile () {
@@ -195,6 +196,28 @@ function translation (e) {
   config.tuiles.liste.forEach((tuile) => { appliquer_transform(tuile); });
 }
 
+function translation_scroll (ev) {
+  ev.stopPropagation();
+  ev.preventDefault();
+
+  config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation * 3;
+  config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation * 3;
+
+  config.tuiles.liste.forEach((image) => { appliquer_transform(image); });
+} 
+
 function appliquer_transform (tuile) {
   tuile.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) "; 
-} 
+  mesurer_vue(tuile);
+}
+
+function mesurer_vue (tuile) {
+
+  let rect = tuile.getBoundingClientRect();
+  console.log(rect);
+
+  if(false) {
+    ajouter_tuile();
+  }
+
+}
