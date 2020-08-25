@@ -18,6 +18,15 @@ var config = {
   ],
   tuiles: {
     taille: { x: 300, y: 300 },
+    positions: [
+      { x: "1%", y: "2%" },
+      { x: "10%", y: "20%" },
+      { x: "1%", y: "2%" },
+      { x: "1%", y: "2%" },
+      { x: "1%", y: "2%" },
+      { x: "1%", y: "2%" },
+      { x: "1%", y: "2%" },
+    ],
     liste: []
   },
   translate: { x: 0, y: 0 },
@@ -58,7 +67,6 @@ window.onload = function () {
     + "height:" + config.tuiles.taille.y + "px;"
     + " }";
 
-  console.log(style);
   document.body.appendChild(style);
 }
 
@@ -73,21 +81,23 @@ function creer_tuile () {
     show_modal(e.target.src);
   });
 
-  config.sources.forEach((source) => {
-    positionner_image(tuile, creer_image(source));
-  })
+  positionner_images(tuile);
 
   return tuile; 
 }
 
-function creer_image (src) {
+function creer_image (src, position) {
   let img = document.createElement("img");
 
   // Info de base
   img.src = "../images/" + src;
   img.className = "image-flottante"
   img.alt = "Madonna";
-  img.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
+
+  img.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px";
+  img.style.left = position.x;
+  img.style.top = position.y;
+
   img.addEventListener("click", (e) => {
     show_modal(e.target.src);
   });
@@ -95,10 +105,19 @@ function creer_image (src) {
   return img; 
 }
 
-function positionner_image (tuile, image) {
+// Utiliser algo backtrack?
+function positionner_images (tuile) {
 
-  // TODO positionner image intelligement ici (algo backtrack)
-  tuile.appendChild(image);
+  let positions = deep_copy(config.tuiles.positions);
+  let sources = deep_copy(config.sources);
+
+  while(positions.length > 0 && sources.length > 0) {
+    console.log(sources, positions);
+    let position = positions.pop();
+    let image = creer_image(sources.pop(), position);
+
+    tuile.appendChild(image);
+  }
 }
 
 function afficher_texte_imagine () { }
@@ -143,3 +162,5 @@ function overlap (rect1, rect2) {
     || rect1.bottom < rect2.top 
     || rect1.top > rect2.bottom);
 }
+
+function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }

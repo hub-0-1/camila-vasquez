@@ -142,11 +142,19 @@ main #animation-design-typographique #cercle-scroll-bar {
 main #animation-design-typographique #cercle-scroll-bar img {
   width: 100%;
 }
+main #animation-lexique ~ #modal-interpretation {
+  display: none;
+}
+main #animation-lexique ~ #modal-officiel {
+  display: none;
+}
 main #animation-lexique .tuile {
+  position: relative;
   border: 2px solid red;
 }
 main #animation-lexique .tuile .image-flottante {
-  max-width: 100%;
+  position: absolute;
+  max-width: 10%;
 }
 main #animation-cartographie .image {
   width: 100%;

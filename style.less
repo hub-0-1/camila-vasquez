@@ -180,10 +180,23 @@ main {
   }
 
   #animation-lexique {
+
+    & ~ #modal-interpretation {
+      display: none;
+    }
+
+    & ~ #modal-officiel {
+      display: none;
+    }
+
     .tuile {
+
+      position: relative;
       border: 2px solid red;
+
       .image-flottante {
-        max-width: 100%;
+        position: absolute;
+        max-width: 10%;
       }
     }
   }
