@@ -149,8 +149,11 @@ main #animation-lexique ~ #modal-officiel {
   display: none;
 }
 main #animation-lexique .tuile {
+  width: 200vw;
+  margin-left: -50vw;
+  height: 200vh;
+  margin-top: -50vh;
   position: relative;
-  border: 2px solid red;
 }
 main #animation-lexique .tuile .image-flottante {
   position: absolute;

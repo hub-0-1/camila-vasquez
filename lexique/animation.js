@@ -19,13 +19,19 @@ var config = {
   tuiles: {
     taille: { x: 300, y: 300 },
     positions: [
-      { x: "1%", y: "2%" },
-      { x: "10%", y: "20%" },
-      { x: "1%", y: "2%" },
-      { x: "1%", y: "2%" },
-      { x: "1%", y: "2%" },
-      { x: "1%", y: "2%" },
-      { x: "1%", y: "2%" },
+      { x: "3%", y: "4%" },
+      { x: "7%", y: "15%" },
+      { x: "1%", y: "75%" },
+      { x: "10%", y: "35%" },
+      { x: "46%", y: "20%" },
+      { x: "33%", y: "45%" },
+      { x: "74%", y: "64%" },
+      { x: "81%", y: "92%" },
+      { x: "51%", y: "52%" },
+      { x: "31%", y: "72%" },
+      { x: "58%", y: "82%" },
+      { x: "78%", y: "2%" },
+      { x: "89%", y: "72%" }
     ],
     liste: []
   },
@@ -49,29 +55,20 @@ window.onload = function () {
   config.hauteur = bounding.height;
 
   // Appliquer une transformation sur chaque image
-  /*
-  canva.addEventListener("wheel", translation_scroll);
+  //canva.addEventListener("wheel", translation_scroll);
   canva.addEventListener("mousedown", commencer_translation);
   canva.addEventListener("mouseup", terminer_translation);
   canva.addEventListener("touchstart", commencer_translation_touch);
   canva.addEventListener("touchend", terminer_translation_touch);
-  */
 
   // Creer la premiere tuile
   let tuile = creer_tuile();
   config.canva.appendChild(tuile);
-
-  let style = document.createElement("style");
-  style.innerHTML = " .tuile { " 
-    + "width:" + config.tuiles.taille.x + "px;"
-    + "height:" + config.tuiles.taille.y + "px;"
-    + " }";
-
-  document.body.appendChild(style);
 }
 
 function creer_tuile () {
   let tuile = document.createElement("div");
+  config.tuiles.liste.push(tuile);
 
   // Info de base
   tuile.className = "tuile";
@@ -112,7 +109,6 @@ function positionner_images (tuile) {
   let sources = deep_copy(config.sources);
 
   while(positions.length > 0 && sources.length > 0) {
-    console.log(sources, positions);
     let position = positions.pop();
     let image = creer_image(sources.pop(), position);
 
@@ -129,6 +125,7 @@ function hide_modal () {
 }
 
 function show_modal (image_url) {
+  return;
   let modal = document.getElementById("modal");
   modal.classList.add("active");
   modal.querySelector("img").src = image_url;
@@ -156,11 +153,48 @@ function terminer_translation_touch (e) {
   config.canva.removeEventListener("touchmove", translation_touch);
 }
 
-function overlap (rect1, rect2) {
-  return !(rect1.right < rect2.left 
-    || rect1.left > rect2.right 
-    || rect1.bottom < rect2.top 
-    || rect1.top > rect2.bottom);
+function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }
+
+function translation_touch (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  let x0 = config.touch.x;
+  let y0 = config.touch.y;
+
+  config.touch.x = e.touches[0].screenX;
+  config.touch.y = e.touches[0].screenY;
+
+  if(x0 == null && y0 == null) return;
+
+  let delta_x = config.touch.x - x0;
+  let delta_y = config.touch.y - y0;
+
+  config.translate.x += delta_x * config.vitesse_translation;
+  config.translate.y += delta_y * config.vitesse_translation;
+
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform(tuile); });
 }
 
-function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }
+function translation (e) {
+
+  let x0 = config.souris.x;
+  let y0 = config.souris.y;
+
+  config.souris.x = e.clientX;
+  config.souris.y = e.clientY;
+
+  if(x0 == null && y0 == null) return;
+
+  let delta_x = config.souris.x - x0;
+  let delta_y = config.souris.y - y0;
+
+  config.translate.x += delta_x * config.vitesse_translation;
+  config.translate.y += delta_y * config.vitesse_translation;
+
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform(tuile); });
+}
+
+function appliquer_transform (tuile) {
+  tuile.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) "; 
+} 
