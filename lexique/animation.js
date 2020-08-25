@@ -2,7 +2,7 @@ var config = {
   souris: { x: null, y: null },
   touch: { x: null, y: null },
   largeur_image_max: "5%",
-  images_src: [
+  sources: [
     'madonna1.jpg',
     'madonna2.jpg',
     'madonna3.jpg',
@@ -16,26 +16,13 @@ var config = {
     'madonna11.jpg',
     'madonna12.jpg'
   ],
-  images: [],
+  tuiles: {
+    taille: { x: 300, y: 300 },
+    liste: []
+  },
   translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
-  ms_animation: 40,
-  delais_apparition_image: 1500,
-  delais_suppression_image: 1000 * 30, // 30 secondes
-  multiplicateur_vecteur: 3,
-  positionnements: [
-    { x: 0, y: 0 },
-    //{ x: -1, y: -1 },
-    //{ x: 0, y: -1 },
-    //{ x: 1, y: -1 },
-    { x: 1, y: 0 },
-    { x: 1, y: 1 },
-    { x: 0, y: 1 },
-    //{ x: -1, y: 1 },
-    { x: -1, y: 0 }
-  ],
-  positionnement_actuel: 0,
-  nb_images_initiales: 6 
+  positionnement_actuel: 0
 }
 
 window.onload = function () {
@@ -53,15 +40,26 @@ window.onload = function () {
   config.hauteur = bounding.height;
 
   // Appliquer une transformation sur chaque image
+  /*
   canva.addEventListener("wheel", translation_scroll);
   canva.addEventListener("mousedown", commencer_translation);
   canva.addEventListener("mouseup", terminer_translation);
   canva.addEventListener("touchstart", commencer_translation_touch);
   canva.addEventListener("touchend", terminer_translation_touch);
+  */
 
   // Creer la premiere tuile
   let tuile = creer_tuile();
   config.canva.appendChild(tuile);
+
+  let style = document.createElement("style");
+  style.innerHTML = " .tuile { " 
+    + "width:" + config.tuiles.taille.x + "px;"
+    + "height:" + config.tuiles.taille.y + "px;"
+    + " }";
+
+  console.log(style);
+  document.body.appendChild(style);
 }
 
 function creer_tuile () {
@@ -75,8 +73,8 @@ function creer_tuile () {
     show_modal(e.target.src);
   });
 
-  config.images_src.forEach((image) => {
-    positionner_image(tuile, image);
+  config.sources.forEach((source) => {
+    positionner_image(tuile, creer_image(source));
   })
 
   return tuile; 
@@ -84,10 +82,9 @@ function creer_tuile () {
 
 function creer_image (src) {
   let img = document.createElement("img");
-  config.images.push(img);
 
   // Info de base
-  img.src = "images/" + src;
+  img.src = "../images/" + src;
   img.className = "image-flottante"
   img.alt = "Madonna";
   img.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
@@ -99,6 +96,7 @@ function creer_image (src) {
 }
 
 function positionner_image (tuile, image) {
+
   // TODO positionner image intelligement ici (algo backtrack)
   tuile.appendChild(image);
 }
@@ -139,3 +137,9 @@ function terminer_translation_touch (e) {
   config.canva.removeEventListener("touchmove", translation_touch);
 }
 
+function overlap (rect1, rect2) {
+  return !(rect1.right < rect2.left 
+    || rect1.left > rect2.right 
+    || rect1.bottom < rect2.top 
+    || rect1.top > rect2.bottom);
+}
