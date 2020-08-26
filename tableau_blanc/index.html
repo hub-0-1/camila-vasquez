@@ -12,7 +12,7 @@
 
     <title>Camila Vasquez - Repenser la famille</title>
     <link rel="stylesheet" href="../style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Nunito+Sans:wght@300;400&display=swap" rel="stylesheet"> 
 
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
     <script src="../js/traduction.js"></script>
@@ -31,10 +31,30 @@
         <svg id="dessin"></svg> 
       </div>
       <div id="consignes">
-        <p>Consignes ... Cliquez ici pour commencer</p>
+        <div id="container-contenu-consignes">
+          <p id="introduction">
+          Fermez les yeux<br>
+          Écoutez<br>
+          Bougez la souris en maintenant le clic enfoncé<br>
+          Répondez au son spontanément<br>
+          À la fin, ouvrez les yeux et contemplez
+          </p>
+          <h3 id="lancement">
+            POUR COMMENCER<br>
+            CLIQUEZ <span class="couleur-trait">ICI</span>
+          </h3>
+        </div>
         <audio id="ambiance">
-          <source src="../audio/madonna.mp3" type="audio/mpeg">
+          <source src="../audio/dessins_sonores_web.mp3" type="audio/mpeg">
         </audio> 
+      </div>
+      <div id="conclusion">
+        <div id="container-contenu-conclusion">
+          <h3 class="couleur-trait">DESSINS SONORES</h3>
+          <p>
+          Est une invitation à entrer en relation avec l’environnement sonore de la vie quotidienne autrement, afin d'aiguiser le sens de l'écoute et de ne pas réagir aux bruits uniquement de façon automatique.
+          </p>
+        </div>
       </div>
     </main>
   </body>

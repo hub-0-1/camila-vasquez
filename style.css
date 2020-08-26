@@ -166,6 +166,9 @@ main #animation-tableau-blanc svg {
   width: 100vw;
   height: 100vh;
 }
+main #animation-tableau-blanc .couleur-trait {
+  color: #f19731;
+}
 main #animation-tableau-blanc + #consignes {
   position: fixed;
   top: 0;
@@ -175,9 +178,30 @@ main #animation-tableau-blanc + #consignes {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+main #animation-tableau-blanc + #consignes #introduction,
+main #animation-tableau-blanc + #consignes #lancement {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.3em;
 }
 main #animation-tableau-blanc + #consignes audio {
   display: none;
+}
+main #animation-tableau-blanc ~ #conclusion {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion {
+  width: 200px;
+  text-align: justify;
 }
 @media only screen and (max-width: 600px) {
   header nav {

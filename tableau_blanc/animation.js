@@ -16,10 +16,19 @@ window.onload = function () {
   config.svg.addEventListener("touchstart", commencer_dessin);
   config.svg.addEventListener("touchend", terminer_dessin);
 
-  document.getElementById("consignes").addEventListener("click", (e) => {
+  // Lancer l'expérience
+  document.getElementById("lancement").addEventListener("click", (e) => {
     document.getElementById("ambiance").play();
-    e.target.style.display = "none";
-  })
+    document.getElementById("consignes").style.display = "none";
+  });
+
+  // Terminer l'expérience
+  document.getElementById("ambiance").addEventListener("ended", (e) => {
+    document.getElementById("conclusion").style.display = "flex";
+    [].forEach.call(document.querySelectorAll("path"), (path) => {
+      path.setAttribute("stroke", "rgb(241, 151, 49, 0.2)")
+    });
+  });
 }
 
 function commencer_dessin (e) {
@@ -66,5 +75,5 @@ function capter (e) {
   config.path_actuel.setAttribute("d", string_path);
   config.path_actuel.setAttribute("fill", "none");
   config.path_actuel.setAttribute("stroke-width", "7");
-  config.path_actuel.setAttribute("stroke", "#f19731");
+  config.path_actuel.setAttribute("stroke", "rgb(241, 151, 49)");
 }
