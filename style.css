@@ -201,7 +201,9 @@ main #animation-tableau-blanc ~ #conclusion {
   flex-direction: column;
 }
 main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion {
-  width: 200px;
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 1.3em;
+  width: 240px;
   text-align: justify;
 }
 main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .couleur-trait {
