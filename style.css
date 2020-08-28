@@ -149,7 +149,6 @@ main #animation-lexique ~ #modal-officiel {
   display: none;
 }
 main #animation-lexique .tuile {
-  border: 2px solid red;
   position: absolute;
 }
 main #animation-lexique .tuile .image-flottante {

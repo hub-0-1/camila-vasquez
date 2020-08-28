@@ -3,6 +3,7 @@ var config = {
   touch: { x: null, y: null },
   translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
+  vitesse_maj_tuiles_visibles: 250,
   sources: [
     'madonna1.jpg',
     'madonna2.jpg',
@@ -65,10 +66,8 @@ window.onload = function () {
   // Creer la premiere tuile
   new Tuile({x: 0, y: 0}, creer_images());
 
-  // Navigation
-  window.setInterval(function () {
-    maj_tuiles_visibles();
-  }, 2000);
+  // Mise à jour des tuiles visibles
+  window.setInterval( maj_tuiles_visibles, config.vitesse_maj_tuiles_visibles);
 }
 
 function hide_modal () {
