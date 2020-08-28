@@ -47,6 +47,7 @@ window.onload = function () {
 
   // Traduire les elements texte
   init_traduction();
+  config.textes = traiter_textes();
 
   // Element
   let canva = document.getElementById("animation-lexique");
