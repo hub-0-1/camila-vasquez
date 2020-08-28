@@ -150,10 +150,6 @@ main #animation-lexique ~ #modal-officiel {
 }
 main #animation-lexique .tuile {
   border: 2px solid red;
-  width: 200vw;
-  margin-left: -50vw;
-  height: 200vh;
-  margin-top: -50vh;
   position: absolute;
 }
 main #animation-lexique .tuile .image-flottante {

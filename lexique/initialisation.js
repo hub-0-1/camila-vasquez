@@ -1,6 +1,8 @@
 var config = {
   souris: { x: null, y: null },
   touch: { x: null, y: null },
+  translate: { x: 0, y: 0 },
+  vitesse_translation: 1.3,
   sources: [
     'madonna1.jpg',
     'madonna2.jpg',
@@ -31,27 +33,18 @@ var config = {
     { x: "89%", y: "72%" }
   ],
   tuiles: {
-    taille: { x: 300, y: 300 },
-    positions: [
-      { x: "3%", y: "4%" },
-      { x: "7%", y: "15%" },
-      { x: "1%", y: "75%" },
-      { x: "10%", y: "35%" },
-      { x: "46%", y: "20%" },
-      { x: "33%", y: "45%" },
-      { x: "74%", y: "64%" },
-      { x: "81%", y: "92%" },
-      { x: "51%", y: "52%" },
-      { x: "31%", y: "72%" },
-      { x: "58%", y: "82%" },
-      { x: "78%", y: "2%" },
-      { x: "89%", y: "72%" }
-    ],
+    taille: { 
+      x: {
+        valeur: 200,
+        unite: "vw"
+      },
+      y: {
+        valeur: 200,
+        unite: "vh" 
+      },
+    },
     liste: []
-  },
-  translate: { x: 0, y: 0 },
-  vitesse_translation: 1.3,
-  positionnement_actuel: 0
+  }
 }
 
 window.onload = function () {
