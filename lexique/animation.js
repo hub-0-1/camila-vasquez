@@ -8,9 +8,6 @@ class Tuile {
     this.element.className = "tuile";
     this.element.alt = "Tuile";
     this.element.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
-    this.element.addEventListener("click", (e) => {
-      show_modal(e.target.src);
-    });
 
     // Positionner la tuile
     this.element.style.width = config.tuiles.taille.x.valeur + config.tuiles.taille.x.unite;
@@ -57,32 +54,37 @@ class Tuile {
     return inside;
   }
 
-  afficher () {
-    console.log("afficher");
-  }
+  afficher () { }
 }
 
 class Image {
   constructor(source) {
     this.element = document.createElement("img");
+    this.source = "../images/" + source;
 
     // Info de base
-    this.element.src = "../images/" + source;
+    this.element.src = this.source;
     this.element.className = "image-flottante";
     this.element.alt = "Madonna";
 
     this.element.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px";
 
-    this.element.addEventListener("click", (e) => {
-      show_modal(e.target.src);
-    });
+    this.element.addEventListener("click", this.afficher_definitions.bind(this));
+  }
+
+  afficher_definitions () {
+    afficher_definition_interpretation(this.source, "texte1");
+    window.setTimeout(cacher_definition_interpretation, config.temps_apparition_definition);
+
+    window.setTimeout(() => {
+      afficher_definition_officielle(this.source, "texte2");
+    }, config.temps_apparition_definition);
+
+    window.setTimeout(cacher_definition_officielle, config.temps_apparition_definition * 2);
   }
 }
 
 function maj_tuiles_visibles () {
-  let tuiles_visiibles = tuiles_visibles();
-  console.log(tuiles_visiibles);
-
   tuiles_visibles().forEach((tuile) => {
     afficher_tuiles_voisines(tuile);
   })
@@ -191,7 +193,6 @@ function tuiles_visibles () {
 
 function afficher_tuiles_voisines (tuile) {
   let tuiles_voisines = trouver_tuiles_voisines(tuile);
-  console.log(tuiles_voisines);
 
   Object.keys(tuiles_voisines).forEach((key) => {
     if(tuiles_voisines[key]) {

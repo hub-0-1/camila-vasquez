@@ -4,6 +4,7 @@ var config = {
   translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
   vitesse_maj_tuiles_visibles: 250,
+  temps_apparition_definition: 2000,
   sources: [
     'madonna1.jpg',
     'madonna2.jpg',
@@ -70,15 +71,30 @@ window.onload = function () {
   window.setInterval( maj_tuiles_visibles, config.vitesse_maj_tuiles_visibles);
 }
 
-function hide_modal () {
-  let modal = document.getElementById("modal");
-  modal.classList.remove("active");
+function afficher_definition_interpretation (src_image, texte) {
+  let modal = document.getElementById("modal-interpretation");
+
+  modal.style.display = "block";
+  modal.querySelector("img").src = src_image;
+  modal.querySelector("p").innerHTML = texte;
 }
 
-function show_modal (image_url) {
-  /*let modal = document.getElementById("modal");
-  modal.classList.add("active");
-  modal.querySelector("img").src = image_url;*/
+function cacher_definition_interpretation () {
+  let modal = document.getElementById("modal-interpretation");
+  modal.style.display = "none";
+}
+
+function afficher_definition_officielle (src_image, texte) {
+  let modal = document.getElementById("modal-officiel");
+
+  modal.style.display = "block";
+  modal.querySelector("img").src = src_image;
+  modal.querySelector("p").innerHTML = texte;
+}
+
+function cacher_definition_officielle () {
+  let modal = document.getElementById("modal-officiel");
+  modal.style.display = "none";
 }
 
 function commencer_translation (e) {

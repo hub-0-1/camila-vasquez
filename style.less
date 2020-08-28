@@ -182,11 +182,51 @@ main {
   #animation-lexique {
 
     & ~ #modal-interpretation {
+      position: fixed;
+      top: 10%;
+      bottom: 10%;
+      left: 10%;
+      right: 40%;
+
       display: none;
+
+      .container-contenu-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+
+        img {
+          width: 50%;
+        }
+      }
     }
 
     & ~ #modal-officiel {
+      position: fixed;
+      top: 10%;
+      bottom: 10%;
+      left: 60%;
+      right: 90%;
+
       display: none;
+
+      .container-contenu-modal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+
+        height: 100%;
+        background-color: rgba(0,0,0,0.5);
+
+        img {
+          width: 50%;
+        }
+      }
     }
 
     .tuile {
