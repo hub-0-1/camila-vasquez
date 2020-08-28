@@ -34,6 +34,10 @@ class Tuile {
     images.forEach((image) => {
       this.element.appendChild(image.element);
     });
+
+    // Finaliser
+    config.tuiles.liste.push(this);
+    config.canva.appendChild(this.element);
   }
 
   est_visible () {
@@ -51,6 +55,10 @@ class Tuile {
     const inside = !!rect && !above && !below && !left && !right;
 
     return inside;
+  }
+
+  afficher () {
+    console.log("afficher");
   }
 }
 
@@ -71,54 +79,13 @@ class Image {
   }
 }
 
-function creer_tuile () {
-  let tuile = document.createElement("div");
-  config.tuiles.liste.push(tuile);
+function maj_tuiles_visibles () {
+  let tuiles_visiibles = tuiles_visibles();
+  console.log(tuiles_visiibles);
 
-  // Info de base
-  tuile.className = "tuile";
-  tuile.alt = "Tuile";
-  tuile.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
-  tuile.addEventListener("click", (e) => {
-    show_modal(e.target.src);
-  });
-
-  positionner_images(tuile);
-
-  return tuile; 
-}
-
-function creer_image (src, position) {
-  let img = document.createElement("img");
-
-  // Info de base
-  img.src = "../images/" + src;
-  img.className = "image-flottante"
-  img.alt = "Madonna";
-
-  img.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px";
-  img.style.left = position.x;
-  img.style.top = position.y;
-
-  img.addEventListener("click", (e) => {
-    show_modal(e.target.src);
-  });
-
-  return img; 
-}
-
-// Utiliser algo backtrack?
-function positionner_images (tuile) {
-
-  let positions = deep_copy(config.tuiles.positions);
-  let sources = deep_copy(config.sources);
-
-  while(positions.length > 0 && sources.length > 0) {
-    let position = positions.pop();
-    let image = creer_image(sources.pop(), position);
-
-    tuile.appendChild(image);
-  }
+  tuiles_visibles().forEach((tuile) => {
+    afficher_tuiles_voisines(tuile);
+  })
 }
 
 function afficher_texte_imagine () { }
@@ -127,18 +94,93 @@ function afficher_texte_original () { }
 function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }
 
 // TODO //
-function maj_tuiles_visibles () {
-  tuiles_visibles().forEach((tuile) => {
-    afficher_tuiles_voisines(tuile);
-  })
-}
+function trouver_tuiles_voisines (tuile_centrale) {
 
-function trouver_tuiles_voisines (tuile) {
-  return [];
-}
+  let voisines = {
+    haut_gauche: null,
+    haut: null,
+    haut_droite: null,
+    droite: null,
+    bas_droite: null,
+    bas: null,
+    bas_gauche: null,
+    gauche: null,
+  }
 
-function afficher_tuile (tuile) {
-  tuile.style.display = "block";
+  // Haut gauche
+  voisines.haut_gauche = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x - 1
+            && tuile.position.y == tuile_centrale.position.y - 1) });
+
+  if(!voisines.haut_gauche) {
+    voisines.haut_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y - 1}, creer_images());
+  }
+
+  // Haut
+  voisines.haut = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x
+            && tuile.position.y == tuile_centrale.position.y - 1) });
+
+  if(!voisines.haut) {
+    voisines.haut = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y - 1}, creer_images());
+  }
+  
+  // Haut Droite
+  voisines.haut_droite = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x + 1
+            && tuile.position.y == tuile_centrale.position.y - 1) });
+
+  if(!voisines.haut_droite) {
+    voisines.haut_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y - 1}, creer_images());
+  }
+
+  // Droite
+  voisines.droite = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x + 1
+            && tuile.position.y == tuile_centrale.position.y) });
+
+  if(!voisines.droite) {
+    voisines.droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y}, creer_images());
+  }
+
+  // Bas Droite
+  voisines.bas_droite = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x + 1
+            && tuile.position.y == tuile_centrale.position.y + 1) });
+
+  if(!voisines.bas_droite) {
+    voisines.bas_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y + 1}, creer_images());
+  }
+
+  // Bas
+  voisines.bas = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x
+            && tuile.position.y == tuile_centrale.position.y + 1) });
+
+  if(!voisines.bas) {
+    voisines.bas = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y + 1}, creer_images());
+  }
+
+  // Bas Gauche
+  voisines.bas_gauche = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x - 1
+            && tuile.position.y == tuile_centrale.position.y + 1) });
+
+  if(!voisines.bas_gauche) {
+    voisines.bas_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y + 1}, creer_images());
+  }
+
+  // Gauche
+  voisines.gauche = config.tuiles.liste.find((tuile) => { 
+    return (tuile.position.x == tuile_centrale.position.x - 1
+            && tuile.position.y == tuile_centrale.position.y) });
+
+  if(!voisines.gauche) {
+    voisines.gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y}, creer_images());
+  }
+
+
+  return voisines;
 }
 
 function tuiles_visibles () {
@@ -148,8 +190,17 @@ function tuiles_visibles () {
 }
 
 function afficher_tuiles_voisines (tuile) {
-  trouver_tuiles_voisines(tuile).forEach((tuile) => {
-    afficher_tuile(tuile);
+  let tuiles_voisines = trouver_tuiles_voisines(tuile);
+  console.log(tuiles_voisines);
+
+  Object.keys(tuiles_voisines).forEach((key) => {
+    if(tuiles_voisines[key]) {
+      let tuile = tuiles_voisines[key];
+      tuile.afficher();
+    }
   });
 }
 
+function creer_images () {
+  return config.sources.map((source) => { return new Image (source) });
+}

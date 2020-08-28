@@ -34,14 +34,8 @@ var config = {
   ],
   tuiles: {
     taille: { 
-      x: {
-        valeur: 200,
-        unite: "vw"
-      },
-      y: {
-        valeur: 200,
-        unite: "vh" 
-      },
+      x: { valeur: 200, unite: "vw" },
+      y: { valeur: 200, unite: "vh" },
     },
     liste: []
   }
@@ -69,10 +63,12 @@ window.onload = function () {
   canva.addEventListener("touchend", terminer_translation_touch);
 
   // Creer la premiere tuile
-  let tuile = new Tuile({x: 0, y: 0}, config.sources.map((source) => { return new Image (source) }));
-  config.tuiles.liste.push(tuile);
-  config.canva.appendChild(tuile.element);
+  new Tuile({x: 0, y: 0}, creer_images());
 
+  // Navigation
+  window.setInterval(function () {
+    maj_tuiles_visibles();
+  }, 2000);
 }
 
 function hide_modal () {
@@ -162,7 +158,5 @@ function translation_scroll (ev) {
 
 function appliquer_transform (tuile) {
   tuile.element.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) "; 
-
-  // Navigation
-  maj_tuiles_visibles();
 }
+
