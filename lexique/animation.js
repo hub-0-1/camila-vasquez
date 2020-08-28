@@ -28,6 +28,23 @@ class Tuile {
       this.element.appendChild(image.element);
     });
   }
+
+  est_visible () {
+    let rect = this.element.getBoundingClientRect();
+
+    let threshold = 0;
+
+    const vpWidth = window.innerWidth;
+    const vpHeight = window.innerHeight;
+
+    const above = rect && rect.bottom - threshold <= 0;
+    const below = rect && rect.top - vpHeight + threshold >= 0;
+    const left = rect && rect.right - threshold <= 0;
+    const right = rect && rect.left - vpWidth + threshold >= 0;
+    const inside = !!rect && !above && !below && !left && !right;
+
+    return inside;
+  }
   
   positionner_images () {
     console.log("positionner_images");
@@ -110,12 +127,14 @@ function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }
 // TODO //
 function maj_tuiles_visibles () {
   tuiles_visibles().forEach((tuile) => {
-    afficher_tuiles_voisines(tuiles);
+    afficher_tuiles_voisines(tuile);
   })
 }
 
 function tuiles_visibles () {
-  return config.tuiles.liste;
+  return config.tuiles.liste.filter((tuile) => {
+    return tuile.est_visible();
+  });
 }
 
 function afficher_tuiles_voisines (tuile) {

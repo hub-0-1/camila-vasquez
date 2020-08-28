@@ -171,5 +171,5 @@ function appliquer_transform (tuile) {
   tuile.element.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) "; 
 
   // Navigation
-  //maj_tuiles_visibles();
+  maj_tuiles_visibles();
 }

@@ -149,6 +149,7 @@ main #animation-lexique ~ #modal-officiel {
   display: none;
 }
 main #animation-lexique .tuile {
+  border: 2px solid red;
   width: 200vw;
   margin-left: -50vw;
   height: 200vh;
