@@ -147,7 +147,7 @@ main #animation-lexique ~ #modal-interpretation {
   top: 10%;
   bottom: 10%;
   left: 10%;
-  right: 40%;
+  width: 30%;
   display: none;
 }
 main #animation-lexique ~ #modal-interpretation .container-contenu-modal {
@@ -165,8 +165,8 @@ main #animation-lexique ~ #modal-officiel {
   position: fixed;
   top: 10%;
   bottom: 10%;
-  left: 60%;
-  right: 90%;
+  right: 10%;
+  width: 30%;
   display: none;
 }
 main #animation-lexique ~ #modal-officiel .container-contenu-modal {
