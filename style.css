@@ -215,6 +215,9 @@ main #animation-tableau-blanc + #consignes #introduction .couleur-trait,
 main #animation-tableau-blanc + #consignes #lancement .couleur-trait {
   color: #f19731;
 }
+main #animation-tableau-blanc + #consignes #lancement {
+  text-transform: uppercase;
+}
 main #animation-tableau-blanc + #consignes audio {
   display: none;
 }

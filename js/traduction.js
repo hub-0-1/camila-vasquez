@@ -36,6 +36,20 @@ var traduction = {
         tableau_blanc: "Tableau blanc",
         cartographie: "Cartographie",
         autre_langue: "EN"
+      },
+      tableau: {
+        intro: {
+          ligne1: "Fermez les yeux",
+          ligne2: "Écoutez",
+          ligne3: "Bougez la souris en maintenant le clic enfoncé",
+          ligne4: "Répondez au son spontanément",
+          ligne5: "À la fin, ouvrez les yeux et contemplez"
+        },
+        lancement: {
+          ligne1: "Pour commencer",
+          ligne2: "Cliquez",
+          ligne3: "Ici"
+        }
       }
     }
   },
@@ -47,6 +61,20 @@ var traduction = {
         tableau_blanc: "White board",
         cartographie: "Cartography",
         autre_langue: "FR"
+      },
+      tableau: {
+        intro: {
+          ligne1: "Close your eyes",
+          ligne2: "Listen",
+          ligne3: "Move the mouse while maintaining your click",
+          ligne4: "Spontaniously respond to the sound",
+          ligne5: "At the end, open your eyes and see"
+        },
+        lancement: {
+          ligne1: "To start",
+          ligne2: "Click",
+          ligne3: "Here"
+        }
       }
     }
   }
