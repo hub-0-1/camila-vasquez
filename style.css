@@ -121,6 +121,7 @@ main #animation-design-typographique p {
   overflow-x: scroll;
   width: 99%;
   white-space: nowrap;
+  line-height: 200px;
   font-size: 2em;
   /* Hide scrollbar for Chrome, Safari and Opera */
   /* Hide scrollbar for IE, Edge and Firefox */

@@ -5,10 +5,6 @@ var dernier_x = 0;
 
 window.onload = function () {
 
-
-  // Init
-  init_traduction();
-
   let texte = document.getElementById("texte");
   texte.scroll({ left: 1, top: 0 });
 
