@@ -21,12 +21,6 @@
     <link rel="stylesheet" href="https://unpkg.com/iv-viewer/dist/iv-viewer.css">
   </head>
   <body>
-    <header>
-      <a href="/"><img id="logo" class="icone" src="../images/logo.png"></a>
-      <nav>
-        <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
-      </nav>
-    </header>
     <main>
       <div id="animation-cartographie">
         <img src="../images/1_100p.jpg" class="image">
@@ -35,6 +29,9 @@
     <footer>
       <p id="copyright">@2020 Camila Vasquez. Tous droits réservés.</p>
     </footer>
+
+    <a id="container-logo" href="/"><img id="logo" class="icone" src="../images/logo.png"></a>
+    <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
   <script>
     const viewer = new ImageViewer(document.querySelector("#animation-cartographie img"), { 
       snapView: false,
