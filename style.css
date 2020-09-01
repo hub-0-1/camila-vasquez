@@ -183,6 +183,7 @@ main #animation-lexique ~ #modal-officiel .container-contenu-modal img {
 }
 main #animation-lexique .tuile {
   position: absolute;
+  transition: opacity 1s;
 }
 main #animation-lexique .tuile .image-flottante {
   position: absolute;
