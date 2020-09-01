@@ -74,11 +74,14 @@ class Image {
 
   afficher_definitions () {
 
-    afficher_definition_officielle(this.source, config.textes.fr.apnee.original);
+    // TODO lier le texte a l'image
+    let langue = document.getElementById("langue").getAttribute("data-langue");
+
+    afficher_definition_officielle(this.source, config.textes[langue].apnee.original);
     window.setTimeout(cacher_definition_officielle, config.temps_apparition_definition);
 
     window.setTimeout(() => {
-      afficher_definition_interpretation(this.source, config.textes.fr.apnee.interpretation);
+      afficher_definition_interpretation(this.source, config.textes[langue].apnee.interpretation);
     }, config.temps_apparition_definition);
 
     window.setTimeout(cacher_definition_interpretation, config.temps_apparition_definition * 2);
