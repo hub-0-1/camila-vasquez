@@ -27,62 +27,51 @@ body {
   }
 }
 
-header {
+#container-logo {
   position: fixed;
-  z-index: 1;
-  width: 95vw;
-  height: @hauteur-header;
-  padding: 0 20px;
-  margin: 0 auto;
-  background-color: transparent;
+  top: 10px;
+  left: 25px;
+  width: 100px;
 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: block;
 
+  #logo {
+    width: 100%;
+  }
+}
+
+#hamburger {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  right: 100px;
+  width: 100px;
+
+  background-image: url("images/logo_menu_rlf.png");
+  background-size: contain;
   color: white;
+  text-align: center;
 
-  a {
-    display: block;
-    height: 75%;
-    color: white;
+  mix-blend-mode: darken;
+  
+  text-transform: uppercase;
+}
 
-    #logo {
-      height: 100%;
-    }
-  }
+#langue {
+  position: fixed;
+  top: 0;
+  height: 45px;
+  right: 50px;
+  width: 75px;
 
-  nav {
-    width: 75%;
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    flex-direction: row-reverse;
+  background-image: url("images/logo_menu_rlf.png");
+  background-size: contain;
+  color: white;
+  text-align: center;
 
-    &.inverse {
-      #langue, .item-menu > a {
-        color: black;
-      }
-
-      #hamburger {
-        filter: none;
-      }
-    }
-
-    #hamburger {
-      filter: invert();
-    }
-
-    #langue {
-      color: white;
-      margin-left: 2%;
-    }
-
-    img {
-      height: 50%;
-    }
-  }
+  mix-blend-mode: darken;
+  
+  text-transform: uppercase;
 }
 
 #menu {

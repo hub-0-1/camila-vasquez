@@ -19,51 +19,41 @@ body .italic {
 body .optima {
   font-family: 'Belleza', sans-serif;
 }
-header {
+#container-logo {
   position: fixed;
-  z-index: 1;
-  width: 95vw;
-  height: 75px;
-  padding: 0 20px;
-  margin: 0 auto;
-  background-color: transparent;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: white;
-}
-header a {
+  top: 10px;
+  left: 25px;
+  width: 100px;
   display: block;
-  height: 75%;
+}
+#container-logo #logo {
+  width: 100%;
+}
+#hamburger {
+  position: fixed;
+  top: 0;
+  height: 60px;
+  right: 100px;
+  width: 100px;
+  background-image: url("images/logo_menu_rlf.png");
+  background-size: contain;
   color: white;
+  text-align: center;
+  mix-blend-mode: darken;
+  text-transform: uppercase;
 }
-header a #logo {
-  height: 100%;
-}
-header nav {
-  width: 75%;
-  height: 100%;
-  display: flex;
-  justify-content: end;
-  align-items: center;
-  flex-direction: row-reverse;
-}
-header nav.inverse #langue,
-header nav.inverse .item-menu > a {
-  color: black;
-}
-header nav.inverse #hamburger {
-  filter: none;
-}
-header nav #hamburger {
-  filter: invert();
-}
-header nav #langue {
+#langue {
+  position: fixed;
+  top: 0;
+  height: 45px;
+  right: 50px;
+  width: 75px;
+  background-image: url("images/logo_menu_rlf.png");
+  background-size: contain;
   color: white;
-  margin-left: 2%;
-}
-header nav img {
-  height: 50%;
+  text-align: center;
+  mix-blend-mode: darken;
+  text-transform: uppercase;
 }
 #menu {
   position: fixed;

@@ -12,7 +12,7 @@
 
     <title>Camila Vasquez - Repenser la famille</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
 
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
     <script src="js/menu.js"></script>
@@ -21,13 +21,7 @@
     <script src="animation.js"></script>
   </head>
   <body>
-    <header>
-      <a href="/"><img id="logo" class="icone" src="images/logo.png"></a>
-      <nav>
-        <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
-        <img id="hamburger" src="images/hamburger.png">
-      </nav>
-    </header>
+
     <main>
       <video autoplay muted loop id="video-background">
         <source src="videos/background1.mp4" type="video/mp4">
@@ -47,5 +41,10 @@
       <div class="item-menu"><div class="index">04.</div><a class="oeuvre" href="tableau_blanc/index.html" data-i18n="header.tableau_blanc"></a></div>
       <div class="item-menu"><div class="index">05.</div><a class="oeuvre" href="info/index.html" data-i18n="header.info"></a></div>
     </div>
+
+    <a id="container-logo" href="/"><img id="logo" class="icone" src="images/logo.png"></a>
+    <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
+    <div id="hamburger">Menu</div>
+
   </body>
 </html>
