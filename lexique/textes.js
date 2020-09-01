@@ -77,7 +77,81 @@ var textes = {
     }
   },
   en: {
-
+    belong: {
+      mot: "Belong",
+      original: "$belong$ @intr. verb.@ _1._ %To be part of (something).% *To belong to a well-established family.*",
+      interpretation: "$belonging to a community$ _1._ %Alternative or complementary formula to the nuclear family, which offers a possible solution to the solitude and isolation of the individual, to the separation of couples and to the dissolution of extended family ties, phenomena of the current era, characteristics of capitalist societies.%"
+    },
+    apnea: {
+      mot: "Apnea",
+      original: "$apnea$ @noun.@ _1._ %Temporary cessation of breathing.%",
+      interpretation: "$in apnea$ _1._ %Psychological state which is characterized by an interior movement allowing the individual to disappear, to become invisible, when one considers it necessary or useful.% "
+    },
+    breach: {
+      mot: "Breach",
+      original: "$breach$ @noun.@ _1._ %Small gap on an object from which a shard has come off.%",
+      interpretation: "$seize the gaps in time$@loc.@ _1._ %Possibility that suddenly presents itself to a parent to seize a precise moment in the middle of an indefinite continuity of priority obligations (ex. Preparing meals, paying bills, completing school permission slips, etc.), to leave room for intuition.%"
+    },
+    upset: {
+      mot: "Upset",
+      original: "$upset$ @transitive verb.@_1._@Fam.@ %To disrupt, to turn upside down.%",
+      interpretation: "$upset heterosexuality$ _1._ %During intercourse, change the positions, the modes and the functions of heterosexual partners.%_2._%To reverse the sexual meaning, habits, and behaviors related to the satisfaction of the erotic needs between woman and man.%_3._%How to subvert the patriarchal power system in bed.%"
+    },
+    equal: {
+      mot: "Equal",
+      original: "$equal$ @adj., noun.@ _1._ @(People, things)@ %Which is of the same quantity, size, nature, quality or value.% _identical, same; equivalent._ @/ antonym.@ _unequal; different._ _2._ @(People)@ %Who are in the same rank; who have the same rights and charges.%",
+      interpretation: "$to be equal$ _1._ @idiom.@ %In a heterosexual couple, sharing equally both the domestic tasks and the mental burden - which can be defined as 'the work of management, organization and planning which is at the same time intangible, unavoidable and constant, and which has for objectives the satisfaction of everyone's needs and the smooth running of the residence. '. - and this, despite the flagrant contradiction between discourse and practice regarding equality between men and women at home.%"
+    },
+    do: {
+      mot: "Do",
+      original: "$do$ @trans. verb.@ _1._ %Realize outside oneself (a material thing).% *Make a house.* _build, construct._ *Make a piece of furniture.* _produce_ *Make the bread.* _prepare_ *Make a dress.* *>* _make._ *Make a picture.* _create._ _2._ %Realize (an abstract thing).% *Make a law.* _establish, to institute._ *Make a work of art.* _compose; create._ *Make a poem, a sonata.* _write._ ",
+      interpretation: "$do what you can and do as little as possible$ _1._ %Adaptation strategy by parents from large families which aims to maintain good mental health and, at the same time, provide for the needs of their children.%"
+    },
+    crack: {
+      mot: "Crack",
+      original: "$crack$ @trans. verb.@ _1._ %Divide by fissures% _crack, split._",
+      interpretation: "$fissuring monogamy$ _1._ %Dismantle the hierarchy of human relations which places the lover at the top of the pyramid to the detriment of other ties of kinship, family, friendship, neighborhood, etc.%"
+    },
+    reverse: {
+      mot: "Reverse",
+      original: "$reverse$ @trans. verb.@ _1._ %Change the position, the order. >% _invert._ ",
+      interpretation: "$reverse roles$ _1._ %In a heterosexual couple, an explicit or implicit understanding that the man takes care of tasks traditionally considered to be feminine (e.g. taking care of children) and the woman devotes herself to intellectual, manual or physical work or any task usually considered to be masculine (e.g. scientific research).% _2._ %Modality that has the advantage of developing empathy between partners.% *Stay-at-home father and provider mother.*"
+    },
+    play: {
+      mot: "Play",
+      original: "$play$ @intransitive verb..@ _1._ %Play a game.% @Have fun.@",
+      interpretation: "$play among adults$ _1._ %Activity which decreases in frequency and intensity or which disappears completely in humans during the transition to adulthood, preventing the individual from reaping the benefits of said activity: fun, discovery, imagination, learning, inspiration, creativity, focus of mind, distraction, excitement, joy, relaxation and stimulation, to name a few.% "
+    },
+    mistifi: {
+      mot: "Mistifi",
+      original: "$Mistifi$ @noun.@ _1._ %Ideal society located in an imaginary geography where multiple family utopias are possible and coexist.% *Down with the image of the perfect family!*",
+      interpretation: "$Mistifi$ @noun.@ _1._ %Ideal society located in an imaginary geography where multiple family utopias are possible and coexist.% *Down with the image of the perfect family!*"
+    },
+    mountain: {
+      mot: "Mountain",
+      original: "$mountain$ @noun.@ _1._ %Significant elevation of the land.% _eminence, height, mount._ _2._ @loc.@ %Metaphor that designates the family as being what occupies most of the space in the house and in life, while also being what is most beautiful.%",
+      interpretation: "$mountain$ @noun.@ _1._ %Significant elevation of the land.% _eminence, height, mount._ _2._ @loc.@ %Metaphor that designates the family as being what occupies most of the space in the house and in life, while also being what is most beautiful.%"
+    },
+    presence: {
+      mot: "Presence",
+      original: "$presence$ @noun.@ _1._ %Being physically somewhere near someone.% @/antonym.@  _abscence._ _2._ %Disposition of mind that allows access to love for members of one’s family, beyond overwork, the demands of daily life, of worries or of cohabitation.%",
+      interpretation: "$presence$ @noun.@ _1._ %Being physically somewhere near someone.% @/antonym.@  _abscence._ _2._ %Disposition of mind that allows access to love for members of one’s family, beyond overwork, the demands of daily life, of worries or of cohabitation.%"
+    },
+    refuge: {
+      mot: "Take refuge",
+      original: "$take refuge$ @idiom.@ _1._ %To withdraw (to a place) to take shelter there.%",
+      interpretation: "$take refuge in the bathroom$ _1._ %To isolate oneself in the bathroom for unusual purposes, to escape the family and find a space alone or as a couple.%"
+    },
+    work: {
+      mot: "Work",
+      original: "$work$ @intransitive verb.@ _1._ %To act in a sustained manner, with more or less effort, to obtain a useful result (intellectually, manually).@Antonym.@ _to have fun, to be unemployed, to rest._ _2._ %To practice a professional activity, a trade.%",
+      interpretation: "$never work$ _1._ %Act of resistance to capitalism which consists in rebalancing personal life - and, eventually, society - by dividing one's time between family and friends, political life, spiritual life and individual activities, and refusing to devote oneself to productive life, which occupies too big a space in today's world for a large majority of adults.%"
+    },
+    watch: {
+      mot: "Watch",
+      original: "$watch$ @trans. verb.@ _1._ %Make sure to see, apply yourself to seeing (someone, something).% _examine, observe._",
+      interpretation: "$looking at the house from the inside$ _1._ @idiom.@ %Ability to examine one's home when it is in disorder without experiencing commotion and, on the contrary, radiate a peaceful beam of light which reflects harmony in the lived space.%"
+    }
   }
 }
 
