@@ -31,10 +31,10 @@ var traduction = {
   fr: {
     translation: {
       header: {
-        design_typo: "Design typographique",
-        lexique: "Lexique",
-        tableau_blanc: "Tableau blanc",
-        cartographie: "Cartographie",
+        design_typo: "Là où nous passons du temps ensemble",
+        lexique: "Bref lexique illustré non exhaustif",
+        tableau_blanc: "Dessins sonores",
+        cartographie: "Collage de collages",
         autre_langue: "EN"
       },
       tableau: {
