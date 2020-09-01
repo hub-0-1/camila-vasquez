@@ -73,14 +73,15 @@ class Image {
   }
 
   afficher_definitions () {
-    afficher_definition_interpretation(this.source, "texte1");
-    window.setTimeout(cacher_definition_interpretation, config.temps_apparition_definition);
+
+    afficher_definition_officielle(this.source, config.textes.fr.apnee.original);
+    window.setTimeout(cacher_definition_officielle, config.temps_apparition_definition);
 
     window.setTimeout(() => {
-      afficher_definition_officielle(this.source, "texte2");
+      afficher_definition_interpretation(this.source, config.textes.fr.apnee.interpretation);
     }, config.temps_apparition_definition);
 
-    window.setTimeout(cacher_definition_officielle, config.temps_apparition_definition * 2);
+    window.setTimeout(cacher_definition_interpretation, config.temps_apparition_definition * 2);
   }
 }
 

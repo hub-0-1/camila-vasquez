@@ -100,13 +100,13 @@ function afficher_definition_officielle (src_image, texte) {
 }
 
 function cacher_definition_officielle () {
-  let modal = document.getElementById("modal-officiel");
-  modal.style.display = "none";
-  
   // Afficher les tuiles
   [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
     tuile.style.opacity = "1";
   });
+
+  let modal = document.getElementById("modal-officiel");
+  modal.style.display = "none";
 }
 
 function commencer_translation (e) {
