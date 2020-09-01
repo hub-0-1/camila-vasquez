@@ -75,11 +75,6 @@ window.onload = function () {
 function afficher_definition_interpretation (src_image, texte) {
   let modal = document.getElementById("modal-interpretation");
   
-  // Cacher les tuiles
-  [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
-    tuile.style.opacity = "0";
-  });
-
   // Afficher les definitions
   modal.style.display = "block";
   modal.querySelector("img").src = src_image;
@@ -87,11 +82,23 @@ function afficher_definition_interpretation (src_image, texte) {
 }
 
 function cacher_definition_interpretation () {
+
+  // Afficher les tuiles
+  [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
+    tuile.style.opacity = "1";
+  });
+
   let modal = document.getElementById("modal-interpretation");
   modal.style.display = "none";
 }
 
 function afficher_definition_officielle (src_image, texte) {
+  
+  // Cacher les tuiles
+  [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
+    tuile.style.opacity = "0";
+  });
+
   let modal = document.getElementById("modal-officiel");
 
   modal.style.display = "block";
@@ -100,11 +107,7 @@ function afficher_definition_officielle (src_image, texte) {
 }
 
 function cacher_definition_officielle () {
-  // Afficher les tuiles
-  [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
-    tuile.style.opacity = "1";
-  });
-
+  
   let modal = document.getElementById("modal-officiel");
   modal.style.display = "none";
 }
