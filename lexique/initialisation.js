@@ -113,6 +113,9 @@ function cacher_definition_officielle () {
 }
 
 function commencer_translation (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
   config.souris.x = null;
   config.souris.y = null;
 
@@ -120,6 +123,9 @@ function commencer_translation (e) {
 }
 
 function commencer_translation_touch (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
   config.touch.x = null;
   config.touch.y = null;
 
