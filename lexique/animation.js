@@ -94,12 +94,8 @@ function maj_tuiles_visibles () {
   })
 }
 
-function afficher_texte_imagine () { }
-function afficher_texte_original () { }
-
 function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }
 
-// TODO //
 function trouver_tuiles_voisines (tuile_centrale) {
 
   let voisines = {
@@ -184,7 +180,6 @@ function trouver_tuiles_voisines (tuile_centrale) {
   if(!voisines.gauche) {
     voisines.gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y}, creer_images());
   }
-
 
   return voisines;
 }
