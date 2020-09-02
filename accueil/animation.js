@@ -1,8 +1,16 @@
 var config = {
-  souris: { x: null, y: null },
-  touch: { x: null, y: null },
-  largeur: 0,
-  hauteur: 0,
+  elements_flottants: {
+
+  },
+  navigation: {
+    souris: { x: null, y: null },
+    touch: { x: null, y: null },
+  },
+  ecran: {
+    largeur: 0,
+    hauteur: 0,
+  },
+  vitesse_maj_tuiles_visibles: 250,
   rapport_image_ecran: 6,
   scale_ext_canva: 2,
   images_src: [
@@ -38,7 +46,35 @@ var config = {
     { x: -1, y: 0 }
   ],
   positionnement_actuel: 0,
-  nb_images_initiales: 6 
+  nb_images_initiales: 6, 
+  sources: [
+    'madonna1.jpg',
+    'madonna2.jpg',
+    'madonna3.jpg',
+    'madonna4.jpg'
+  ],
+  positions_images_tuiles: [
+    { x: "3%", y: "4%" },
+    { x: "7%", y: "15%" },
+    { x: "1%", y: "75%" },
+    { x: "10%", y: "35%" },
+    { x: "46%", y: "20%" },
+    { x: "33%", y: "45%" },
+    { x: "74%", y: "64%" },
+    { x: "81%", y: "92%" },
+    { x: "51%", y: "52%" },
+    { x: "31%", y: "72%" },
+    { x: "58%", y: "82%" },
+    { x: "78%", y: "2%" },
+    { x: "89%", y: "72%" }
+  ],
+  tuiles: {
+    taille: { 
+      x: { valeur: 200, unite: "vw" },
+      y: { valeur: 200, unite: "vh" },
+    },
+    liste: []
+  }
 }
 
 window.onload = function () {
@@ -53,8 +89,8 @@ window.onload = function () {
 
   // Dimensions animation
   let bounding = canva.getBoundingClientRect();
-  config.largeur = bounding.width;
-  config.hauteur = bounding.height;
+  config.ecran.largeur = bounding.width;
+  config.ecran.hauteur = bounding.height;
 
   // Appliquer une transformation sur chaque image
   canva.addEventListener("wheel", translation_scroll);
@@ -75,27 +111,12 @@ window.onload = function () {
   window.setInterval(function () { 
     canva.appendChild(creer_image());
   }, config.delais_apparition_image);
-}
 
-function animer_images () {
-  config.images.forEach((image) => {
-    // Flotement - translation
-    let top_px = parseFloat(image.style.top.slice(0, -2));
-    let left_px = parseFloat(image.style.left.slice(0, -2));
+  // Creer la premiere tuile
+  new Tuile({x: 0, y: 0}, creer_images());
 
-    let deltaX = parseFloat(image.getAttribute("data-dx"));
-    let deltaY = parseFloat(image.getAttribute("data-dy"));
-
-    image.style.top = (top_px + deltaY) + "px";
-    image.style.left = (left_px + deltaX) + "px";
-
-    // Flotement - rotation
-    let delta_rotation = parseInt(image.getAttribute("data-dr"));
-    let rotation_originale = parseInt(image.getAttribute("data-r"));
-    image.setAttribute("data-r", rotation_originale + delta_rotation);
-
-    appliquer_transform(image);
-  });
+  // Mise à jour des tuiles visibles
+  window.setInterval(maj_tuiles_visibles, config.vitesse_maj_tuiles_visibles);
 }
 
 function translation_scroll (ev) {
@@ -105,95 +126,13 @@ function translation_scroll (ev) {
   config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation;
   config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation;
 
-  config.images.forEach((image) => { appliquer_transform(image); });
-}
-
-function appliquer_transform (image) {
-  image.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) rotate(" + image.getAttribute("data-r") + "deg)";
-}
-
-function creer_image () {
-  let img = document.createElement("img");
-  config.images.push(img);
-
-  // Info de base
-  img.src = "images/" + src_image_aleatoire();
-  img.className = "image-flottante"
-  img.alt = "Madonna";
-  img.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
-  img.addEventListener("click", (e) => {
-    show_modal(e.target.src);
-  });
-  img.setAttribute("data-r", 0);
-
-  // Position initiale
-  positionner_image(img);
-
-  // Deplacement
-  determiner_vecteur_deplacement(img);
-
-  // Rotation
-  determiner_sens_rotation(img);
-
-  // Prochaine position d'apparition
-  config.positionnement_actuel = (config.positionnement_actuel + 1) % config.positionnements.length 
-  
-  // Supression de l'image apres un certain temps
-  window.setTimeout(function () {
-    img.remove();
-    delete img;
-  }, config.delais_suppression_image);
-
-  return img; 
-}
-
-function positionner_image (image) {
-  let coordonnees = { };
-  let pos_init = config.positionnements[config.positionnement_actuel];
-
-  if(pos_init.x == -1) { coordonnees.x = Math.round(Math.random() * -1 * config.largeur * config.scale_ext_canva) - config.largeur; }
-  else if(pos_init.x == 0) { coordonnees.x = Math.round(Math.random() * config.largeur); }
-  else if(pos_init.x == 1) { coordonnees.x = Math.round(Math.random() * 1 * config.largeur * config.scale_ext_canva) + config.largeur; }
-
-  if(pos_init.y == -1) { coordonnees.y = Math.round(Math.random() * -1 * config.hauteur * config.scale_ext_canva) - config.hauteur; }
-  else if(pos_init.y == 0) { coordonnees.y = Math.round(Math.random() * config.hauteur); }
-  else if(pos_init.y == 1) { coordonnees.y = Math.round(Math.random() * 1 * config.hauteur * config.scale_ext_canva) + config.hauteur; }
-
-  image.style.left = coordonnees.x + "px";
-  image.style.top = coordonnees.y + "px";
-}
-
-function determiner_vecteur_deplacement (image) {
-  let vecteur = { };
-  let pos_init = config.positionnements[config.positionnement_actuel];
-
-  if(pos_init.x == -1) { vecteur.x = round_decimal((Math.random() / 2) + 0.5); } // [0.5, 1]
-  else if(pos_init.x == 0) { vecteur.x = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; } // [-1, -0.5], [0.5, 1]
-  else if(pos_init.x == 1) { vecteur.x = round_decimal((Math.random() / 2) - 1); } // [-1, -0.5]
-
-  if(pos_init.y == -1) { vecteur.y = round_decimal((Math.random() / 2) + 0.5); }
-  else if(pos_init.y == 0) { vecteur.y = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; }
-  else if(pos_init.y == 1) { vecteur.y = round_decimal((Math.random() / 2) - 1); }
-
-  vecteur = { x: -1, y: -1 }
-
-  image.setAttribute("data-dx", vecteur.x * config.multiplicateur_vecteur);
-  image.setAttribute("data-dy", vecteur.y * config.multiplicateur_vecteur);
-}
-
-function determiner_sens_rotation (image) {
-  image.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1));
-}
-
-function src_image_aleatoire () {
-  let index = Math.round(Math.random() * (config.images_src.length - 1));
-  return config.images_src[index];
+  config.images.forEach((image) => { appliquer_transform_image(image); });
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
 
 function round_decimal (nb) {
   return Math.round(nb * 10) / 10;
 }
-
 
 function hide_modal () {
   let modal = document.getElementById("modal");
@@ -207,15 +146,15 @@ function show_modal (image_url) {
 }
 
 function commencer_translation (e) {
-  config.souris.x = null;
-  config.souris.y = null;
+  config.navigation.souris.x = null;
+  config.navigation.souris.y = null;
 
   config.canva.addEventListener("mousemove", translation);
 }
 
 function commencer_translation_touch (e) {
-  config.touch.x = null;
-  config.touch.y = null;
+  config.navigation.touch.x = null;
+  config.navigation.touch.y = null;
 
   config.canva.addEventListener("touchmove", translation_touch);
 }
@@ -232,38 +171,40 @@ function translation_touch (e) {
   e.stopPropagation();
   e.preventDefault();
 
-  let x0 = config.touch.x;
-  let y0 = config.touch.y;
+  let x0 = config.navigation.touch.x;
+  let y0 = config.navigation.touch.y;
 
-  config.touch.x = e.touches[0].screenX;
-  config.touch.y = e.touches[0].screenY;
+  config.navigation.touch.x = e.touches[0].screenX;
+  config.navigation.touch.y = e.touches[0].screenY;
 
   if(x0 == null && y0 == null) return;
 
-  let delta_x = config.touch.x - x0;
-  let delta_y = config.touch.y - y0;
+  let delta_x = config.navigation.touch.x - x0;
+  let delta_y = config.navigation.touch.y - y0;
 
   config.translate.x += delta_x * config.vitesse_translation;
   config.translate.y += delta_y * config.vitesse_translation;
 
-  config.images.forEach((image) => { appliquer_transform(image); });
+  config.images.forEach((image) => { appliquer_transform_image(image); });
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
 
 function translation (e) {
 
-  let x0 = config.souris.x;
-  let y0 = config.souris.y;
+  let x0 = config.navigation.souris.x;
+  let y0 = config.navigation.souris.y;
 
-  config.souris.x = e.clientX;
-  config.souris.y = e.clientY;
+  config.navigation.souris.x = e.clientX;
+  config.navigation.souris.y = e.clientY;
 
   if(x0 == null && y0 == null) return;
 
-  let delta_x = config.souris.x - x0;
-  let delta_y = config.souris.y - y0;
+  let delta_x = config.navigation.souris.x - x0;
+  let delta_y = config.navigation.souris.y - y0;
 
   config.translate.x += delta_x * config.vitesse_translation;
   config.translate.y += delta_y * config.vitesse_translation;
 
-  config.images.forEach((image) => { appliquer_transform(image); });
+  config.images.forEach((image) => { appliquer_transform_image(image); });
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }

@@ -1,4 +1,8 @@
 var config = {
+  ecran: {
+    largeur: 0,
+    hauteur: 0
+  },
   souris: { x: null, y: null },
   touch: { x: null, y: null },
   translate: { x: 0, y: 0 },
@@ -55,8 +59,8 @@ window.onload = function () {
 
   // Dimensions animation
   let bounding = canva.getBoundingClientRect();
-  config.largeur = bounding.width;
-  config.hauteur = bounding.height;
+  config.ecran.largeur = bounding.width;
+  config.ecran.hauteur = bounding.height;
 
   // Appliquer une transformation sur chaque image
   canva.addEventListener("wheel", translation_scroll);
@@ -164,7 +168,7 @@ function translation_touch (e) {
   config.translate.x += delta_x * config.vitesse_translation;
   config.translate.y += delta_y * config.vitesse_translation;
 
-  config.tuiles.liste.forEach((tuile) => { appliquer_transform(tuile); });
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
 
 function translation (e) {
@@ -185,7 +189,7 @@ function translation (e) {
   config.translate.x += delta_x * config.vitesse_translation;
   config.translate.y += delta_y * config.vitesse_translation;
 
-  config.tuiles.liste.forEach((tuile) => { appliquer_transform(tuile); });
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
 
 function translation_scroll (ev) {
@@ -195,10 +199,5 @@ function translation_scroll (ev) {
   config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation * 3;
   config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation * 3;
 
-  config.tuiles.liste.forEach((image) => { appliquer_transform(image); });
+  config.tuiles.liste.forEach((image) => { appliquer_transform_tuile(image); });
 } 
-
-function appliquer_transform (tuile) {
-  tuile.element.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) "; 
-}
-

@@ -7,7 +7,7 @@ class Tuile {
     // Info de base
     this.element.className = "tuile";
     this.element.alt = "Tuile";
-    this.element.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px"
+    this.element.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px"
 
     // Positionner la tuile
     this.element.style.width = config.tuiles.taille.x.valeur + config.tuiles.taille.x.unite;
@@ -21,20 +21,20 @@ class Tuile {
 
     // Postionner les images
     let positions_images = deep_copy(config.positions_images_tuiles);
-    images.forEach((image) => {
+    this.images.forEach((image) => {
       let position_image = positions_images.pop();
       image.element.style.left = position_image.x;
       image.element.style.top = position_image.y;
     });
 
     // Ajouter les images
-    images.forEach((image) => {
+    this.images.forEach((image) => {
       this.element.appendChild(image.element);
     });
 
     // Finaliser
     config.tuiles.liste.push(this);
-    config.canva.appendChild(this.element);
+    config.canva.prepend(this.element);
   }
 
   est_visible () {
@@ -55,6 +55,8 @@ class Tuile {
   }
 
   afficher () { }
+  
+  cacher () { }
 }
 
 class Image {
@@ -67,7 +69,7 @@ class Image {
     this.element.className = "image-flottante";
     this.element.alt = "Madonna";
 
-    this.element.style.width = Math.round(config.largeur / config.rapport_image_ecran) + "px";
+    this.element.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px";
 
     this.element.addEventListener("click", this.afficher_definitions.bind(this));
   }
@@ -89,9 +91,13 @@ class Image {
 }
 
 function maj_tuiles_visibles () {
-  tuiles_visibles().forEach((tuile) => {
+  let liste_tuiles_visibles = tuiles_visibles();
+  let tuiles_invisibles = config.tuiles.liste.filter((tuile) => { return !liste_tuiles_visibles.includes(tuile) });
+
+  liste_tuiles_visibles.forEach((tuile) => {
     afficher_tuiles_voisines(tuile);
-  })
+  });
+
 }
 
 function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }
@@ -204,3 +210,8 @@ function afficher_tuiles_voisines (tuile) {
 function creer_images () {
   return config.sources.map((source) => { return new Image (source) });
 }
+
+function appliquer_transform_tuile (tuile) {
+  tuile.element.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) "; 
+}
+
