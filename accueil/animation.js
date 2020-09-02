@@ -27,7 +27,9 @@ var config = {
     'madonna11.jpg',
     'madonna12.jpg'
   ],
-  images: [],
+  images: {
+    liste: []
+  },
   translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
   ms_animation: 40,
@@ -126,7 +128,7 @@ function translation_scroll (ev) {
   config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation;
   config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation;
 
-  config.images.forEach((image) => { appliquer_transform_image(image); });
+  config.images.liste.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
 
@@ -185,7 +187,7 @@ function translation_touch (e) {
   config.translate.x += delta_x * config.vitesse_translation;
   config.translate.y += delta_y * config.vitesse_translation;
 
-  config.images.forEach((image) => { appliquer_transform_image(image); });
+  config.liste.images.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
 
@@ -205,6 +207,6 @@ function translation (e) {
   config.translate.x += delta_x * config.vitesse_translation;
   config.translate.y += delta_y * config.vitesse_translation;
 
-  config.images.forEach((image) => { appliquer_transform_image(image); });
+  config.images.liste.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }

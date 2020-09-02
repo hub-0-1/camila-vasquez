@@ -1,6 +1,6 @@
 function creer_image () {
   let img = document.createElement("img");
-  config.images.push(img);
+  config.images.liste.push(img);
 
   // Info de base
   img.src = "images/" + src_image_aleatoire();
@@ -22,7 +22,7 @@ function creer_image () {
   determiner_sens_rotation(img);
 
   // Prochaine position d'apparition
-  config.positionnement_actuel = (config.positionnement_actuel + 1) % config.positionnements.length 
+  config.positionnement_actuel = (config.positionnement_actuel + 1) % config.positionnements.length;
   
   // Supression de l'image apres un certain temps
   window.setTimeout(function () {
@@ -77,7 +77,7 @@ function src_image_aleatoire () {
 }
 
 function animer_images () {
-  config.images.forEach((image) => {
+  config.images.liste.forEach((image) => {
     // Flotement - translation
     let top_px = parseFloat(image.style.top.slice(0, -2));
     let left_px = parseFloat(image.style.left.slice(0, -2));
