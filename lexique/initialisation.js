@@ -133,10 +133,16 @@ function commencer_translation_touch (e) {
 }
 
 function terminer_translation (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
   config.canva.removeEventListener("mousemove", translation);
 }
 
 function terminer_translation_touch (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
   config.canva.removeEventListener("touchmove", translation_touch);
 }
 
