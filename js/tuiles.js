@@ -117,8 +117,6 @@ function trouver_tuiles_voisines (tuile_centrale) {
   }
 
   // Haut gauche
-  console.log(tuile_centrale.position);
-
   voisines.haut_gauche = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x - 1
             && tuile.position.y == tuile_centrale.position.y - 1) });
@@ -215,7 +213,6 @@ function creer_images () {
 }
 
 function appliquer_transform_tuile (tuile) {
-  console.log(config.tuiles.translate);
   tuile.element.style.transform = "translate(" + config.tuiles.translate.x + "px, " + config.tuiles.translate.y + "px) "; 
 }
 

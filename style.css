@@ -99,6 +99,7 @@ main #animation-accueil .image-flottante {
 }
 main #animation-accueil .tuile {
   position: absolute;
+  border: 2px solid red;
 }
 main #animation-accueil + #modal {
   display: none;
