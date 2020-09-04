@@ -97,6 +97,9 @@ main #animation-accueil {
 main #animation-accueil .image-flottante {
   position: absolute;
 }
+main #animation-accueil .tuile {
+  position: absolute;
+}
 main #animation-accueil + #modal {
   display: none;
   position: fixed;

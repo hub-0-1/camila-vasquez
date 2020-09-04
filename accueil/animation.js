@@ -63,7 +63,7 @@ var config = {
     { x: "89%", y: "72%" }
   ],
   tuiles: {
-    vitesse_maj_tuiles_visibles: 250,
+    vitesse_maj_tuiles_visibles: 5000,
     translate: { x: 0, y: 0 },
     taille: { 
       x: { valeur: 200, unite: "vw" },
