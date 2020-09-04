@@ -34,7 +34,9 @@ var traduction = {
         design_typo: "Là où nous passons du temps ensemble",
         lexique: "Bref lexique illustré non exhaustif",
         tableau_blanc: "Dessins sonores",
+        portraits: "Portraits à l'aveugle",
         cartographie: "Collage de collages",
+        info: "Info",
         autre_langue: "EN"
       },
       tableau: {
@@ -59,7 +61,9 @@ var traduction = {
         design_typo: "Design typo EN",
         lexique: "Lexique",
         tableau_blanc: "White board",
+        portraits: "Blind portraits",
         cartographie: "Cartography",
+        info: "Info",
         autre_langue: "FR"
       },
       tableau: {

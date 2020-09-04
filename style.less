@@ -74,8 +74,8 @@ body {
 
 #menu {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  bottom: 50%;
   left: 2%;
   right: 2%;
 
@@ -89,6 +89,7 @@ body {
 
   .item-menu {
     display: flex;
+    height: 100%;
 
     .index {
       font-weight: bold;
@@ -125,7 +126,6 @@ main {
 
     .tuile {
       position: absolute;
-      border: 2px solid red;
     }
 
     & + #modal {
@@ -344,6 +344,29 @@ main {
         }
       }
     }
+  }
+
+  #animation-portraits {
+    position: fixed;
+    top: 25%;
+    bottom: 25%;
+    left: 1%;
+    right: 1%;
+    
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    overflow: auto;
+
+    .paysage {
+      height: 70%;
+    }
+
+    .portrait {
+      height: 100%;
+    } 
+
   }
 }
 

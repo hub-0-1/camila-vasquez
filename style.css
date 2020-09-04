@@ -56,8 +56,8 @@ body .optima {
 }
 #menu {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 50%;
+  bottom: 50%;
   left: 2%;
   right: 2%;
   display: none;
@@ -69,6 +69,7 @@ body .optima {
 }
 #menu .item-menu {
   display: flex;
+  height: 100%;
 }
 #menu .item-menu .index {
   font-weight: bold;
@@ -99,7 +100,6 @@ main #animation-accueil .image-flottante {
 }
 main #animation-accueil .tuile {
   position: absolute;
-  border: 2px solid red;
 }
 main #animation-accueil + #modal {
   display: none;
@@ -265,6 +265,23 @@ main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion {
 }
 main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .couleur-trait {
   color: #f19731;
+}
+main #animation-portraits {
+  position: fixed;
+  top: 25%;
+  bottom: 25%;
+  left: 1%;
+  right: 1%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+main #animation-portraits .paysage {
+  height: 70%;
+}
+main #animation-portraits .portrait {
+  height: 100%;
 }
 @media only screen and (max-width: 600px) {
   header nav {
