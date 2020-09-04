@@ -284,6 +284,13 @@ main #animation-portraits .paysage {
 main #animation-portraits .portrait {
   height: 100%;
 }
+main #animation-portraits + #legende {
+  position: fixed;
+  top: 85%;
+  left: 1%;
+  right: 1%;
+  text-align: center;
+}
 @media only screen and (max-width: 600px) {
   header nav {
     justify-content: flex-end;
