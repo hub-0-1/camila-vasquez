@@ -215,6 +215,7 @@ function creer_images () {
 }
 
 function appliquer_transform_tuile (tuile) {
+  console.log(config.tuiles.translate);
   tuile.element.style.transform = "translate(" + config.tuiles.translate.x + "px, " + config.tuiles.translate.y + "px) "; 
 }
 

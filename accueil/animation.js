@@ -35,6 +35,7 @@ var config = {
   navigation: {
     souris: { x: null, y: null },
     touch: { x: null, y: null },
+    ajustement_vitesse_scroll: 3
   },
   ecran: {
     largeur: 0,
@@ -63,7 +64,8 @@ var config = {
     { x: "89%", y: "72%" }
   ],
   tuiles: {
-    vitesse_maj_tuiles_visibles: 5000,
+    vitesse_maj_tuiles_visibles: 250,
+    vitesse_translation: 1,
     translate: { x: 0, y: 0 },
     taille: { 
       x: { valeur: 200, unite: "vw" },
@@ -162,11 +164,11 @@ function translation_scroll (e) {
   e.stopPropagation();
   e.preventDefault();
 
-  config.images.parametres.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation;
-  config.images.parametres.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation;
+  config.images.parametres.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation * config.navigation.ajustement_vitesse_scroll;
+  config.images.parametres.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation * config.navigation.ajustement_vitesse_scroll;
 
-  config.tuiles.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation * 0.5;
-  config.tuiles.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation * 0.5;
+  config.tuiles.translate.x += Math.sign(e.deltaX) * -1 * config.tuiles.vitesse_translation;
+  config.tuiles.translate.y += Math.sign(e.deltaY) * -1 * config.tuiles.vitesse_translation;
 
   config.images.liste.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
@@ -190,8 +192,8 @@ function translation_touch (e) {
   config.images.parametres.translate.x += delta_x * config.vitesse_translation;
   config.images.parametres.translate.y += delta_y * config.vitesse_translation;
 
-  config.tuiles.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation * 0.5;
-  config.tuiles.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation * 0.5;
+  config.tuiles.translate.x += delta_x * config.tuiles.vitesse_translation;
+  config.tuiles.translate.y += delta_y * config.tuiles.vitesse_translation;
 
   config.liste.images.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
@@ -213,8 +215,8 @@ function translation (e) {
   config.images.parametres.translate.x += delta_x * config.vitesse_translation;
   config.images.parametres.translate.y += delta_y * config.vitesse_translation;
 
-  config.tuiles.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation * 0.5;
-  config.tuiles.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation * 0.5;
+  config.tuiles.translate.x += delta_x * config.tuiles.vitesse_translation;
+  config.tuiles.translate.y += delta_y * config.tuiles.vitesse_translation;
 
   config.images.liste.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
