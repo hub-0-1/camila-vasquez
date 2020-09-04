@@ -1,6 +1,36 @@
 var config = {
-  elements_flottants: {
-
+  images: {
+    liste: [],
+    parametres: {
+      translate: { x: 0, y: 0 },
+      interval_apparition_image: 1500,
+      delais_suppression_image: 1000 * 30, // 30 secondes
+    },
+    positionnements: [
+      { x: 0, y: 0 },
+      //{ x: -1, y: -1 },
+      //{ x: 0, y: -1 },
+      //{ x: 1, y: -1 },
+      { x: 1, y: 0 },
+      { x: 1, y: 1 },
+      { x: 0, y: 1 },
+      //{ x: -1, y: 1 },
+      { x: -1, y: 0 }
+    ],
+    sources: [
+      'madonna1.jpg',
+      'madonna2.jpg',
+      'madonna3.jpg',
+      'madonna4.jpg',
+      'madonna5.jpg',
+      'madonna6.jpg',
+      'madonna7.jpg',
+      'madonna8.jpg',
+      'madonna9.jpg',
+      'madonna10.jpg',
+      'madonna11.jpg',
+      'madonna12.jpg'
+    ],
   },
   navigation: {
     souris: { x: null, y: null },
@@ -10,51 +40,13 @@ var config = {
     largeur: 0,
     hauteur: 0,
   },
-  vitesse_maj_tuiles_visibles: 250,
   rapport_image_ecran: 6,
   scale_ext_canva: 2,
-  images_src: [
-    'madonna1.jpg',
-    'madonna2.jpg',
-    'madonna3.jpg',
-    'madonna4.jpg',
-    'madonna5.jpg',
-    'madonna6.jpg',
-    'madonna7.jpg',
-    'madonna8.jpg',
-    'madonna9.jpg',
-    'madonna10.jpg',
-    'madonna11.jpg',
-    'madonna12.jpg'
-  ],
-  images: {
-    liste: []
-  },
-  translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
   ms_animation: 40,
-  delais_apparition_image: 1500,
-  delais_suppression_image: 1000 * 30, // 30 secondes
   multiplicateur_vecteur: 3,
-  positionnements: [
-    { x: 0, y: 0 },
-    //{ x: -1, y: -1 },
-    //{ x: 0, y: -1 },
-    //{ x: 1, y: -1 },
-    { x: 1, y: 0 },
-    { x: 1, y: 1 },
-    { x: 0, y: 1 },
-    //{ x: -1, y: 1 },
-    { x: -1, y: 0 }
-  ],
   positionnement_actuel: 0,
   nb_images_initiales: 6, 
-  sources: [
-    'madonna1.jpg',
-    'madonna2.jpg',
-    'madonna3.jpg',
-    'madonna4.jpg'
-  ],
   positions_images_tuiles: [
     { x: "3%", y: "4%" },
     { x: "7%", y: "15%" },
@@ -71,10 +63,18 @@ var config = {
     { x: "89%", y: "72%" }
   ],
   tuiles: {
+    vitesse_maj_tuiles_visibles: 250,
+    translate: { x: 0, y: 0 },
     taille: { 
       x: { valeur: 200, unite: "vw" },
       y: { valeur: 200, unite: "vh" },
     },
+    sources: [
+      'madonna1.jpg',
+      'madonna2.jpg',
+      'madonna3.jpg',
+      'madonna4.jpg'
+    ],
     liste: []
   }
 }
@@ -112,24 +112,13 @@ window.onload = function () {
   window.setInterval(animer_images, config.ms_animation);
   window.setInterval(function () { 
     canva.appendChild(creer_image());
-  }, config.delais_apparition_image);
+  }, config.images.parametres.interval_apparition_image);
 
   // Creer la premiere tuile
   new Tuile({x: 0, y: 0}, creer_images());
 
   // Mise à jour des tuiles visibles
-  window.setInterval(maj_tuiles_visibles, config.vitesse_maj_tuiles_visibles);
-}
-
-function translation_scroll (ev) {
-  ev.stopPropagation();
-  ev.preventDefault();
-
-  config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation;
-  config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation;
-
-  config.images.liste.forEach((image) => { appliquer_transform_image(image); });
-  config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
+  window.setInterval(maj_tuiles_visibles, config.tuiles.vitesse_maj_tuiles_visibles);
 }
 
 function round_decimal (nb) {
@@ -169,6 +158,20 @@ function terminer_translation_touch (e) {
   config.canva.removeEventListener("touchmove", translation_touch);
 }
 
+function translation_scroll (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  config.images.parametres.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation;
+  config.images.parametres.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation;
+
+  config.tuiles.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation * 0.5;
+  config.tuiles.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation * 0.5;
+
+  config.images.liste.forEach((image) => { appliquer_transform_image(image); });
+  config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
+}
+
 function translation_touch (e) {
   e.stopPropagation();
   e.preventDefault();
@@ -184,8 +187,11 @@ function translation_touch (e) {
   let delta_x = config.navigation.touch.x - x0;
   let delta_y = config.navigation.touch.y - y0;
 
-  config.translate.x += delta_x * config.vitesse_translation;
-  config.translate.y += delta_y * config.vitesse_translation;
+  config.images.parametres.translate.x += delta_x * config.vitesse_translation;
+  config.images.parametres.translate.y += delta_y * config.vitesse_translation;
+
+  config.tuiles.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation * 0.5;
+  config.tuiles.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation * 0.5;
 
   config.liste.images.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
@@ -204,8 +210,11 @@ function translation (e) {
   let delta_x = config.navigation.souris.x - x0;
   let delta_y = config.navigation.souris.y - y0;
 
-  config.translate.x += delta_x * config.vitesse_translation;
-  config.translate.y += delta_y * config.vitesse_translation;
+  config.images.parametres.translate.x += delta_x * config.vitesse_translation;
+  config.images.parametres.translate.y += delta_y * config.vitesse_translation;
+
+  config.tuiles.translate.x += Math.sign(e.deltaX) * -1 * config.vitesse_translation * 0.5;
+  config.tuiles.translate.y += Math.sign(e.deltaY) * -1 * config.vitesse_translation * 0.5;
 
   config.images.liste.forEach((image) => { appliquer_transform_image(image); });
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });

@@ -22,20 +22,20 @@ function creer_image () {
   determiner_sens_rotation(img);
 
   // Prochaine position d'apparition
-  config.positionnement_actuel = (config.positionnement_actuel + 1) % config.positionnements.length;
+  config.positionnement_actuel = (config.positionnement_actuel + 1) % config.images.positionnements.length;
   
   // Supression de l'image apres un certain temps
   window.setTimeout(function () {
     img.remove();
     delete img;
-  }, config.delais_suppression_image);
+  }, config.images.parametres.delais_suppression_image);
 
   return img; 
 }
 
 function positionner_image (image) {
   let coordonnees = { };
-  let pos_init = config.positionnements[config.positionnement_actuel];
+  let pos_init = config.images.positionnements[config.positionnement_actuel];
 
   if(pos_init.x == -1) { coordonnees.x = Math.round(Math.random() * -1 * config.ecran.largeur * config.scale_ext_canva) - config.ecran.largeur; }
   else if(pos_init.x == 0) { coordonnees.x = Math.round(Math.random() * config.ecran.largeur); }
@@ -51,7 +51,7 @@ function positionner_image (image) {
 
 function determiner_vecteur_deplacement (image) {
   let vecteur = { };
-  let pos_init = config.positionnements[config.positionnement_actuel];
+  let pos_init = config.images.positionnements[config.positionnement_actuel];
 
   if(pos_init.x == -1) { vecteur.x = round_decimal((Math.random() / 2) + 0.5); } // [0.5, 1]
   else if(pos_init.x == 0) { vecteur.x = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; } // [-1, -0.5], [0.5, 1]
@@ -72,8 +72,8 @@ function determiner_sens_rotation (image) {
 }
 
 function src_image_aleatoire () {
-  let index = Math.round(Math.random() * (config.images_src.length - 1));
-  return config.images_src[index];
+  let index = Math.round(Math.random() * (config.images.sources.length - 1));
+  return config.images.sources[index];
 }
 
 function animer_images () {
@@ -98,6 +98,6 @@ function animer_images () {
 }
 
 function appliquer_transform_image (image) {
-  image.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) rotate(" + image.getAttribute("data-r") + "deg)";
+  image.style.transform = "translate(" + config.images.parametres.translate.x + "px, " + config.images.parametres.translate.y + "px) rotate(" + image.getAttribute("data-r") + "deg)";
 }
 

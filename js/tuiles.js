@@ -208,10 +208,11 @@ function afficher_tuiles_voisines (tuile) {
 }
 
 function creer_images () {
-  return config.sources.map((source) => { return new Image (source) });
+  return config.tuiles.sources.map((source) => { return new Image (source) });
 }
 
 function appliquer_transform_tuile (tuile) {
-  tuile.element.style.transform = "translate(" + config.translate.x + "px, " + config.translate.y + "px) "; 
+  console.log(config.tuiles.translate);
+  tuile.element.style.transform = "translate(" + config.tuiles.translate.x + "px, " + config.tuiles.translate.y + "px) "; 
 }
 

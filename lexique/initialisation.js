@@ -5,24 +5,8 @@ var config = {
   },
   souris: { x: null, y: null },
   touch: { x: null, y: null },
-  translate: { x: 0, y: 0 },
   vitesse_translation: 1.3,
-  vitesse_maj_tuiles_visibles: 250,
   temps_apparition_definition: 2000,
-  sources: [
-    'madonna1.jpg',
-    'madonna2.jpg',
-    'madonna3.jpg',
-    'madonna4.jpg',
-    'madonna5.jpg',
-    'madonna6.jpg',
-    'madonna7.jpg',
-    'madonna8.jpg',
-    'madonna9.jpg',
-    'madonna10.jpg',
-    'madonna11.jpg',
-    'madonna12.jpg'
-  ],
   positions_images_tuiles: [
     { x: "3%", y: "4%" },
     { x: "7%", y: "15%" },
@@ -39,10 +23,26 @@ var config = {
     { x: "89%", y: "72%" }
   ],
   tuiles: {
+    vitesse_maj_tuiles_visibles: 250,
+    translate: { x: 0, y: 0 },
     taille: { 
       x: { valeur: 200, unite: "vw" },
       y: { valeur: 200, unite: "vh" },
     },
+    sources: [
+      'madonna1.jpg',
+      'madonna2.jpg',
+      'madonna3.jpg',
+      'madonna4.jpg',
+      'madonna5.jpg',
+      'madonna6.jpg',
+      'madonna7.jpg',
+      'madonna8.jpg',
+      'madonna9.jpg',
+      'madonna10.jpg',
+      'madonna11.jpg',
+      'madonna12.jpg'
+    ],
     liste: []
   }
 }
@@ -73,12 +73,12 @@ window.onload = function () {
   new Tuile({x: 0, y: 0}, creer_images());
 
   // Mise à jour des tuiles visibles
-  window.setInterval( maj_tuiles_visibles, config.vitesse_maj_tuiles_visibles);
+  window.setInterval( maj_tuiles_visibles, config.tuiles.vitesse_maj_tuiles_visibles);
 }
 
 function afficher_definition_interpretation (src_image, texte) {
   let modal = document.getElementById("modal-interpretation");
-  
+
   // Afficher les definitions
   modal.style.display = "block";
   modal.querySelector("img").src = src_image;
@@ -97,7 +97,7 @@ function cacher_definition_interpretation () {
 }
 
 function afficher_definition_officielle (src_image, texte) {
-  
+
   // Cacher les tuiles
   [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
     tuile.style.opacity = "0";
@@ -111,7 +111,7 @@ function afficher_definition_officielle (src_image, texte) {
 }
 
 function cacher_definition_officielle () {
-  
+
   let modal = document.getElementById("modal-officiel");
   modal.style.display = "none";
 }
@@ -165,8 +165,8 @@ function translation_touch (e) {
   let delta_x = config.touch.x - x0;
   let delta_y = config.touch.y - y0;
 
-  config.translate.x += delta_x * config.vitesse_translation;
-  config.translate.y += delta_y * config.vitesse_translation;
+  config.tuiles.translate.x += delta_x * config.vitesse_translation;
+  config.tuiles.translate.y += delta_y * config.vitesse_translation;
 
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
@@ -186,8 +186,8 @@ function translation (e) {
   let delta_x = config.souris.x - x0;
   let delta_y = config.souris.y - y0;
 
-  config.translate.x += delta_x * config.vitesse_translation;
-  config.translate.y += delta_y * config.vitesse_translation;
+  config.tuiles.translate.x += delta_x * config.vitesse_translation;
+  config.tuiles.translate.y += delta_y * config.vitesse_translation;
 
   config.tuiles.liste.forEach((tuile) => { appliquer_transform_tuile(tuile); });
 }
@@ -196,8 +196,8 @@ function translation_scroll (ev) {
   ev.stopPropagation();
   ev.preventDefault();
 
-  config.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation * 3;
-  config.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation * 3;
+  config.tuiles.translate.x += Math.sign(ev.deltaX) * -1 * config.vitesse_translation * 3;
+  config.tuiles.translate.y += Math.sign(ev.deltaY) * -1 * config.vitesse_translation * 3;
 
   config.tuiles.liste.forEach((image) => { appliquer_transform_tuile(image); });
 } 
