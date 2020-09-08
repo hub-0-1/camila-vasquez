@@ -62,7 +62,7 @@ class Tuile {
 class Image {
   constructor(source) {
     this.element = document.createElement("img");
-    this.source = "../images/" + source;
+    this.source = source;
 
     // Info de base
     this.element.src = this.source;
@@ -74,16 +74,17 @@ class Image {
     this.element.addEventListener("click", this.afficher_definitions.bind(this));
   }
 
-  afficher_definitions () {
+  afficher_definitions (e) {
 
     // TODO lier le texte a l'image
     let langue = document.getElementById("langue").getAttribute("data-langue");
+    let texte = e.target.src.match(/\/lexique\/(\w+)\.png/)[1];
 
-    afficher_definition_officielle(this.source, config.textes[langue].apnee.original);
+    afficher_definition_officielle(this.source, config.textes[langue][texte].original);
     window.setTimeout(cacher_definition_officielle, config.temps_apparition_definition);
 
     window.setTimeout(() => {
-      afficher_definition_interpretation(this.source, config.textes[langue].apnee.interpretation);
+      afficher_definition_interpretation(this.source, config.textes[langue][texte].interpretation);
     }, config.temps_apparition_definition);
 
     window.setTimeout(cacher_definition_interpretation, config.temps_apparition_definition * 2);

@@ -8,13 +8,9 @@ var config = {
     },
     positionnements: [
       { x: 0, y: 0 },
-      //{ x: -1, y: -1 },
-      //{ x: 0, y: -1 },
-      //{ x: 1, y: -1 },
       { x: 1, y: 0 },
       { x: 1, y: 1 },
       { x: 0, y: 1 },
-      //{ x: -1, y: 1 },
       { x: -1, y: 0 }
     ],
     sources: [
@@ -72,10 +68,10 @@ var config = {
       y: { valeur: 200, unite: "vh" },
     },
     sources: [
-      'madonna1.jpg',
-      'madonna2.jpg',
-      'madonna3.jpg',
-      'madonna4.jpg'
+      '/images/madonna1.jpg',
+      '/images/madonna2.jpg',
+      '/images/madonna3.jpg',
+      '/images/madonna4.jpg'
     ],
     liste: []
   }

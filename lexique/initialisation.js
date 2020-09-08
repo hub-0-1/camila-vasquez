@@ -6,7 +6,7 @@ var config = {
   souris: { x: null, y: null },
   touch: { x: null, y: null },
   vitesse_translation: 1.3,
-  temps_apparition_definition: 2000,
+  temps_apparition_definition: 5000,
   positions_images_tuiles: [
     { x: "3%", y: "4%" },
     { x: "7%", y: "15%" },
@@ -30,18 +30,16 @@ var config = {
       y: { valeur: 200, unite: "vh" },
     },
     sources: [
-      'madonna1.jpg',
-      'madonna2.jpg',
-      'madonna3.jpg',
-      'madonna4.jpg',
-      'madonna5.jpg',
-      'madonna6.jpg',
-      'madonna7.jpg',
-      'madonna8.jpg',
-      'madonna9.jpg',
-      'madonna10.jpg',
-      'madonna11.jpg',
-      'madonna12.jpg'
+      '/images/lexique/apnee.png',
+      '/images/lexique/breches.png',
+      '/images/lexique/chambouler.png',
+      '/images/lexique/faire_peut.png',
+      '/images/lexique/jamais_travailler.png',
+      '/images/lexique/jouer_adultes.png',
+      '/images/lexique/montagne.png',
+      '/images/lexique/presence.png',
+      '/images/lexique/regarder_maison.png',
+      '/images/lexique/se_refugier.png'
     ],
     liste: []
   }
