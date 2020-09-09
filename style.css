@@ -102,6 +102,11 @@ main #animation-accueil .image-flottante {
 main #animation-accueil .tuile {
   position: absolute;
 }
+main #animation-accueil .tuile .video-bg {
+  width: 1500px;
+  height: 1500px;
+  display: block;
+}
 main #animation-accueil + #modal {
   display: none;
   position: fixed;

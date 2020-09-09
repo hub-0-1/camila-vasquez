@@ -64,8 +64,8 @@ var config = {
     vitesse_translation: 1,
     translate: { x: 0, y: 0 },
     taille: { 
-      x: { valeur: 200, unite: "vw" },
-      y: { valeur: 200, unite: "vh" },
+      x: { valeur: 1500, unite: "px" },
+      y: { valeur: 1500, unite: "px" },
     },
     sources: [
       '/images/madonna1.jpg',
@@ -99,6 +99,15 @@ window.onload = function () {
   canva.addEventListener("touchstart", commencer_translation_touch);
   canva.addEventListener("touchend", terminer_translation_touch);
 
+  window.setTimeout(() => {
+    [].forEach.call(document.querySelectorAll("video"), (el) => {
+      el.addEventListener("mousedown", commencer_translation);
+      el.addEventListener("mouseup", terminer_translation);
+      el.addEventListener("touchstart", commencer_translation_touch);
+      el.addEventListener("touchend", terminer_translation_touch);
+    });
+  }, 0);
+
   // Creer les premieres images
   for(let i = 0; i < config.nb_images_initiales; ++i) {
     canva.appendChild(creer_image());
@@ -113,7 +122,7 @@ window.onload = function () {
   }, config.images.parametres.interval_apparition_image);
 
   // Creer la premiere tuile
-  new Tuile({x: 0, y: 0}, creer_images());
+  new TuileVideo({x: 0, y: 0}, "/videos/background_accueil.m4v");
 
   // Mise à jour des tuiles visibles
   window.setInterval(maj_tuiles_visibles, config.tuiles.vitesse_maj_tuiles_visibles);

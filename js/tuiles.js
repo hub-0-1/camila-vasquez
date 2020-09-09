@@ -1,8 +1,47 @@
+class TuileVideo {
+  constructor(position, source_video) {
+    this.element = document.createElement("div");
+    this.position = position;
+    this.source_video = source_video;
+
+    // Info de base
+    this.element.className = "tuile";
+    this.element.alt = "Tuile";
+    this.element.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px"
+
+    // Positionner la tuile
+    this.element.style.width = config.tuiles.taille.x.valeur + config.tuiles.taille.x.unite;
+    this.element.style.marginLeft = (-1 * config.tuiles.taille.x.valeur / 4) + config.tuiles.taille.x.unite;
+
+    this.element.style.height = config.tuiles.taille.y.valeur + config.tuiles.taille.y.unite;
+    this.element.style.marginTop = (-1 * config.tuiles.taille.y.valeur / 4) + config.tuiles.taille.y.unite;
+
+    this.element.style.left = (position.x * config.tuiles.taille.x.valeur) + config.tuiles.taille.x.unite;
+    this.element.style.top = (position.y * config.tuiles.taille.y.valeur) + config.tuiles.taille.y.unite;
+
+    // Ajouter le video
+    let video = document.createElement("video");
+    video.className = "video-bg";
+
+    video.src = source_video;
+    video.muted = true;
+    video.autoplay = true;
+    video.loop = true;
+
+    this.element.appendChild(video);
+
+    // Finaliser
+    config.tuiles.liste.push(this);
+    config.canva.prepend(this.element);
+  }
+}
+
 class Tuile {
-  constructor(position, images) {
+  constructor(position, images, source_video) {
     this.element = document.createElement("div");
     this.images = images;
     this.position = position;
+    this.source_video = source_video;
 
     // Info de base
     this.element.className = "tuile";
@@ -26,6 +65,19 @@ class Tuile {
       image.element.style.left = position_image.x;
       image.element.style.top = position_image.y;
     });
+
+    // Ajouter le video
+    if (source_video) {
+      let video = document.createElement("video");
+      video.className = "video-bg";
+
+      video.src = source_video;
+      video.muted = true;
+      video.autoplay = true;
+      video.loop = true;
+
+      this.element.appendChild(video);
+    }
 
     // Ajouter les images
     this.images.forEach((image) => {
@@ -55,7 +107,7 @@ class Tuile {
   }
 
   afficher () { }
-  
+
   cacher () { }
 }
 
@@ -120,7 +172,7 @@ function trouver_tuiles_voisines (tuile_centrale) {
   // Haut gauche
   voisines.haut_gauche = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x - 1
-            && tuile.position.y == tuile_centrale.position.y - 1) });
+      && tuile.position.y == tuile_centrale.position.y - 1) });
 
   if(!voisines.haut_gauche) {
     voisines.haut_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y - 1}, creer_images());
@@ -129,16 +181,16 @@ function trouver_tuiles_voisines (tuile_centrale) {
   // Haut
   voisines.haut = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x
-            && tuile.position.y == tuile_centrale.position.y - 1) });
+      && tuile.position.y == tuile_centrale.position.y - 1) });
 
   if(!voisines.haut) {
     voisines.haut = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y - 1}, creer_images());
   }
-  
+
   // Haut Droite
   voisines.haut_droite = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x + 1
-            && tuile.position.y == tuile_centrale.position.y - 1) });
+      && tuile.position.y == tuile_centrale.position.y - 1) });
 
   if(!voisines.haut_droite) {
     voisines.haut_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y - 1}, creer_images());
@@ -147,7 +199,7 @@ function trouver_tuiles_voisines (tuile_centrale) {
   // Droite
   voisines.droite = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x + 1
-            && tuile.position.y == tuile_centrale.position.y) });
+      && tuile.position.y == tuile_centrale.position.y) });
 
   if(!voisines.droite) {
     voisines.droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y}, creer_images());
@@ -156,7 +208,7 @@ function trouver_tuiles_voisines (tuile_centrale) {
   // Bas Droite
   voisines.bas_droite = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x + 1
-            && tuile.position.y == tuile_centrale.position.y + 1) });
+      && tuile.position.y == tuile_centrale.position.y + 1) });
 
   if(!voisines.bas_droite) {
     voisines.bas_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y + 1}, creer_images());
@@ -165,7 +217,7 @@ function trouver_tuiles_voisines (tuile_centrale) {
   // Bas
   voisines.bas = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x
-            && tuile.position.y == tuile_centrale.position.y + 1) });
+      && tuile.position.y == tuile_centrale.position.y + 1) });
 
   if(!voisines.bas) {
     voisines.bas = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y + 1}, creer_images());
@@ -174,7 +226,7 @@ function trouver_tuiles_voisines (tuile_centrale) {
   // Bas Gauche
   voisines.bas_gauche = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x - 1
-            && tuile.position.y == tuile_centrale.position.y + 1) });
+      && tuile.position.y == tuile_centrale.position.y + 1) });
 
   if(!voisines.bas_gauche) {
     voisines.bas_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y + 1}, creer_images());
@@ -183,7 +235,7 @@ function trouver_tuiles_voisines (tuile_centrale) {
   // Gauche
   voisines.gauche = config.tuiles.liste.find((tuile) => { 
     return (tuile.position.x == tuile_centrale.position.x - 1
-            && tuile.position.y == tuile_centrale.position.y) });
+      && tuile.position.y == tuile_centrale.position.y) });
 
   if(!voisines.gauche) {
     voisines.gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y}, creer_images());
