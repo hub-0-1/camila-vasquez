@@ -34,6 +34,118 @@ class TuileVideo {
     config.tuiles.liste.push(this);
     config.canva.prepend(this.element);
   }
+
+  est_visible () {
+    let rect = this.element.getBoundingClientRect();
+
+    let threshold = 0;
+
+    const vpWidth = window.innerWidth;
+    const vpHeight = window.innerHeight;
+
+    const above = rect && rect.bottom - threshold <= 0;
+    const below = rect && rect.top - vpHeight + threshold >= 0;
+    const left = rect && rect.right - threshold <= 0;
+    const right = rect && rect.left - vpWidth + threshold >= 0;
+    const inside = !!rect && !above && !below && !left && !right;
+
+    return inside;
+  }
+
+  voisines () {
+
+    let voisines = {
+      haut_gauche: null,
+      haut: null,
+      haut_droite: null,
+      droite: null,
+      bas_droite: null,
+      bas: null,
+      bas_gauche: null,
+      gauche: null,
+    };
+
+    let tuile_centrale = this;
+
+    // Haut gauche
+    voisines.haut_gauche = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x - 1
+        && tuile.position.y == tuile_centrale.position.y - 1) });
+
+    if(!voisines.haut_gauche) {
+      voisines.haut_gauche = new TuileVideo({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y - 1}, this.source_video);
+    }
+
+    // Haut
+    voisines.haut = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x
+        && tuile.position.y == tuile_centrale.position.y - 1) });
+
+    if(!voisines.haut) {
+      voisines.haut = new TuileVideo({x: tuile_centrale.position.x, y: tuile_centrale.position.y - 1}, this.source_video);
+    }
+
+    // Haut Droite
+    voisines.haut_droite = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x + 1
+        && tuile.position.y == tuile_centrale.position.y - 1) });
+
+    if(!voisines.haut_droite) {
+      voisines.haut_droite = new TuileVideo({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y - 1}, this.source_video);
+    }
+
+    // Droite
+    voisines.droite = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x + 1
+        && tuile.position.y == tuile_centrale.position.y) });
+
+    if(!voisines.droite) {
+      voisines.droite = new TuileVideo({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y}, this.source_video);
+    }
+
+    // Bas Droite
+    voisines.bas_droite = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x + 1
+        && tuile.position.y == tuile_centrale.position.y + 1) });
+
+    if(!voisines.bas_droite) {
+      voisines.bas_droite = new TuileVideo({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y + 1}, this.source_video);
+    }
+
+    // Bas
+    voisines.bas = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x
+        && tuile.position.y == tuile_centrale.position.y + 1) });
+
+    if(!voisines.bas) {
+      voisines.bas = new TuileVideo({x: tuile_centrale.position.x, y: tuile_centrale.position.y + 1}, this.source_video);
+    }
+
+    // Bas Gauche
+    voisines.bas_gauche = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x - 1
+        && tuile.position.y == tuile_centrale.position.y + 1) });
+
+    if(!voisines.bas_gauche) {
+      voisines.bas_gauche = new TuileVideo({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y + 1}, this.source_video);
+    }
+
+    // Gauche
+    voisines.gauche = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x - 1
+        && tuile.position.y == tuile_centrale.position.y) });
+
+    if(!voisines.gauche) {
+      voisines.gauche = new TuileVideo({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y}, this.source_video);
+    }
+
+    return voisines;
+  }
+
+  afficher () { }
+
+  cacher () { }
+
 }
 
 class Tuile {
@@ -106,6 +218,96 @@ class Tuile {
     return inside;
   }
 
+  voisines () {
+
+    let voisines = {
+      haut_gauche: null,
+      haut: null,
+      haut_droite: null,
+      droite: null,
+      bas_droite: null,
+      bas: null,
+      bas_gauche: null,
+      gauche: null,
+    };
+
+    let tuile_centrale = this;
+
+    // Haut gauche
+    voisines.haut_gauche = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x - 1
+        && tuile.position.y == tuile_centrale.position.y - 1) });
+
+    if(!voisines.haut_gauche) {
+      voisines.haut_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y - 1}, creer_images());
+    }
+
+    // Haut
+    voisines.haut = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x
+        && tuile.position.y == tuile_centrale.position.y - 1) });
+
+    if(!voisines.haut) {
+      voisines.haut = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y - 1}, creer_images());
+    }
+
+    // Haut Droite
+    voisines.haut_droite = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x + 1
+        && tuile.position.y == tuile_centrale.position.y - 1) });
+
+    if(!voisines.haut_droite) {
+      voisines.haut_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y - 1}, creer_images());
+    }
+
+    // Droite
+    voisines.droite = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x + 1
+        && tuile.position.y == tuile_centrale.position.y) });
+
+    if(!voisines.droite) {
+      voisines.droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y}, creer_images());
+    }
+
+    // Bas Droite
+    voisines.bas_droite = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x + 1
+        && tuile.position.y == tuile_centrale.position.y + 1) });
+
+    if(!voisines.bas_droite) {
+      voisines.bas_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y + 1}, creer_images());
+    }
+
+    // Bas
+    voisines.bas = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x
+        && tuile.position.y == tuile_centrale.position.y + 1) });
+
+    if(!voisines.bas) {
+      voisines.bas = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y + 1}, creer_images());
+    }
+
+    // Bas Gauche
+    voisines.bas_gauche = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x - 1
+        && tuile.position.y == tuile_centrale.position.y + 1) });
+
+    if(!voisines.bas_gauche) {
+      voisines.bas_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y + 1}, creer_images());
+    }
+
+    // Gauche
+    voisines.gauche = config.tuiles.liste.find((tuile) => { 
+      return (tuile.position.x == tuile_centrale.position.x - 1
+        && tuile.position.y == tuile_centrale.position.y) });
+
+    if(!voisines.gauche) {
+      voisines.gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y}, creer_images());
+    }
+
+    return voisines;
+  }
+
   afficher () { }
 
   cacher () { }
@@ -146,8 +348,6 @@ class Image {
 function maj_tuiles_visibles () {
   let liste_tuiles_visibles = tuiles_visibles();
 
-  let tuiles_invisibles = config.tuiles.liste.filter((tuile) => { return !liste_tuiles_visibles.includes(tuile) });
-
   liste_tuiles_visibles.forEach((tuile) => {
     afficher_tuiles_voisines(tuile);
   });
@@ -156,94 +356,6 @@ function maj_tuiles_visibles () {
 
 function deep_copy (obj) { return JSON.parse(JSON.stringify(obj)); }
 
-function trouver_tuiles_voisines (tuile_centrale) {
-
-  let voisines = {
-    haut_gauche: null,
-    haut: null,
-    haut_droite: null,
-    droite: null,
-    bas_droite: null,
-    bas: null,
-    bas_gauche: null,
-    gauche: null,
-  }
-
-  // Haut gauche
-  voisines.haut_gauche = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x - 1
-      && tuile.position.y == tuile_centrale.position.y - 1) });
-
-  if(!voisines.haut_gauche) {
-    voisines.haut_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y - 1}, creer_images());
-  }
-
-  // Haut
-  voisines.haut = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x
-      && tuile.position.y == tuile_centrale.position.y - 1) });
-
-  if(!voisines.haut) {
-    voisines.haut = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y - 1}, creer_images());
-  }
-
-  // Haut Droite
-  voisines.haut_droite = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x + 1
-      && tuile.position.y == tuile_centrale.position.y - 1) });
-
-  if(!voisines.haut_droite) {
-    voisines.haut_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y - 1}, creer_images());
-  }
-
-  // Droite
-  voisines.droite = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x + 1
-      && tuile.position.y == tuile_centrale.position.y) });
-
-  if(!voisines.droite) {
-    voisines.droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y}, creer_images());
-  }
-
-  // Bas Droite
-  voisines.bas_droite = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x + 1
-      && tuile.position.y == tuile_centrale.position.y + 1) });
-
-  if(!voisines.bas_droite) {
-    voisines.bas_droite = new Tuile({x: tuile_centrale.position.x + 1, y: tuile_centrale.position.y + 1}, creer_images());
-  }
-
-  // Bas
-  voisines.bas = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x
-      && tuile.position.y == tuile_centrale.position.y + 1) });
-
-  if(!voisines.bas) {
-    voisines.bas = new Tuile({x: tuile_centrale.position.x, y: tuile_centrale.position.y + 1}, creer_images());
-  }
-
-  // Bas Gauche
-  voisines.bas_gauche = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x - 1
-      && tuile.position.y == tuile_centrale.position.y + 1) });
-
-  if(!voisines.bas_gauche) {
-    voisines.bas_gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y + 1}, creer_images());
-  }
-
-  // Gauche
-  voisines.gauche = config.tuiles.liste.find((tuile) => { 
-    return (tuile.position.x == tuile_centrale.position.x - 1
-      && tuile.position.y == tuile_centrale.position.y) });
-
-  if(!voisines.gauche) {
-    voisines.gauche = new Tuile({x: tuile_centrale.position.x - 1, y: tuile_centrale.position.y}, creer_images());
-  }
-
-  return voisines;
-}
-
 function tuiles_visibles () {
   return config.tuiles.liste.filter((tuile) => {
     return tuile.est_visible();
@@ -251,7 +363,7 @@ function tuiles_visibles () {
 }
 
 function afficher_tuiles_voisines (tuile) {
-  let tuiles_voisines = trouver_tuiles_voisines(tuile);
+  let tuiles_voisines = tuile.voisines();
 
   Object.keys(tuiles_voisines).forEach((key) => {
     if(tuiles_voisines[key]) {

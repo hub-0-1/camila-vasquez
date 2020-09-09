@@ -99,6 +99,7 @@ window.onload = function () {
   canva.addEventListener("touchstart", commencer_translation_touch);
   canva.addEventListener("touchend", terminer_translation_touch);
 
+  /*
   window.setTimeout(() => {
     [].forEach.call(document.querySelectorAll("video"), (el) => {
       el.addEventListener("mousedown", commencer_translation);
@@ -107,6 +108,7 @@ window.onload = function () {
       el.addEventListener("touchend", terminer_translation_touch);
     });
   }, 0);
+  */
 
   // Creer les premieres images
   for(let i = 0; i < config.nb_images_initiales; ++i) {

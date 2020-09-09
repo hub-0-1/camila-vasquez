@@ -6,7 +6,7 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "run-dev": "python3 -m http.server 8080 --bind 127.0.0.1",
+    "run-dev": "nodemon --exec python3 -m http.server 8080 --bind 127.0.0.1",
     "build-dev": "nodemon --exec ./render.sh -e less"
   }
 }
