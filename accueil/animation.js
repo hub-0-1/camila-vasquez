@@ -44,21 +44,6 @@ var config = {
   multiplicateur_vecteur: 3,
   positionnement_actuel: 0,
   nb_images_initiales: 6, 
-  positions_images_tuiles: [
-    { x: "3%", y: "4%" },
-    { x: "7%", y: "15%" },
-    { x: "1%", y: "75%" },
-    { x: "10%", y: "35%" },
-    { x: "46%", y: "20%" },
-    { x: "33%", y: "45%" },
-    { x: "74%", y: "64%" },
-    { x: "81%", y: "92%" },
-    { x: "51%", y: "52%" },
-    { x: "31%", y: "72%" },
-    { x: "58%", y: "82%" },
-    { x: "78%", y: "2%" },
-    { x: "89%", y: "72%" }
-  ],
   tuiles: {
     vitesse_maj_tuiles_visibles: 250,
     vitesse_translation: 1,
@@ -67,12 +52,6 @@ var config = {
       x: { valeur: 1500, unite: "px" },
       y: { valeur: 1500, unite: "px" },
     },
-    sources: [
-      '/images/madonna1.jpg',
-      '/images/madonna2.jpg',
-      '/images/madonna3.jpg',
-      '/images/madonna4.jpg'
-    ],
     liste: []
   }
 }
@@ -99,17 +78,6 @@ window.onload = function () {
   canva.addEventListener("touchstart", commencer_translation_touch);
   canva.addEventListener("touchend", terminer_translation_touch);
 
-  /*
-  window.setTimeout(() => {
-    [].forEach.call(document.querySelectorAll("video"), (el) => {
-      el.addEventListener("mousedown", commencer_translation);
-      el.addEventListener("mouseup", terminer_translation);
-      el.addEventListener("touchstart", commencer_translation_touch);
-      el.addEventListener("touchend", terminer_translation_touch);
-    });
-  }, 0);
-  */
-
   // Creer les premieres images
   for(let i = 0; i < config.nb_images_initiales; ++i) {
     canva.appendChild(creer_image());
@@ -124,7 +92,7 @@ window.onload = function () {
   }, config.images.parametres.interval_apparition_image);
 
   // Creer la premiere tuile
-  new TuileVideo({x: 0, y: 0}, "/videos/background_accueil.m4v");
+  new TuileVideo({x: 0, y: 0}, "/videos/dessin-sonore-1-1_low.mp4");
 
   // Mise à jour des tuiles visibles
   window.setInterval(maj_tuiles_visibles, config.tuiles.vitesse_maj_tuiles_visibles);
