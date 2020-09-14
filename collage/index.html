@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta property="og:title" content="Camila Vasquez - Repenser la famille">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <meta property="og:site_name" content="Camila Vasquez - Repenser la famille">
+    <meta property="og:type" content="website">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Camila Vasquez - Repenser la famille</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
+
+    <script src="https://unpkg.com/iv-viewer/dist/iv-viewer.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/iv-viewer/dist/iv-viewer.css">
+  </head>
+  <body>
+    <main>
+      <div id="animation-cartographie">
+        <img src="/images/collage/collage_collages_grande_72dpi.jpg" class="image">
+      </div>
+    </main>
+
+    <a id="container-logo" href="/"><img id="logo" class="icone" src="/images/logo.png"></a>
+  <script>
+    const viewer = new ImageViewer(document.querySelector("#animation-cartographie img"), { 
+      snapView: false,
+      maxZoom: 10000
+    });
+  </script>
+  </body>
+</html>
