@@ -35,7 +35,7 @@ var traduction = {
         lexique: "Bref lexique illustré non exhaustif",
         tableau_blanc: "Dessins sonores",
         portraits: "Portraits à l'aveugle",
-        cartographie: "Collage de collages",
+        collage: "Collage de collages",
         info: "Info",
         autre_langue: "EN"
       },
@@ -62,7 +62,7 @@ var traduction = {
         lexique: "Lexique",
         tableau_blanc: "White board",
         portraits: "Blind portraits",
-        cartographie: "Cartography",
+        collage: "Cartography",
         info: "Info",
         autre_langue: "FR"
       },

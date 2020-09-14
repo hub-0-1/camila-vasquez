@@ -71,6 +71,8 @@ body .optima {
 #menu .item-menu {
   display: flex;
   height: 100%;
+  justify-content: center;
+  width: 16%;
 }
 #menu .item-menu .index {
   font-weight: bold;
