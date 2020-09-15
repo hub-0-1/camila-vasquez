@@ -23,7 +23,7 @@ body .optima {
 #container-logo {
   position: fixed;
   top: 10px;
-  left: 25px;
+  left: 2%;
   width: 100px;
   display: block;
 }
@@ -275,11 +275,10 @@ main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .coule
   color: #f19731;
 }
 main #animation-portraits {
-  position: fixed;
+  position: relative;
   top: 25%;
-  bottom: 25%;
   left: 1%;
-  right: 1%;
+  width: 98%;
   /*
     display: flex;
     align-items: center;
@@ -328,5 +327,11 @@ main #animation-info .contenu-a-propos p {
   }
   header nav .item-menu-mobile {
     display: initial;
+  }
+  #hamburger {
+    right: 55px;
+  }
+  #langue {
+    right: 5px;
   }
 }
