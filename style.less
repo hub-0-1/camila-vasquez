@@ -362,28 +362,34 @@ main {
     left: 1%;
     right: 1%;
     
+    /*
     display: flex;
     align-items: center;
     flex-wrap: nowrap;
+    */
 
     overflow: auto;
 
+    #portraits {
+      width: 8330px;
+    }
+
     .paysage {
-      height: 70%;
+      width: 290px;
+      float: left;
     }
 
     .portrait {
-      height: 100%;
+      width: 200px;
+      float: left;
     } 
 
-    & + #legende {
-      position: fixed;
-      top: 85%;
-      left: 1%;
-      right: 1%;
-      white-space: nowrap;
-
-      text-align: center;
+    #legende {
+      padding-top: 30px;
+      text-align: justify;
+      text-align-last: justify;
+      width: 8330px;
+      clear: both;
     }
   }
 

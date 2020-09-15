@@ -280,24 +280,30 @@ main #animation-portraits {
   bottom: 25%;
   left: 1%;
   right: 1%;
-  display: flex;
-  align-items: center;
-  flex-wrap: nowrap;
+  /*
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    */
   overflow: auto;
 }
+main #animation-portraits #portraits {
+  width: 8330px;
+}
 main #animation-portraits .paysage {
-  height: 70%;
+  width: 290px;
+  float: left;
 }
 main #animation-portraits .portrait {
-  height: 100%;
+  width: 200px;
+  float: left;
 }
-main #animation-portraits + #legende {
-  position: fixed;
-  top: 85%;
-  left: 1%;
-  right: 1%;
-  white-space: nowrap;
-  text-align: center;
+main #animation-portraits #legende {
+  padding-top: 30px;
+  text-align: justify;
+  text-align-last: justify;
+  width: 8330px;
+  clear: both;
 }
 main #animation-info {
   position: relative;
