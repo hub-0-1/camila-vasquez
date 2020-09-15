@@ -21,12 +21,27 @@
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
     <script src="/js/menu.js"></script>
     <script src="/js/traduction.js"></script>
+    <script src="/info/animation.js"></script>
   </head>
   <body>
 
     <main>
       <div id="animation-info" class="animation"> 
-        Information
+        <div id="textes-info">
+          <h2 data-i18n="info.a_propos.titre"></h2>
+          <div class="contenu-a-propos">
+            <p>
+              <span style="font-style: italic;">Repenser la famille : de l'utopie aux nouvelles stratégies</span>
+              <span data-i18n="info.a_propos.p1"></span>
+            </p>
+            <p data-i18n="info.a_propos.p2"></p>
+            <p data-i18n="info.a_propos.p3"></p>
+          </div>
+          <h2 data-i18n="info.contact.titre"></h2>
+          <p><a href="mailto:camilarosario.vasquez@gmail.com" style="text-decoration: underline;">camilarosario.vasquez@gmail.com</a></p>
+          <p data-i18n="info.contact.p1"></p>
+          <p data-i18n="info.contact.p2"></p>
+        </div>
       </div>
     </main>
     <div id="menu">
@@ -41,6 +56,5 @@
     <a id="container-logo" href="/"><img id="logo" class="icone" src="/images/logo.png"></a>
     <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
     <div id="hamburger">Menu</div>
-
   </body>
 </html>

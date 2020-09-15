@@ -299,6 +299,23 @@ main #animation-portraits + #legende {
   white-space: nowrap;
   text-align: center;
 }
+main #animation-info {
+  position: relative;
+  top: 20%;
+  left: 18%;
+  width: 64%;
+  font-size: 0.9em;
+}
+main #animation-info h2 {
+  text-transform: uppercase;
+}
+main #animation-info .contenu-a-propos {
+  display: flex;
+  justify-content: space-between;
+}
+main #animation-info .contenu-a-propos p {
+  width: 30%;
+}
 @media only screen and (max-width: 600px) {
   header nav {
     justify-content: flex-end;
