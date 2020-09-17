@@ -287,22 +287,35 @@ main #animation-portraits {
   overflow: auto;
 }
 main #animation-portraits #portraits {
-  width: 8330px;
+  width: max-content;
+  font-size: 0px;
 }
 main #animation-portraits .paysage {
+  display: inline-block;
   width: 290px;
-  float: left;
+  transition: 2s width;
+  vertical-align: middle;
+}
+main #animation-portraits .paysage:hover,
+main #animation-portraits .paysage.focus {
+  width: 435px;
 }
 main #animation-portraits .portrait {
+  display: inline-block;
   width: 200px;
-  float: left;
+  transition: 2s width;
+  vertical-align: middle;
+}
+main #animation-portraits .portrait:hover,
+main #animation-portraits .portrait.focus {
+  width: 300px;
 }
 main #animation-portraits #legende {
-  padding-top: 30px;
+  font-size: initial;
+  padding-top: 20px;
   text-align: justify;
   text-align-last: justify;
-  width: 8330px;
-  clear: both;
+  width: 100%;
 }
 main #animation-info {
   position: relative;

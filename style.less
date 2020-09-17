@@ -370,25 +370,38 @@ main {
     overflow: auto;
 
     #portraits {
-      width: 8330px;
+      width: max-content;
+      font-size: 0px;
     }
 
     .paysage {
+      display: inline-block;
       width: 290px;
-      float: left;
+      transition: 2s width;
+      vertical-align: middle;
+
+      &:hover, &.focus {
+        width: 435px;
+      }
     }
 
     .portrait {
+      display: inline-block;
       width: 200px;
-      float: left;
+      transition: 2s width;
+      vertical-align: middle;
+
+      &:hover, &.focus {
+        width: 300px;
+      }
     } 
 
     #legende {
-      padding-top: 30px;
+      font-size: initial;
+      padding-top: 20px;
       text-align: justify;
       text-align-last: justify;
-      width: 8330px;
-      clear: both;
+      width: 100%;
     }
   }
 
