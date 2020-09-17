@@ -294,6 +294,7 @@ main #animation-portraits .paysage {
   display: inline-block;
   width: 290px;
   transition: 2s width;
+  transition-delay: 0.1s;
   vertical-align: middle;
 }
 main #animation-portraits .paysage:hover,
@@ -304,6 +305,7 @@ main #animation-portraits .portrait {
   display: inline-block;
   width: 200px;
   transition: 2s width;
+  transition-delay: 0.1s;
   vertical-align: middle;
 }
 main #animation-portraits .portrait:hover,
@@ -312,7 +314,7 @@ main #animation-portraits .portrait.focus {
 }
 main #animation-portraits #legende {
   font-size: initial;
-  padding-top: 20px;
+  padding: 20px 0;
   text-align: justify;
   text-align-last: justify;
   width: 100%;
