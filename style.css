@@ -350,6 +350,14 @@ main #animation-info .contenu-a-propos p {
   width: 30%;
 }
 @media only screen and (max-width: 600px) {
+  #menu {
+    flex-direction: column;
+    top: 20%;
+    bottom: 10%;
+  }
+  #menu .item-menu {
+    width: 75%;
+  }
   header nav {
     justify-content: flex-end;
   }
