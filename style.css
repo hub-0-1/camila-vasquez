@@ -52,6 +52,7 @@ body .optima {
   background-size: contain;
   color: white;
   text-align: center;
+  cursor: pointer;
   mix-blend-mode: darken;
   text-transform: uppercase;
 }
@@ -216,6 +217,7 @@ main #animation-lexique .tuile {
 }
 main #animation-lexique .tuile .image-flottante {
   position: absolute;
+  cursor: pointer;
   max-width: 10%;
 }
 main #animation-cartographie .image {
