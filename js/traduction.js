@@ -53,6 +53,9 @@ var traduction = {
           ligne3: "Ici"
         }
       },
+      cartographie: {
+        explication: "Zoomez et explorez"
+      },
       info: {
         a_propos: {
           titre: "À propos",
@@ -92,6 +95,9 @@ var traduction = {
           ligne2: "Click",
           ligne3: "Here"
         }
+      },
+      cartographie: {
+        explication: "Zoom and explore"
       },
       info: {
         a_propos: {

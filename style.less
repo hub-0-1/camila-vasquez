@@ -86,6 +86,8 @@ body {
   justify-content: space-evenly;
   align-items: center;
 
+  cursor: pointer;
+
   &.show {
     display: flex;
   }
@@ -288,6 +290,22 @@ main {
     .image {
       width: 100%;
     }
+
+    & + #explications {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      display: flex;
+      opacity: 1;
+      transition: opacity 2s;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #f2efea;
+    }
   }
 
   #animation-tableau-blanc {
@@ -458,6 +476,16 @@ main {
         left: 10%;
         width: 80%;
       }
+    }
+  }
+}
+
+@media (orientation: portrait) {
+  main {
+    #animation-cartographie {
+      position: fixed;
+      top: 25%;
+      bottom: 25%;
     }
   }
 }
