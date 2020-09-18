@@ -20,7 +20,10 @@ var config = {
     { x: "31%", y: "72%" },
     { x: "58%", y: "82%" },
     { x: "78%", y: "2%" },
-    { x: "89%", y: "72%" }
+    { x: "90%", y: "39%" },
+    { x: "70%", y: "34%" },
+    { x: "100%", y: "0%" },
+    { x: "15%", y: "72%" }
   ],
   tuiles: {
     vitesse_maj_tuiles_visibles: 250,
@@ -39,7 +42,10 @@ var config = {
       '/images/lexique/montagne.png',
       '/images/lexique/presence.png',
       '/images/lexique/regarder_maison.png',
-      '/images/lexique/se_refugier.png'
+      '/images/lexique/se_refugier.png',
+      '/images/lexique/mistifi.png',
+      '/images/lexique/inverser.png',
+      '/images/lexique/egal.png'
     ],
     liste: []
   }
