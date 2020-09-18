@@ -6,6 +6,7 @@ var dernier_x = 0;
 window.onload = function () {
 
   init_traduction();
+  init_menu();
 
   let texte = document.getElementById("texte");
   texte.scroll({ left: 1, top: 0 });

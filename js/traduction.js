@@ -36,7 +36,7 @@ var traduction = {
         tableau_blanc: "Dessins sonores",
         portraits: "Portraits à l'aveugle",
         collage: "Collage de collages",
-        info: "Info",
+        info: "Informations",
         autre_langue: "EN"
       },
       tableau: {
@@ -82,7 +82,8 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         contact: {
           titre: "Contact",
           p1: "Ce site web a été produit par la Galerie d’art Foreman et a été programmé par 0/1 - Hub numérique Estrie.",
-          p2: "Les animations ont été créés par Carl C. Ferland."
+          p2: "Les animations ont été créés par Carl C. Ferland.",
+          p3: "foreman.ubishops.ca/repenser-la-famille-de-lutopie-aux-nouvelles-strategies"
         }
       }
     }
@@ -95,7 +96,7 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         tableau_blanc: "White board",
         portraits: "Blind portraits",
         collage: "Cartography",
-        info: "Info",
+        info: "Informations",
         autre_langue: "FR"
       },
       tableau: {
@@ -144,7 +145,8 @@ Leo just stopped his shower; he comes into the living room in a towel and sits d
         contact: {
           titre: "Contact",
           p1: "This website was produced by the Foreman Art Gallery and programmed by the 0/1 - Hub numérique de l’Estrie.",
-          p2: "The animations were created by Carl C. Ferland."
+          p2: "The animations were created by Carl C. Ferland.",
+          p3: "foreman.ubishops.ca/repenser-la-famille-de-lutopie-aux-nouvelles-strategies"
         }
       }
     }
