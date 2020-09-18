@@ -304,6 +304,7 @@ main #animation-portraits::-webkit-scrollbar {
 }
 main #animation-portraits #portraits {
   width: max-content;
+  font-size: 0;
 }
 main #animation-portraits .paysage {
   margin: 0;
