@@ -24,7 +24,7 @@ body .optima {
   position: fixed;
   top: 10px;
   left: 2%;
-  width: 100px;
+  width: 220px;
   display: block;
 }
 #container-logo #logo {
@@ -355,6 +355,9 @@ main #animation-info .contenu-a-propos p {
   width: 30%;
 }
 @media only screen and (max-width: 600px) {
+  #container-logo {
+    width: 33%;
+  }
   #menu {
     flex-direction: column;
     top: 20%;
