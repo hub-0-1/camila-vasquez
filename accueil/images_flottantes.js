@@ -63,12 +63,12 @@ function determiner_vecteur_deplacement (image) {
 
   vecteur = { x: -1, y: -1 }
 
-  image.setAttribute("data-dx", vecteur.x * config.multiplicateur_vecteur);
-  image.setAttribute("data-dy", vecteur.y * config.multiplicateur_vecteur);
+  image.setAttribute("data-dx", vecteur.x * config.images.parametres.multiplicateur_vecteur_translation);
+  image.setAttribute("data-dy", vecteur.y * config.images.parametres.multiplicateur_vecteur_translation);
 }
 
 function determiner_sens_rotation (image) {
-  image.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1));
+  image.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1) * config.images.parametres.multiplicateur_vecteur_rotation);
 }
 
 function src_image_aleatoire () {
@@ -89,8 +89,8 @@ function animer_images () {
     image.style.left = (left_px + deltaX) + "px";
 
     // Flotement - rotation
-    let delta_rotation = parseInt(image.getAttribute("data-dr"));
-    let rotation_originale = parseInt(image.getAttribute("data-r"));
+    let delta_rotation = parseFloat(image.getAttribute("data-dr"));
+    let rotation_originale = parseFloat(image.getAttribute("data-r"));
     image.setAttribute("data-r", rotation_originale + delta_rotation);
 
     appliquer_transform_image(image);

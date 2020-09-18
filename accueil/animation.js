@@ -1,10 +1,13 @@
 var config = {
+  frame_rate: 30,
   images: {
     liste: [],
     parametres: {
       translate: { x: 0, y: 0 },
-      interval_apparition_image: 1500,
-      delais_suppression_image: 1000 * 30, // 30 secondes
+      interval_apparition_image: 500,
+      delais_suppression_image: 1000 * 45, // 30 secondes
+      multiplicateur_vecteur_translation: 0.7,
+      multiplicateur_vecteur_rotation: 0.2 
     },
     positionnements: [
       { x: 0, y: 0 },
@@ -40,20 +43,8 @@ var config = {
   rapport_image_ecran: 6,
   scale_ext_canva: 2,
   vitesse_translation: 1.3,
-  ms_animation: 40,
-  multiplicateur_vecteur: 3,
   positionnement_actuel: 0,
-  nb_images_initiales: 6, 
-  tuiles: {
-    vitesse_maj_tuiles_visibles: 250,
-    vitesse_translation: 1,
-    translate: { x: 0, y: 0 },
-    taille: { 
-      x: { valeur: 1500, unite: "px" },
-      y: { valeur: 1500, unite: "px" },
-    },
-    liste: []
-  }
+  nb_images_initiales: 6
 }
 
 window.onload = function () {
@@ -86,16 +77,10 @@ window.onload = function () {
   document.getElementById("modal").addEventListener("click", hide_modal);
 
   // Lancer l'animation
-  window.setInterval(animer_images, config.ms_animation);
+  window.setInterval(animer_images, config.frame_rate);
   window.setInterval(function () { 
     canva.appendChild(creer_image());
   }, config.images.parametres.interval_apparition_image);
-
-  // Creer la premiere tuile
-  new TuileVideo({x: 0, y: 0}, "/videos/dessin-sonore-1-1_low.mp4");
-
-  // Mise à jour des tuiles visibles
-  window.setInterval(maj_tuiles_visibles, config.tuiles.vitesse_maj_tuiles_visibles);
 }
 
 function round_decimal (nb) {
