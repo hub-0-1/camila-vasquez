@@ -217,13 +217,12 @@ main {
   #animation-lexique {
 
     & ~ #modal-interpretation {
-      position: fixed;
-      top: 10%;
-      bottom: 10%;
-      left: 10%;
-      width: 30%;
+      position: absolute;
 
       display: none;
+      opacity: 0;
+      width: 300px;
+      transition: opacity 2s;
 
       .container-contenu-modal {
         display: flex;
@@ -232,7 +231,6 @@ main {
         justify-content: space-evenly;
 
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
 
         img {
           width: 50%;
@@ -245,13 +243,12 @@ main {
     }
 
     & ~ #modal-officiel {
-      position: fixed;
-      top: 10%;
-      bottom: 10%;
-      right: 10%;
-      width: 30%;
+      position: absolute;
 
       display: none;
+      opacity: 0;
+      width: 300px;
+      transition: opacity 2s;
 
       .container-contenu-modal {
         display: flex;
@@ -260,7 +257,6 @@ main {
         justify-content: space-evenly;
 
         height: 100%;
-        background-color: rgba(0,0,0,0.5);
 
         img {
           width: 50%;
@@ -268,6 +264,7 @@ main {
 
         p {
           padding: 2%;
+          color: rgba(0, 0, 0, 0.6);
         }
       }
     }

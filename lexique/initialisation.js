@@ -79,39 +79,59 @@ function afficher_definition_interpretation (src_image, texte) {
 
   // Afficher les definitions
   modal.style.display = "block";
-  modal.querySelector("img").src = src_image;
   modal.querySelector("p").innerHTML = texte;
+  window.setTimeout(function () {
+    modal.style.opacity = "1";
+  }, 10);
 }
 
 function cacher_definition_interpretation () {
 
-  // Afficher les tuiles
-  [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
-    tuile.style.opacity = "1";
-  });
-
   let modal = document.getElementById("modal-interpretation");
-  modal.style.display = "none";
+  modal.style.opacity = "0";
+  window.setTimeout(function () {
+    modal.style.display = "none";
+    
+    // Afficher les tuiles
+    [].forEach.call(document.querySelectorAll(".image-flottante"), (image) => {
+      image.style.opacity = "1";
+    });
+
+  }, 2000);
+
 }
 
-function afficher_definition_officielle (src_image, texte) {
+function afficher_definition_officielle (src_image, texte, element) {
 
   // Cacher les tuiles
-  [].forEach.call(document.querySelectorAll(".tuile"), (tuile) => {
-    tuile.style.opacity = "0";
+  [].forEach.call(document.querySelectorAll(".image-flottante"), (image) => {
+    image.style.opacity = "0";
   });
+  element.style.opacity = "1";
 
-  let modal = document.getElementById("modal-officiel");
+  let rect = element.getBoundingClientRect();
 
-  modal.style.display = "block";
-  modal.querySelector("img").src = src_image;
-  modal.querySelector("p").innerHTML = texte;
+  let modal_officiel = document.getElementById("modal-officiel");
+  modal_officiel.style.top = (rect.y - 20) + "px";
+  modal_officiel.style.left = (rect.x - 350) + "px";
+  modal_officiel.style.display = "block";
+  modal_officiel.querySelector("p").innerHTML = texte;
+  window.setTimeout(function () {
+    modal_officiel.style.opacity = "1";
+  }, 0);
+
+  let modal_interpretation = document.getElementById("modal-interpretation");
+  modal_interpretation.style.top = (rect.y - 20) + "px";
+  modal_interpretation.style.left = (rect.x - 350) + "px";
 }
 
 function cacher_definition_officielle () {
 
   let modal = document.getElementById("modal-officiel");
-  modal.style.display = "none";
+  modal.style.opacity = "0";
+  window.setTimeout(function () {
+    modal.style.display = "none";
+  }, 2000);
 }
 
 function commencer_translation (e) {

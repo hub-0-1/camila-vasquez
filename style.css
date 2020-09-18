@@ -170,12 +170,11 @@ main #animation-design-typographique #cercle-scroll-bar img {
   width: 100%;
 }
 main #animation-lexique ~ #modal-interpretation {
-  position: fixed;
-  top: 10%;
-  bottom: 10%;
-  left: 10%;
-  width: 30%;
+  position: absolute;
   display: none;
+  opacity: 0;
+  width: 300px;
+  transition: opacity 2s;
 }
 main #animation-lexique ~ #modal-interpretation .container-contenu-modal {
   display: flex;
@@ -183,7 +182,6 @@ main #animation-lexique ~ #modal-interpretation .container-contenu-modal {
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 main #animation-lexique ~ #modal-interpretation .container-contenu-modal img {
   width: 50%;
@@ -192,12 +190,11 @@ main #animation-lexique ~ #modal-interpretation .container-contenu-modal p {
   padding: 2%;
 }
 main #animation-lexique ~ #modal-officiel {
-  position: fixed;
-  top: 10%;
-  bottom: 10%;
-  right: 10%;
-  width: 30%;
+  position: absolute;
   display: none;
+  opacity: 0;
+  width: 300px;
+  transition: opacity 2s;
 }
 main #animation-lexique ~ #modal-officiel .container-contenu-modal {
   display: flex;
@@ -205,13 +202,13 @@ main #animation-lexique ~ #modal-officiel .container-contenu-modal {
   align-items: center;
   justify-content: space-evenly;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
 }
 main #animation-lexique ~ #modal-officiel .container-contenu-modal img {
   width: 50%;
 }
 main #animation-lexique ~ #modal-officiel .container-contenu-modal p {
   padding: 2%;
+  color: rgba(0, 0, 0, 0.6);
 }
 main #animation-lexique .tuile {
   position: absolute;

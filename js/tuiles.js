@@ -330,18 +330,17 @@ class Image {
 
   afficher_definitions (e) {
 
-    // TODO lier le texte a l'image
     let langue = document.getElementById("langue").getAttribute("data-langue");
     let texte = e.target.src.match(/\/lexique\/(\w+)\.png/)[1];
 
-    afficher_definition_officielle(this.source, config.textes[langue][texte].original);
+    afficher_definition_officielle(this.source, config.textes[langue][texte].original, e.target);
     window.setTimeout(cacher_definition_officielle, config.temps_apparition_definition);
 
     window.setTimeout(() => {
       afficher_definition_interpretation(this.source, config.textes[langue][texte].interpretation);
-    }, config.temps_apparition_definition);
+    }, config.temps_apparition_definition + 2000);
 
-    window.setTimeout(cacher_definition_interpretation, config.temps_apparition_definition * 2);
+    window.setTimeout(cacher_definition_interpretation, (config.temps_apparition_definition * 2) + 2000);
   }
 }
 
