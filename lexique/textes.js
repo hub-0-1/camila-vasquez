@@ -72,7 +72,7 @@ var textes = {
     },
     regarder_maison: {
       mot: "Regarder",
-      original: "$travailler$ @v.  . conjug.@ _1._ %Agir d'une manière suivie, avec plus ou moins d'effort, pour obtenir un résultat utile (intellectuellement, manuellement).% @fam.@ _Bosser, boulonner_ @/ contr.@ _s’amuser, chômer, se reposer._ _2._ %Exercer une activité professionnelle, un métier.%",
+      original: "$regarder$ @v. tr. . conjug.@ _1._ %Faire en sorte de voir, s'appliquer à voir (qqn, qqch.).% _> examiner, observer._",
       interpretation: "$regarder la maison de l'intérieur$ _1._ @loc.@ %Faculté d'examiner sa maison quand elle en désordre sans éprouver de l'agitation et, au contraire, irradier un faisceau lumineux paisible qui reflète de l’harmonie dans l’espace habité.%"
     }
   },
@@ -149,7 +149,7 @@ var textes = {
     },
     regarder_maison: {
       mot: "Watch",
-      original: "$watch$ @trans. verb.@ _1._ %Make sure to see, apply yourself to seeing (someone, something).% _examine, observe._",
+      original: "$watch$ @trans. verb.@ _1._ %Make sure to see, apply yourself to seeing (someone, something).% _> examine, observe._",
       interpretation: "$looking at the house from the inside$ _1._ @idiom.@ %Ability to examine one's home when it is in disorder without experiencing commotion and, on the contrary, radiate a peaceful beam of light which reflects harmony in the lived space.%"
     }
   }
