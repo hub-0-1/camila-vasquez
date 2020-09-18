@@ -379,46 +379,52 @@ main {
     left: 1%;
     width: 98%;
     
-    /*
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    */
-
     overflow: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    & {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
 
     #portraits {
       width: max-content;
-      font-size: 0px;
     }
 
     .paysage {
+      margin: 0;
       display: inline-block;
-      width: 290px;
-      transition: 2s width;
+      width: 450px;
+      transition: 2s all;
       transition-delay: 0.1s;
       vertical-align: middle;
 
-      &:hover, &.focus {
-        width: 435px;
+      &.focus {
+        width: 600px;
+        margin: 0 600px;
       }
     }
 
     .portrait {
+      margin: 0;
       display: inline-block;
-      width: 200px;
+      width: 350px;
       transition: 2s width;
       transition-delay: 0.1s;
       vertical-align: middle;
 
-      &:hover, &.focus {
-        width: 300px;
+      &.focus {
+        width: 600px;
+        margin: 0 600px;
       }
     } 
 
     #legende {
       font-size: initial;
-      padding: 20px 0;
+      margin-top: -12px;
       text-align: justify;
       text-align-last: justify;
       width: 100%;
@@ -430,7 +436,7 @@ main {
     top: 20%;
     left: 18%;
     width: 64%;
-    
+
     font-size: 0.9em;
 
     h2 {

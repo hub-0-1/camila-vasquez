@@ -292,42 +292,46 @@ main #animation-portraits {
   top: 25%;
   left: 1%;
   width: 98%;
-  /*
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    */
   overflow: auto;
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+main #animation-portraits::-webkit-scrollbar {
+  display: none;
 }
 main #animation-portraits #portraits {
   width: max-content;
-  font-size: 0px;
 }
 main #animation-portraits .paysage {
+  margin: 0;
   display: inline-block;
-  width: 290px;
-  transition: 2s width;
+  width: 450px;
+  transition: 2s all;
   transition-delay: 0.1s;
   vertical-align: middle;
 }
-main #animation-portraits .paysage:hover,
 main #animation-portraits .paysage.focus {
-  width: 435px;
+  width: 600px;
+  margin: 0 600px;
 }
 main #animation-portraits .portrait {
+  margin: 0;
   display: inline-block;
-  width: 200px;
+  width: 350px;
   transition: 2s width;
   transition-delay: 0.1s;
   vertical-align: middle;
 }
-main #animation-portraits .portrait:hover,
 main #animation-portraits .portrait.focus {
-  width: 300px;
+  width: 600px;
+  margin: 0 600px;
 }
 main #animation-portraits #legende {
   font-size: initial;
-  padding: 20px 0;
+  margin-top: -12px;
   text-align: justify;
   text-align-last: justify;
   width: 100%;
