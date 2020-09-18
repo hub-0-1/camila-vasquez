@@ -88,6 +88,9 @@ body {
 
   cursor: pointer;
 
+  opacity: 0;
+  transition: opacity 2s;
+
   &.show {
     display: flex;
   }
@@ -116,6 +119,7 @@ body {
 main {
   width: 100vw;
   height: 100vh;
+  transition: 2s opacity;
 
   .animation {
     position: fixed;
