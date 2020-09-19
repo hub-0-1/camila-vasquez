@@ -135,13 +135,24 @@ main {
       position: absolute;
     }
 
-    .tuile {
-      position: absolute;
+    & ~ #presentation {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
 
-      .video-bg {
-        width: 1500px;
-        height: 1500px;
-        display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background-color: #f2efea;
+      transition: opacity 2s;
+
+      & div {
+        opacity: 0;
+        transition: opacity 2s;
       }
     }
 

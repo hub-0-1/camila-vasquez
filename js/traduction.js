@@ -39,6 +39,10 @@ var traduction = {
         info: "Informations",
         autre_langue: "EN"
       },
+      accueil: {
+        titre: "Repenser la famille",
+        sous_titre: "de l'utopie aux nouvelles stratégies"
+      },
       tableau: {
         intro: {
           ligne1: "Fermez les yeux",
@@ -98,6 +102,10 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         collage: "Cartography",
         info: "Informations",
         autre_langue: "FR"
+      },
+      accueil: {
+        titre: "Rethinking the family",
+        sous_titre: "From utopia to new strategies"
       },
       tableau: {
         intro: {

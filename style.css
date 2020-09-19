@@ -106,13 +106,22 @@ main #animation-accueil {
 main #animation-accueil .image-flottante {
   position: absolute;
 }
-main #animation-accueil .tuile {
-  position: absolute;
+main #animation-accueil ~ #presentation {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f2efea;
+  transition: opacity 2s;
 }
-main #animation-accueil .tuile .video-bg {
-  width: 1500px;
-  height: 1500px;
-  display: block;
+main #animation-accueil ~ #presentation div {
+  opacity: 0;
+  transition: opacity 2s;
 }
 main #animation-accueil + #modal {
   display: none;

@@ -32,34 +32,24 @@ function creer_image () {
 }
 
 function positionner_image (image) {
-  let coordonnees = { };
+  let coordonnees = {};
   let pos_init = config.images.positionnements[config.positionnement_actuel];
 
-  if(pos_init.x == -1) { coordonnees.x = Math.round(Math.random() * -1 * config.ecran.largeur * config.scale_ext_canva) - config.ecran.largeur; }
-  else if(pos_init.x == 0) { coordonnees.x = Math.round(Math.random() * config.ecran.largeur); }
-  else if(pos_init.x == 1) { coordonnees.x = Math.round(Math.random() * 1 * config.ecran.largeur * config.scale_ext_canva) + config.ecran.largeur; }
+  if(pos_init.x == -1) { coordonnees.x = Math.round(config.ecran.largeur / 2) - config.ecran.largeur; }
+  else if(pos_init.x == 0) { coordonnees.x = Math.round(config.ecran.largeur / 2); }
+  else if(pos_init.x == 1) { coordonnees.x = Math.round(config.ecran.largeur / 2) + config.ecran.largeur; }
 
-  if(pos_init.y == -1) { coordonnees.y = Math.round(Math.random() * -1 * config.ecran.hauteur * config.scale_ext_canva) - config.ecran.hauteur; }
-  else if(pos_init.y == 0) { coordonnees.y = Math.round(Math.random() * config.ecran.hauteur); }
-  else if(pos_init.y == 1) { coordonnees.y = Math.round(Math.random() * 1 * config.ecran.hauteur * config.scale_ext_canva) + config.ecran.hauteur; }
+  if(pos_init.y == -1) { coordonnees.y = Math.round(config.ecran.hauteur / 2) - config.ecran.hauteur; }
+  else if(pos_init.y == 0) { coordonnees.y = Math.round(config.ecran.hauteur / 2); }
+  else if(pos_init.y == 1) { coordonnees.y = Math.round(config.ecran.hauteur / 2) + config.ecran.hauteur; }
 
-  image.style.left = coordonnees.x + "px";
-  image.style.top = coordonnees.y + "px";
+  image.style.left = coordonnees.x + -1 * config.images.parametres.translate.x + "px";
+  image.style.top = coordonnees.y + -1 * config.images.parametres.translate.y + "px";
 }
 
 function determiner_vecteur_deplacement (image) {
-  let vecteur = { };
-  let pos_init = config.images.positionnements[config.positionnement_actuel];
 
-  if(pos_init.x == -1) { vecteur.x = round_decimal((Math.random() / 2) + 0.5); } // [0.5, 1]
-  else if(pos_init.x == 0) { vecteur.x = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; } // [-1, -0.5], [0.5, 1]
-  else if(pos_init.x == 1) { vecteur.x = round_decimal((Math.random() / 2) - 1); } // [-1, -0.5]
-
-  if(pos_init.y == -1) { vecteur.y = round_decimal((Math.random() / 2) + 0.5); }
-  else if(pos_init.y == 0) { vecteur.y = round_decimal((Math.random() / 2) + 0.5) * Math.random() >= 0.5 ? 1 : -1; }
-  else if(pos_init.y == 1) { vecteur.y = round_decimal((Math.random() / 2) - 1); }
-
-  vecteur = { x: -1, y: -1 }
+  let vecteur = { x: -1 * Math.random() / 2, y: -1 * Math.random() / 2 };
 
   image.setAttribute("data-dx", vecteur.x * config.images.parametres.multiplicateur_vecteur_translation);
   image.setAttribute("data-dy", vecteur.y * config.images.parametres.multiplicateur_vecteur_translation);
