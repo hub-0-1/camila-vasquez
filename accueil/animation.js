@@ -92,10 +92,10 @@ function hide_modal () {
   modal.classList.remove("active");
 }
 
-function show_modal (image_url) {
+function show_modal (image) {
   let modal = document.getElementById("modal");
   modal.classList.add("active");
-  modal.querySelector("img").src = image_url;
+  modal.querySelector("img").src = image.src;
 }
 
 function commencer_translation (e) {

@@ -5,11 +5,9 @@ function creer_image () {
   // Info de base
   img.src = "images/" + src_image_aleatoire();
   img.className = "image-flottante"
-  img.alt = "Madonna";
-  img.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px"
-  img.addEventListener("click", (e) => {
-    show_modal(e.target.src);
-  });
+  img.alt = this.src;
+  img.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px";
+  img.addEventListener("click", (e) => { show_modal(e.target); });
   img.setAttribute("data-r", 0);
 
   // Position initiale
