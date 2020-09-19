@@ -12,6 +12,12 @@ window.onload = function () {
 
 function toggleFocus () {
   this.classList.toggle("focus");
-  document.querySelector("#portraits").style.transform = "translateX(-600px)";
+  if([].includes.call(this.classList, "focus")) {
+    document.querySelector("#animation-portraits").scroll({
+      top: 0,
+      left: this.offsetLeft - ((window.innerWidth / 2) - (this.offsetWidth / 2)),
+      behavior: 'smooth'
+    })
+  }
 }
 

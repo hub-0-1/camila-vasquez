@@ -1,3 +1,6 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   padding: 0;
   margin: 0;
@@ -300,10 +303,10 @@ main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .coule
   color: #f19731;
 }
 main #animation-portraits {
-  position: relative;
-  top: 25%;
+  position: fixed;
+  top: 0%;
   left: 1%;
-  width: 98%;
+  right: 1%;
   overflow: auto;
   /* Hide scrollbar for IE, Edge and Firefox */
   -ms-overflow-style: none;
@@ -315,32 +318,31 @@ main #animation-portraits::-webkit-scrollbar {
   display: none;
 }
 main #animation-portraits #portraits {
+  position: absolute;
+  top: 50%;
   width: max-content;
   font-size: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: transform 2s;
 }
 main #animation-portraits .paysage {
-  margin: 0;
   display: inline-block;
   width: 450px;
   transition: 2s all;
-  transition-delay: 0.1s;
   vertical-align: middle;
 }
 main #animation-portraits .paysage.focus {
   width: 600px;
-  margin: 0 600px;
 }
 main #animation-portraits .portrait {
-  margin: 0;
   display: inline-block;
   width: 350px;
-  transition: 2s width;
-  transition-delay: 0.1s;
+  transition: 2s all;
   vertical-align: middle;
 }
 main #animation-portraits .portrait.focus {
   width: 600px;
-  margin: 0 600px;
 }
 main #animation-portraits #legende {
   font-size: initial;

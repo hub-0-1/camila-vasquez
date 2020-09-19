@@ -1,10 +1,13 @@
-@hauteur-header: 75px;
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   padding: 0;
   margin: 0;
   font-family: 'Nunito Sans', sans-serif;
   background-color: #f2efea;
+
 
   a {
     color: black;
@@ -389,10 +392,10 @@ main {
   }
 
   #animation-portraits {
-    position: relative;
-    top: 25%;
+    position: fixed;
+    top: 0%;
     left: 1%;
-    width: 98%;
+    right: 1%;
     
     overflow: auto;
     &::-webkit-scrollbar {
@@ -406,35 +409,36 @@ main {
     }
 
     #portraits {
+      position: absolute;
+      top: 50%;
       width: max-content;
       font-size: 0;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+
+      transition: transform 2s;
     }
 
     .paysage {
-      margin: 0;
       display: inline-block;
       width: 450px;
       transition: 2s all;
-      transition-delay: 0.1s;
       vertical-align: middle;
 
       &.focus {
+
         width: 600px;
-        margin: 0 600px;
       }
     }
 
     .portrait {
-      margin: 0;
       display: inline-block;
       width: 350px;
-      transition: 2s width;
-      transition-delay: 0.1s;
+      transition: 2s all;
       vertical-align: middle;
 
       &.focus {
         width: 600px;
-        margin: 0 600px;
       }
     } 
 
