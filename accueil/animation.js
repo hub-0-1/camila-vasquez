@@ -176,6 +176,9 @@ function afficher_titres () {
         document.getElementById("sous-titre").style.opacity = 1;
         window.setTimeout(function () {
           document.getElementById("presentation").style.opacity = 0;
+          window.setTimeout(function () {
+            document.getElementById("presentation").style.display = "none";
+          }, 2000);
         }, 2000);
       }, 2000);
     }, 2000);
