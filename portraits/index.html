@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
 
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
+    <script src="/js/menu.js"></script>
     <script src="/js/traduction.js"></script>
 
     <script src="/portraits/animation.js"></script>
@@ -27,48 +28,57 @@
     <main>
       <div id="animation-portraits" class="animation">
         <div id="portraits">
-          <img src="/images/portraits/boucle/Gaspar_3_images.gif" class="portrait">
-          <img src="/images/portraits/Blanche_par_Pascal.jpg" class="paysage">
-          <img src="/images/portraits/boucle/Cecilia_4_images.gif" class="portrait">
-          <img src="/images/portraits/Camila_par_Jaya.jpg" class="paysage">
-          <img src="/images/portraits/boucle/Lucie_2_images.gif" class="portrait">
-          <img src="/images/portraits/Christian.jpg" class="paysage">
-          <img src="/images/portraits/boucle/George_3_images.gif" class="portrait">
-          <img src="/images/portraits/Dimitri_par_Jackie.jpg" class="paysage">
-          <img src="/images/portraits/boucle/Elsa_4_images.gif" class="portrait">
-          <img src="/images/portraits/Elohan_par_Catherine.jpg" class="paysage">
-          <img src="/images/portraits/boucle/Marilyn_3_images.gif" class="portrait">
-          <img src="/images/portraits/animations/Catherine_par_Mathieu.gif" class="paysage">
-          <img src="/images/portraits/boucle/Octavio_3_images.gif" class="portrait">
-          <img src="/images/portraits/boucle/Mathieu_2_images.gif" class="paysage">
-          <img src="/images/portraits/Jackie_par_Iliana.jpg" class="portrait">
-          <img src="/images/portraits/boucle/Della_3_images.gif" class="paysage">
-          <img src="/images/portraits/boucle/Loé_3_images.gif" class="portrait">
-          <img src="/images/portraits/boucle/Mano_3_images.gif" class="paysage">
-          <img src="/images/portraits/Joaquim_par_Catherine.jpg" class="portrait">
-          <img src="/images/portraits/boucle/Edouardo_3_images.gif" class="paysage">
-          <img src="/images/portraits/Maca_par_Mano.jpg" class="portrait">
-          <img src="/images/portraits/boucle/Pascal_3_images.gif" class="paysage">
-          <img src="/images/portraits/Namasté_par_Jaya.jpg" class="portrait">
-          <img src="/images/portraits/boucle/Marie-Soleil_2_images.gif" class="paysage">
-          <img src="/images/portraits/boucle/Philippe_3_images.gif" class="portrait">
-          <img src="/images/portraits/animations/Jane_par_mathieu.gif" class="paysage">
-          <img src="/images/portraits/boucle/Ariel_3_images.gif" class="portrait">
-          <img src="/images/portraits/animations/Leo_par_Camila.gif" class="paysage">
-          <img src="/images/portraits/boucle/Diego_4_images.gif" class="portrait">
-          <img src="/images/portraits/animations/Nicolas_par_Octavio.gif" class="paysage">
-          <img src="/images/portraits/boucle/Iliana_3_images.gif" class="portrait">
-          <img src="/images/portraits/animations/Yuko.gif" class="paysage">
-          <img src="/images/portraits/boucle/Satia_4_images.gif" class="portrait">
-          <img src="/images/portraits/Jaya_par_Camila.jpg" class="paysage">
+          <img src="/images/portraits/boucle/Gaspar_3_images.gif" class="image portrait">
+          <img src="/images/portraits/Blanche_par_Pascal.jpg" class="image paysage">
+          <img src="/images/portraits/boucle/Cecilia_4_images.gif" class="image portrait">
+          <img src="/images/portraits/Camila_par_Jaya.jpg" class="image paysage">
+          <img src="/images/portraits/boucle/Lucie_2_images.gif" class="image portrait">
+          <img src="/images/portraits/Christian.jpg" class="image paysage">
+          <img src="/images/portraits/boucle/George_3_images.gif" class="image portrait">
+          <img src="/images/portraits/Dimitri_par_Jackie.jpg" class="image paysage">
+          <img src="/images/portraits/boucle/Elsa_4_images.gif" class="image portrait">
+          <img src="/images/portraits/Elohan_par_Catherine.jpg" class="image paysage">
+          <img src="/images/portraits/boucle/Marilyn_3_images.gif" class="image portrait">
+          <img src="/images/portraits/animations/Catherine_par_Mathieu.gif" class="image paysage">
+          <img src="/images/portraits/boucle/Octavio_3_images.gif" class="image portrait">
+          <img src="/images/portraits/boucle/Mathieu_2_images.gif" class="image paysage">
+          <img src="/images/portraits/Jackie_par_Iliana.jpg" class="image portrait">
+          <img src="/images/portraits/boucle/Della_3_images.gif" class="image paysage">
+          <img src="/images/portraits/boucle/Loé_3_images.gif" class="image portrait">
+          <img src="/images/portraits/boucle/Mano_3_images.gif" class="image paysage">
+          <img src="/images/portraits/Joaquim_par_Catherine.jpg" class="image portrait">
+          <img src="/images/portraits/boucle/Edouardo_3_images.gif" class="image paysage">
+          <img src="/images/portraits/Maca_par_Mano.jpg" class="image portrait">
+          <img src="/images/portraits/boucle/Pascal_3_images.gif" class="image paysage">
+          <img src="/images/portraits/Namasté_par_Jaya.jpg" class="image portrait">
+          <img src="/images/portraits/boucle/Marie-Soleil_2_images.gif" class="image paysage">
+          <img src="/images/portraits/boucle/Philippe_3_images.gif" class="image portrait">
+          <img src="/images/portraits/animations/Jane_par_mathieu.gif" class="image paysage">
+          <img src="/images/portraits/boucle/Ariel_3_images.gif" class="image portrait">
+          <img src="/images/portraits/animations/Leo_par_Camila.gif" class="image paysage">
+          <img src="/images/portraits/boucle/Diego_4_images.gif" class="image portrait">
+          <img src="/images/portraits/animations/Nicolas_par_Octavio.gif" class="image paysage">
+          <img src="/images/portraits/boucle/Iliana_3_images.gif" class="image portrait">
+          <img src="/images/portraits/animations/Yuko.gif" class="image paysage">
+          <img src="/images/portraits/boucle/Satia_4_images.gif" class="image portrait">
+          <img src="/images/portraits/Jaya_par_Camila.jpg" class="image paysage">
 
-          <div id="legende">
-            BLANCHE DESSINÉE PAR DIMITRI – CATHERINE DESSINÉE PAR PHILIPPE – DELLA DESSINÉE PAR MARIE – EDUARDO DE MANO – ELOHAN – GEORGE LOÉ – ILIANA PAR OCTAVIO – JACKIE ARTISTE PASCAL G. – JANE PAR EDUARDO – JAYA PAR NAMASTÉ – LÉO PAR ARIEL – MARIE-SOLEIL PAR MARILYN – NAMASTÉ ELSA – NICOLAS DESSINÉ PAR CAMILA – CHRISTIAN – DIEGO PAR CECILIA– ELSA PAR MACARENA – GASPAR DESSINÉ BLANCHE – JOAQUIM – LUCIE PAR MATHIEU – SATIA – YUKO –  ARIEL DESSINÉ PAR NAMASTÉ – CECILIA PAR CATHERINE – DIMITRI DESSINÉ PAR JACKIE – LOÉ DESSINÉ PAR ILIANA – MACARENA DESSINÉE PAR GASPAR – CAMILA PAR JAYA – OCTAVIO DESSINÉ PAR DIMITRI – PASCAL DESSINÉ PAR BLANCHE – PHILIPPE DESSINÉ PAR GEORGE 
-          </div>
+          <div id="legende" data-i18n="portraits.legende"></div>
         </div>
       </div>
     </main>
 
+    <div id="menu">
+      <div class="item-menu"><div class="index">01.</div><a class="oeuvre" href="/lexique/" data-i18n="header.lexique"></a></div>
+      <div class="item-menu"><div class="index">02.</div><a class="oeuvre" href="/collage/" data-i18n="header.collage"></a></div>
+      <div class="item-menu"><div class="index">03.</div><a class="oeuvre" href="/temps_ensemble/" data-i18n="header.design_typo"></a></div>
+      <div class="item-menu"><div class="index">04.</div><a class="oeuvre" href="/portraits/" data-i18n="header.portraits"></a></div>
+      <div class="item-menu"><div class="index">05.</div><a class="oeuvre" href="/tableau_blanc/" data-i18n="header.tableau_blanc"></a></div>
+      <div class="item-menu"><div class="index">06.</div><a class="oeuvre" href="/info/" data-i18n="header.info"></a></div>
+    </div>
+
     <a id="container-logo" href="/"><img id="logo" class="icone" src="/images/logo.png"></a>
+    <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
+    <div id="hamburger">Menu</div>
   </body>
 </html>
