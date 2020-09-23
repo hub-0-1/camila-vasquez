@@ -98,11 +98,11 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
   en: {
     translation: {
       header: {
-        design_typo: "Design typo EN",
-        lexique: "Lexique",
-        tableau_blanc: "White board",
+        design_typo: "Where we spend time together",
+        lexique: "Not exhaustive short illustrated lexicon",
+        tableau_blanc: "Sound drawings",
         portraits: "Blind portraits",
-        collage: "Cartography",
+        collage: "Collage of collages",
         info: "Informations",
         autre_langue: "FR"
       },
