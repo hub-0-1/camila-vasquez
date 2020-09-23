@@ -144,7 +144,7 @@ var textes = {
     },
     jamais_travailler: {
       mot: "Work",
-      original: "$work$ @intransitive verb.@ _1._ %To act in a sustained manner, with more or less effort, to obtain a useful result (intellectually, manually).@/ Antonym.@ _to have fun, to be unemployed, to rest._ _2._ %To practice a professional activity, a trade.%",
+      original: "$work$ @intransitive verb.@ _1._ %To act in a sustained manner, with more or less effort, to obtain a useful result (intellectually, manually).%@/ Antonym.@ _to have fun, to be unemployed, to rest._ _2._ %To practice a professional activity, a trade.%",
       interpretation: "$never work$ _1._ %Act of resistance to capitalism which consists in rebalancing personal life - and, eventually, society - by dividing one's time between family and friends, political life, spiritual life and individual activities, and refusing to devote oneself to productive life, which occupies too big a space in today's world for a large majority of adults.%"
     },
     regarder_maison: {
@@ -156,11 +156,21 @@ var textes = {
 }
 
 function parser (texte) {
-  texte = texte.replace(/%([-'0-9a-zÀ-ÿ'\s\.\(\),]+)%/gi, "<span class='baskerville'>$1</span>");
-  texte = texte.replace(/_([-'0-9a-zÀ-ÿ'\s\.\(\)]+)_/gi, "<span class='baskerville bold'>$1</span>");
-  texte = texte.replace(/\*([-'0-9a-zÀ-ÿ'\s\.\(\)]+)\*/gi, "<span class='baskerville italic'>$1</span>");
-  texte = texte.replace(/\$([-'0-9a-zÀ-ÿ'\s\.\(\)]+)\$/gi, "<span class='baskerville bold italic'>$1</span>");
-  texte = texte.replace(/@([-'0-9a-zÀ-ÿ'\s\.\(\)]+)@/gi, "<span class='optima'>$1</span>");
+  console.log("////////////////////////////////");
+
+  texte = texte.replace(/%([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)%/gi, "<span class='baskerville'>$1</span>");
+  texte = texte.replace(/_([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)_/gi, "<span class='baskerville bold'>$1</span>");
+  texte = texte.replace(/\*([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)\*/gi, "<span class='baskerville italic'>$1</span>");
+  texte = texte.replace(/\$([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)\$/gi, "<span class='baskerville bold italic'>$1</span>");
+  texte = texte.replace(/@([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)@/gi, "<span class='optima'>$1</span>");
+
+  /*
+  texte = texte.replace(/%([^_\*\$@]+)%/gi, "<span class='baskerville'>$1</span>");
+  texte = texte.replace(/_([^%\*\$@]+)_/gi, "<span class='baskerville'>$1</span>");
+  texte = texte.replace(/\*([^%_\$@]+)\*/gi, "<span class='baskerville'>$1</span>");
+*/
+
+  console.log(texte);
 
   return texte;
 }
