@@ -156,21 +156,12 @@ var textes = {
 }
 
 function parser (texte) {
-  console.log("////////////////////////////////");
 
-  texte = texte.replace(/%([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)%/gi, "<span class='baskerville'>$1</span>");
-  texte = texte.replace(/_([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)_/gi, "<span class='baskerville bold'>$1</span>");
-  texte = texte.replace(/\*([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)\*/gi, "<span class='baskerville italic'>$1</span>");
-  texte = texte.replace(/\$([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)\$/gi, "<span class='baskerville bold italic'>$1</span>");
-  texte = texte.replace(/@([-'0-9a-zÀ-ÿ'\s\.\(\),\/’!:]+)@/gi, "<span class='optima'>$1</span>");
-
-  /*
-  texte = texte.replace(/%([^_\*\$@]+)%/gi, "<span class='baskerville'>$1</span>");
-  texte = texte.replace(/_([^%\*\$@]+)_/gi, "<span class='baskerville'>$1</span>");
-  texte = texte.replace(/\*([^%_\$@]+)\*/gi, "<span class='baskerville'>$1</span>");
-*/
-
-  console.log(texte);
+  texte = texte.replace(/%([^%]+)%/gi, "<span class='baskerville'>$1</span>");
+  texte = texte.replace(/_([^_]+)_/gi, "<span class='baskerville bold'>$1</span>");
+  texte = texte.replace(/\*([^\*]+)\*/gi, "<span class='baskerville italic'>$1</span>");
+  texte = texte.replace(/\$([^\$]+)\$/gi, "<span class='baskerville bold italic'>$1</span>");
+  texte = texte.replace(/@([^@]+)@/gi, "<span class='optima'>$1</span>");
 
   return texte;
 }

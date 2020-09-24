@@ -3,7 +3,7 @@ function creer_image () {
   config.images.liste.push(img);
 
   // Info de base
-  img.src = "images/" + src_image_aleatoire();
+  img.src = src_image_aleatoire();
   img.className = "image-flottante"
   img.alt = this.src;
   img.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px";
@@ -35,13 +35,13 @@ function positionner_image (image) {
   let coordonnees = {};
   let pos_init = config.images.positionnements[config.positionnement_actuel];
 
-  if(pos_init.x == -1) { coordonnees.x = Math.round(config.ecran.largeur / 2) - config.ecran.largeur; }
-  else if(pos_init.x == 0) { coordonnees.x = Math.round(config.ecran.largeur / 2); }
-  else if(pos_init.x == 1) { coordonnees.x = Math.round(config.ecran.largeur / 2) + config.ecran.largeur; }
+  if(pos_init.x == -1) { coordonnees.x = Math.round(config.ecran.largeur * Math.random()) - config.ecran.largeur; }
+  else if(pos_init.x == 0) { coordonnees.x = Math.round(config.ecran.largeur * Math.random()); }
+  else if(pos_init.x == 1) { coordonnees.x = Math.round(config.ecran.largeur * Math.random()) + config.ecran.largeur; }
 
-  if(pos_init.y == -1) { coordonnees.y = Math.round(config.ecran.hauteur / 2) - config.ecran.hauteur; }
-  else if(pos_init.y == 0) { coordonnees.y = Math.round(config.ecran.hauteur / 2); }
-  else if(pos_init.y == 1) { coordonnees.y = Math.round(config.ecran.hauteur / 2) + config.ecran.hauteur; }
+  if(pos_init.y == -1) { coordonnees.y = Math.round(config.ecran.hauteur * Math.random()) - config.ecran.hauteur; }
+  else if(pos_init.y == 0) { coordonnees.y = Math.round(config.ecran.hauteur * Math.random()); }
+  else if(pos_init.y == 1) { coordonnees.y = Math.round(config.ecran.hauteur * Math.random()) + config.ecran.hauteur; }
 
   image.style.left = coordonnees.x + -1 * config.images.parametres.translate.x + "px";
   image.style.top = coordonnees.y + -1 * config.images.parametres.translate.y + "px";
