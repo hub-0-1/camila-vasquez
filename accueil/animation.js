@@ -21,41 +21,7 @@ var config = {
       { x: 0, y: -1 },
       { x: 1, y: -1 }
     ],
-    sources: [
-      '/images/accueil/flottantes_doc_labo/atelier_causerie_02.jpg',
-      '/images/accueil/flottantes_doc_labo/atelier_causerie_03.jpg',
-      '/images/accueil/flottantes_doc_labo/constat_01.jpg',
-      '/images/accueil/flottantes_doc_labo/constat_02.jpg',
-      '/images/accueil/flottantes_doc_labo/constat_03.jpg',
-      '/images/accueil/flottantes_doc_labo/constat_04.jpg',
-      '/images/accueil/flottantes_doc_labo/constat_05.jpg',
-      '/images/accueil/flottantes_doc_labo/constat_06.jpg',
-      '/images/accueil/flottantes_doc_labo/constat_08.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe001.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe003.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe006.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe007.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe008.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe009.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe010.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe011.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe012.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe013.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe014.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe015.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe018.jpg',
-      '/images/accueil/flottantes_doc_labo/la_realite_image_fixe019.jpg',
-      '/images/accueil/flottantes_doc_labo/post-pandemie_01.jpg',
-      '/images/accueil/flottantes_doc_labo/post-pandemie_02.jpg',
-      '/images/accueil/flottantes_doc_labo/post-pandemie_03.jpg',
-      '/images/accueil/flottantes_doc_labo/post-pandemie_04.jpg',
-      '/images/accueil/flottantes_doc_labo/post-pandemie_05.jpg',
-      '/images/accueil/flottantes_doc_labo/utopie_01.jpg',
-      '/images/accueil/flottantes_doc_labo/utopie_03.jpg',
-      '/images/accueil/flottantes_doc_labo/utopie_04.jpg',
-      '/images/accueil/flottantes_doc_labo/utopie_06.jpg',
-      '/images/accueil/flottantes_doc_labo/utopie_07.jpg'
-    ],
+    sources: window.images
   },
   navigation: {
     coords: { x: null, y: null },
@@ -112,6 +78,8 @@ function show_modal (image) {
   let modal = document.getElementById("modal");
   modal.classList.add("active");
   modal.querySelector("img").src = image.src;
+  modal.querySelector("p").setAttribute("data-i18n", image.getAttribute("data-id-texte"));
+  traduire();
 }
 
 function commencer_translation (e) {
