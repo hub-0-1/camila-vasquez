@@ -134,10 +134,12 @@ main #animation-accueil + #modal {
   bottom: 10%;
   left: 10%;
   right: 10%;
+  opacity: 0;
+  transition: opacity 2s;
   background-color: rgba(0, 0, 0, 0.2);
 }
 main #animation-accueil + #modal.active {
-  display: initial;
+  opacity: 1;
 }
 main #animation-accueil + #modal #container-contenu-modal {
   margin: 5%;
@@ -151,8 +153,12 @@ main #animation-accueil + #modal #container-contenu-modal {
   color: white;
 }
 main #animation-accueil + #modal #container-contenu-modal img {
-  width: 40%;
-  max-height: 75%;
+  max-width: 50%;
+  max-height: 50%;
+}
+main #animation-accueil + #modal #container-contenu-modal #type-texte,
+main #animation-accueil + #modal #container-contenu-modal #media-texte {
+  text-transform: uppercase;
 }
 main #animation-design-typographique {
   display: flex;

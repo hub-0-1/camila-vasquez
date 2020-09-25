@@ -168,10 +168,13 @@ main {
       left: 10%;
       right: 10%;
 
+      opacity: 0;
+      transition: opacity 2s;
+
       background-color: rgba(0,0,0,0.2);
 
       &.active {
-        display: initial;
+        opacity: 1;
       }
 
       #container-contenu-modal {
@@ -188,8 +191,12 @@ main {
         color: white;
 
         img {
-          width: 40%;
-          max-height: 75%;
+          max-width: 50%;
+          max-height: 50%;
+        }
+
+        #type-texte, #media-texte {
+          text-transform: uppercase;
         }
       }
     }

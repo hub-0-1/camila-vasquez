@@ -14,6 +14,6 @@ function init_menu () {
       el.classList.add("show");
       window.setTimeout(function () { el.style.opacity = 1; }, 1);
     }
-
   });
 }
+

@@ -72,14 +72,25 @@ window.onload = function () {
 function hide_modal () {
   let modal = document.getElementById("modal");
   modal.classList.remove("active");
+  window.setTimeout(() => {
+    modal.style.display = "none";
+  }, 2000);
 }
 
 function show_modal (image) {
   let modal = document.getElementById("modal");
-  modal.classList.add("active");
   modal.querySelector("img").src = image.src;
-  modal.querySelector("p").setAttribute("data-i18n", image.getAttribute("data-id-texte"));
+  modal.querySelector("#type-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".type");
+  modal.querySelector("#media-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".media");
+  modal.querySelector("#note-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".note");
+  modal.querySelector("#rencontre-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".rencontre");
+  modal.querySelector("#annee-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".annee");
   traduire();
+
+  modal.style.display = "initial";
+  window.setTimeout(() => {
+    modal.classList.add("active");
+  }, 1);
 }
 
 function commencer_translation (e) {
@@ -94,7 +105,6 @@ function commencer_translation_touch (e) {
 
 function terminer_translation (e) {
   config.canva.removeEventListener("mousemove", translation);
-  console.log(config.images.parametres.translate);
 }
 
 function terminer_translation_touch (e) {
