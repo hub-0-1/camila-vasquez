@@ -116,19 +116,32 @@ function afficher_definition_officielle (src_image, texte, element) {
   element.style.opacity = "1";
 
   let rect = element.getBoundingClientRect();
-
   let modal_officiel = document.getElementById("modal-officiel");
-  modal_officiel.style.top = (rect.y - 20) + "px";
-  modal_officiel.style.left = (rect.x - 350) + "px";
+  let modal_interpretation = document.getElementById("modal-interpretation");
+
+  if(rect.left + rect.width / 2 > window.innerWidth / 2) {
+    modal_officiel.style.left = (rect.left - 350) + "px";
+    modal_interpretation.style.left = (rect.x - 350) + "px";
+  }
+  else {
+    modal_officiel.style.left = (rect.left + rect.width + 25) + "px";
+    modal_interpretation.style.left = (rect.left + rect.width + 25) + "px";
+  }
+
+  if(rect.top + rect.height / 2 > window.innerHeight / 2) {
+    modal_officiel.style.top = (rect.top - 20) + "px";
+    modal_interpretation.style.top = (rect.y - 20) + "px";
+  }
+  else {
+    modal_officiel.style.top = (rect.top + rect.height) + "px";
+    modal_interpretation.style.top = (rect.top + rect.height) + "px";
+  }
+
   modal_officiel.style.display = "block";
   modal_officiel.querySelector("p").innerHTML = texte;
   window.setTimeout(function () {
     modal_officiel.style.opacity = "1";
   }, 0);
-
-  let modal_interpretation = document.getElementById("modal-interpretation");
-  modal_interpretation.style.top = (rect.y - 20) + "px";
-  modal_interpretation.style.left = (rect.x - 350) + "px";
 }
 
 function cacher_definition_officielle () {
