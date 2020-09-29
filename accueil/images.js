@@ -686,6 +686,167 @@ traduction.fr.translation.accueil.legendes = {
     note: "Exercice en duo de dessin en miroir et d’écriture de croyances sur la vie familiale à reformuler et à transformer",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
+  },
+  "traces_ecrites_org_2576": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2570": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2565": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2489": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2501": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2514": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2504": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2498": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2472": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2537": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2508": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2534": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2525": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2519": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2524": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2487": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre LE CONSTAT",
+    rencontre: "Rencontre L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2526": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2532": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2543": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2580": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2546": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Retour sur la rencontre L’UTOPIE",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2584": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2586": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
   }
 };
 
