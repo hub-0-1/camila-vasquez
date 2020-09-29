@@ -37,50 +37,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
 
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
-    <script src="/js/menu.js"></script>
     <script src="/js/traduction.js"></script>
-
-    <script src="/accueil/images.js"></script>
-    <script src="/accueil/animation.js"></script>
-    <script src="/accueil/images_flottantes.js"></script>
   </head>
   <body>
-
     <main>
-      <div id="animation-accueil" class="animation"> </div>
-      <div id="modal">
-        <div id="container-contenu-modal">
-          <img src="#">
-          <p id="type-texte"></p>
-          <p id="media-texte"></p>
-          <p id="note-texte"></p>
-          <p id="rencontre-texte"></p>
-          <p id="annee-texte"></p>
-        </div>
+      <div id="animation-accueil" class="animation" style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+        <a href="/"><img id="logo" src="/images/logo.png"></a>
+        <p data-i18n="accueil.construction"></p>
       </div>
-
-      <div id="presentation">
-        <div id="logo-presentation">
-          <img src="/images/logo.png">
-        </div>
-        <div id="titre" data-i18n="accueil.titre"></div>
-        <div id="sous-titre" data-i18n="accueil.sous_titre"></div>
-      </div>
-
+      <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
     </main>
-
-    <div id="menu">
-      <div class="item-menu"><div class="index">01.</div><a class="oeuvre" href="/lexique/" data-i18n="header.lexique"></a></div>
-      <div class="item-menu"><div class="index">02.</div><a class="oeuvre" href="/collage/" data-i18n="header.collage"></a></div>
-      <div class="item-menu"><div class="index">03.</div><a class="oeuvre" href="/temps_ensemble/" data-i18n="header.design_typo"></a></div>
-      <div class="item-menu"><div class="index">04.</div><a class="oeuvre" href="/portraits/" data-i18n="header.portraits"></a></div>
-      <div class="item-menu"><div class="index">05.</div><a class="oeuvre" href="/tableau_blanc/" data-i18n="header.tableau_blanc"></a></div>
-      <div class="item-menu"><div class="index">06.</div><a class="oeuvre" href="/info/" data-i18n="header.info"></a></div>
-    </div>
-
-    <a id="container-logo" href="/"><img id="logo" class="icone" src="/images/logo.png"></a>
-    <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
-    <div id="hamburger">Menu</div>
-
+    <script>init_traduction();</script>
   </body>
 </html>

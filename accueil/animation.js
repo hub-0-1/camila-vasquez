@@ -75,10 +75,14 @@ function hide_modal () {
   window.setTimeout(() => {
     modal.style.display = "none";
   }, 2000);
+  document.getElementById("animation-accueil").style.opacity = 1;
 }
 
 function show_modal (image) {
+  document.getElementById("animation-accueil").style.opacity = 0;
   let modal = document.getElementById("modal");
+
+  // Mise à jour des informations
   modal.querySelector("img").src = image.src;
   modal.querySelector("#type-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".type");
   modal.querySelector("#media-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".media");

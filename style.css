@@ -104,6 +104,7 @@ main .animation {
   bottom: 0;
 }
 main #animation-accueil {
+  transition: opacity 2s;
   overflow: hidden;
 }
 main #animation-accueil .image-flottante {
@@ -128,37 +129,42 @@ main #animation-accueil ~ #presentation div {
 }
 main #animation-accueil + #modal {
   display: none;
-  position: fixed;
-  z-index: 2;
-  top: 10%;
-  bottom: 10%;
-  left: 10%;
-  right: 10%;
   opacity: 0;
   transition: opacity 2s;
-  background-color: rgba(0, 0, 0, 0.2);
 }
 main #animation-accueil + #modal.active {
   opacity: 1;
 }
 main #animation-accueil + #modal #container-contenu-modal {
-  margin: 5%;
-  width: 90%;
-  height: 90%;
-  background-color: transparent;
+  position: fixed;
+  bottom: 10%;
+  right: 15%;
   display: flex;
   flex-direction: column;
-  justify-items: space-evenly;
   align-items: center;
-  color: white;
 }
-main #animation-accueil + #modal #container-contenu-modal img {
+main #animation-accueil + #modal #container-contenu-modal p {
+  margin: 0;
+  padding: 0;
+}
+main #animation-accueil + #modal #container-contenu-modal #image-modal {
+  position: fixed;
+  top: 200px;
+  left: 250px;
+  transform: rotate(-10deg);
   max-width: 50%;
   max-height: 50%;
 }
-main #animation-accueil + #modal #container-contenu-modal #type-texte,
+main #animation-accueil + #modal #container-contenu-modal #type-texte {
+  text-transform: uppercase;
+}
 main #animation-accueil + #modal #container-contenu-modal #media-texte {
   text-transform: uppercase;
+}
+main #animation-accueil + #modal #container-contenu-modal #note-texte {
+  margin: 25px 0;
+  text-align: justify;
+  font-weight: bold;
 }
 main #animation-design-typographique {
   display: flex;

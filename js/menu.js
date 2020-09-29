@@ -5,15 +5,24 @@ function init_menu () {
     let main = document.getElementsByTagName("main")[0];
 
     if([].includes.call(el.classList, "show")) {
-      main.style.opacity = 1;
+      afficher_main();
       el.style.opacity = 0;
       window.setTimeout(function () { el.classList.remove("show"); }, 2000);
     }
     else {
-      main.style.opacity = 0;
+      cacher_main();
       el.classList.add("show");
       window.setTimeout(function () { el.style.opacity = 1; }, 1);
     }
   });
 }
 
+function cacher_main () {
+  let main = document.getElementsByTagName("main")[0];
+  main.style.opacity = 0;
+}
+
+function afficher_main () {
+  let main = document.getElementsByTagName("main")[0];
+  main.style.opacity = 1;
+}
