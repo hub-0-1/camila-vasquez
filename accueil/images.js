@@ -623,6 +623,69 @@ traduction.fr.translation.accueil.legendes = {
     note: "Dessin sur l'utopie de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
+  },
+  "0R": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE ET DESSIN",
+    note: "Exercice en duo de dessin en miroir et d’écriture de croyances sur la vie familiale à reformuler et à transformer",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "1R": {
+    type: "Documentation",
+    media: "DESSIN",
+    note: "Exercice en duo de dessin en miroir",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "2R": {
+    type: "Documentation",
+    media: "DESSIN",
+    note: "Exercice en duo de dessin en miroir",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "3R": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE ET DESSIN",
+    note: "Exercice en duo de dessin en miroir et d’écriture de croyances sur la vie familiale à reformuler et à transformer",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "4R": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE ET DESSIN",
+    note: "Exercice en duo de dessin en miroir et d’écriture de croyances sur la vie familiale à reformuler et à transformer",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "5R": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE ET DESSIN",
+    note: "Exercice en duo de dessin en miroir et d’écriture de croyances sur la vie familiale à reformuler et à transformer",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "2V": {
+    type: "Documentation",
+    media: "DESSIN",
+    note: "Exercice en duo de dessin en miroir",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "3V": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE ET DESSIN",
+    note: "Exercice en duo de dessin en miroir et d’écriture de croyances sur la vie familiale à reformuler et à transformer",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
+  },
+  "4V": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE ET DESSIN",
+    note: "Exercice en duo de dessin en miroir et d’écriture de croyances sur la vie familiale à reformuler et à transformer",
+    rencontre: "Rencontre LE CONSTAT",
+    annee: "2019"
   }
 };
 
@@ -885,5 +948,68 @@ traduction.en.translation.accueil.legendes = {
     note: "Drawing of on the family’s dream",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
+  },
+  "0R": {
+    type: "Documentation",
+    media: "WRITTEN AND DRAWN",
+    note: "Paired exercise of mirror drawing and writing beliefs about family life to reformulate and transform",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "1R": {
+    type: "Documentation",
+    media: "DRAWN DOCUMENTATION",
+    note: "Paired exercise of mirror drawing",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "2R": {
+    type: "Documentation",
+    media: "DESSIN",
+    note: "Paired exercise of mirror drawing",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "3R": {
+    type: "Documentation",
+    media: "WRITTEN AND DRAWN",
+    note: "Paired exercise of mirror drawing and writing beliefs about family life to reformulate and transform",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "4R": {
+    type: "Documentation",
+    media: "WRITTEN AND DRAWN",
+    note: "Paired exercise of mirror drawing and writing beliefs about family life to reformulate and transform",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "5R": {
+    type: "Documentation",
+    media: "WRITTEN AND DRAWN",
+    note: "Paired exercise of mirror drawing and writing beliefs about family life to reformulate and transform",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "2V": {
+    type: "Documentation",
+    media: "DRAWING",
+    note: "Exercice en duo de dessin en miroir",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "3V": {
+    type: "Documentation",
+    media: "WRITTEN AND DRAWN",
+    note: "Paired exercise of mirror drawing and writing beliefs about family life to reformulate and transform",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
+  },
+  "4V": {
+    type: "Documentation",
+    media: "WRITTEN AND DRAWN",
+    note: "Paired exercise of mirror drawing and writing beliefs about family life to reformulate and transform",
+    rencontre: "Meeting on LE CONSTAT",
+    annee: "2019"
   }
 };
