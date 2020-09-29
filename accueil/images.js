@@ -50,10 +50,10 @@ var images = [
   '/images/accueil/flottantes_traces_ecrites/non_retour/jackie_s-thoughts2.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/christian.jpg',
-  '/images/accueil/flottantes_traces_ecrites/non_retour/Jackie_s-thoughts1.jpg',
+  '/images/accueil/flottantes_traces_ecrites/non_retour/jackie_s-thoughts1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/non-retour-3.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose2.jpg',
-  '/images/accueil/flottantes_traces_ecrites/non_retour/envie-d_être.jpg',
+  '/images/accueil/flottantes_traces_ecrites/non_retour/envie-d_etre.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/jane.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/gmail.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/realisations2.jpg',
@@ -110,7 +110,7 @@ var images = [
   '/images/accueil/flottantes_traces_ecrites/les_strategies/03_strategies.jpg',
   '/images/accueil/flottantes_traces_ecrites/les_strategies/02_strategies.jpg',
   '/images/accueil/flottantes_traces_ecrites/les_strategies/05_strategies.jpg'
-]; 
+];
 
 traduction.fr.translation.accueil.legendes = {
   "atelier_causerie_01": {
@@ -158,49 +158,49 @@ traduction.fr.translation.accueil.legendes = {
   "constat_01": {
     type: "Documentation",
     media: "Photographie",
-    note: "Atelier-causerie de collage sur le thème de la  famille",
+    note: "Assemblage d’objets personnels que chaque famille a apporté",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
   },
   "constat_02": {
     type: "Documentation",
     media: "Photographie",
-    note: "Atelier-causerie de collage sur le thème de la  famille",
+    note: "Assemblage d’objets personnels que chaque famille a apporté",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
   },
   "constat_03": {
     type: "Documentation",
     media: "Photographie",
-    note: "Atelier-causerie de collage sur le thème de la  famille",
+    note: "Assemblage d’objets personnels que chaque famille a apporté",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
   },
   "constat_04": {
     type: "Documentation",
     media: "Photographie",
-    note: "Atelier-causerie de collage sur le thème de la  famille",
+    note: "Assemblage d’objets personnels que chaque famille a apporté",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
   },
   "constat_05": {
     type: "Documentation",
     media: "Photographie",
-    note: "Atelier-causerie de collage sur le thème de la  famille",
+    note: "Assemblage d’objets personnels que chaque famille a apporté",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
   },
   "constat_06": {
     type: "Documentation",
     media: "Photographie",
-    note: "Atelier-causerie de collage sur le thème de la  famille",
+    note: "Assemblage d’objets personnels que chaque famille a apporté",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
   },
   "constat_08": {
     type: "Documentation",
     media: "Photographie",
-    note: "Atelier-causerie de collage sur le thème de la  famille",
+    note: "Assemblage d’objets personnels que chaque famille a apporté",
     rencontre: "Rencontre LE CONSTAT",
     annee: "2019"
   },
@@ -272,6 +272,429 @@ traduction.fr.translation.accueil.legendes = {
     media: "Photographie",
     note: "Conversation sur la post-pandémie pour un non-retour à l’anormale",
     rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "la_realite_image_fixe001": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Exercice d’art performance",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe003": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Exercice d’art performance",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe006": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Portraits à l’aveugle au fusain",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe007": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Portraits à l’aveugle au fusain",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe008": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Portraits à l’aveugle au fusain",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe009": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "DESSINS SONORES",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe010": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "DESSINS SONORES",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe011": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "DESSINS SONORES",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe012": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "DESSINS SONORES",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe013": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Exercice d’écoute active d’une prestation musicale",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe014": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Exercice d’écoute active d’une prestation musicale",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe015": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Exercice d’écoute active d’une prestation musicale",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe018": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Exercice d’écoute active d’une prestation musicale",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "la_realite_image_fixe019": {
+    type: "Documentation",
+    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
+    note: "Arrivée",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "08_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "09_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "10_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "11_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "12_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "13_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "14_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "15_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "16_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "17_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "18_15_min": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice d'observation objective d’un moment en famille durant 15 minutes",
+    rencontre: "Rencontre LA RÉALITÉ",
+    annee: "2020"
+  },
+  "jackie_s-thoughts1": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "jackie_s-thoughts2": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "rose1": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "rose2": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "christian": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "non-retour-3": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "envie-d_etre": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "jane": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "gmail": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "realisations1": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "realisations2": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "reflexions": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
+    rencontre: "Rencontre LA POST-PANDÉMIE",
+    annee: "2020"
+  }
+};
+
+traduction.en.translation.accueil.legendes = {
+  "atelier_causerie_01": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Collage workshop-discussion on the theme of the family",
+    rencontre: "",
+    annee: "2019"
+  },
+  "atelier_causerie_02": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Collage workshop-discussion on the theme of the family",
+    rencontre: "",
+    annee: "2019"
+  },
+  "atelier_causerie_03": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Collage workshop-discussion on the theme of the family",
+    rencontre: "",
+    annee: "2019"
+  },
+  "atelier_causerie_04": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Collage workshop-discussion on the theme of the family",
+    rencontre: "",
+    annee: "2019"
+  },
+  "atelier_causerie_05": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Collage workshop-discussion on the theme of the family",
+    rencontre: "",
+    annee: "2019"
+  },
+  "atelier_causerie_06": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Collage workshop-discussion on the theme of the family",
+    rencontre: "",
+    annee: "2019"
+  },
+  "constat_01": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Assemblage of personal items brought by each family",
+    rencontre: "LE CONSTAT meeting",
+    annee: "2019"
+  },
+  "constat_02": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Assemblage of personal items brought by each family",
+    rencontre: "LE CONSTAT meeting",
+    annee: "2019"
+  },
+  "constat_03": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Assemblage of personal items brought by each family",
+    rencontre: "LE CONSTAT meeting",
+    annee: "2019"
+  },
+  "constat_04": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Assemblage of personal items brought by each family",
+    rencontre: "LE CONSTAT meeting",
+    annee: "2019"
+  },
+  "constat_05": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Assemblage of personal items brought by each family",
+    rencontre: "LE CONSTAT meeting",
+    annee: "2019"
+  },
+  "constat_06": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Assemblage of personal items brought by each family",
+    rencontre: "LE CONSTAT meeting",
+    annee: "2019"
+  },
+  "constat_08": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Assemblage of personal items brought by each family",
+    rencontre: "LE CONSTAT meeting",
+    annee: "2019"
+  },
+  "utopie_01": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Preparation of a symbolic fire",
+    rencontre: "L’UTOPIE meeting",
+    annee: "2020"
+  },
+  "utopie_03": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Preparation of a symbolic fire",
+    rencontre: "L’UTOPIE meeting",
+    annee: "2020"
+  },
+  "utopie_04": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Preparation of the story MISTIFI",
+    rencontre: "L’UTOPIE meeting",
+    annee: "2020"
+  },
+  "utopie_06": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Texts and drawings on utopia and the dream of the family",
+    rencontre: "L’UTOPIE meeting",
+    annee: "2020"
+  },
+  "utopie_07": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Symbolic fire",
+    rencontre: "L’UTOPIE meeting",
+    annee: "2020"
+  },
+  "post-pandemie01": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Snack",
+    rencontre: "LA POST-PANDÉMIE meeting",
+    annee: "2020"
+  },
+  "post-pandemie02": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Reunion",
+    rencontre: "LA POST-PANDÉMIE meeting",
+    annee: "2020"
+  },
+  "post-pandemie03": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Symbolic fire",
+    rencontre: "LA POST-PANDÉMIE meeting",
+    annee: "2020"
+  },
+  "post-pandemie04": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Conversation on the post-pandemic for a non-return to the abnormal",
+    rencontre: "LA POST-PANDÉMIE meeting",
+    annee: "2020"
+  },
+  "post-pandemie05": {
+    type: "Documentation",
+    media: "Photographic",
+    note: "Conversation on the post-pandemic for a non-return to the abnormal",
+    rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
   "la_realite_image_fixe001": {
