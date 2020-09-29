@@ -847,6 +847,48 @@ traduction.fr.translation.accueil.legendes = {
     note: "Réflexion sur l'utopie de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
+  },
+  "01_strategies": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice collaboratif durant le confinement. Réalisé en ligne durant le confinement pour remplacer la rencontre LES STRATÉGIES qui n’a pas eu lieu.",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "02_strategies": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice collaboratif durant le confinement. Réalisé en ligne durant le confinement pour remplacer la rencontre LES STRATÉGIES qui n’a pas eu lieu.",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "03_strategies": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice collaboratif durant le confinement. Réalisé en ligne durant le confinement pour remplacer la rencontre LES STRATÉGIES qui n’a pas eu lieu.",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "04_strategies": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice collaboratif durant le confinement. Réalisé en ligne durant le confinement pour remplacer la rencontre LES STRATÉGIES qui n’a pas eu lieu.",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "05_strategies": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice collaboratif durant le confinement. Réalisé en ligne durant le confinement pour remplacer la rencontre LES STRATÉGIES qui n’a pas eu lieu.",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "06_strategies": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Exercice collaboratif durant le confinement. Réalisé en ligne durant le confinement pour remplacer la rencontre LES STRATÉGIES qui n’a pas eu lieu.",
+    rencontre: "-",
+    annee: "2020"
   }
 };
 
