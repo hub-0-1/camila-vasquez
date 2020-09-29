@@ -40,6 +40,7 @@ var traduction = {
         autre_langue: "EN"
       },
       accueil: {
+        construction: "Site en construction",
         titre: "Repenser la famille",
         sous_titre: "de l'utopie aux nouvelles stratégies"
       },
@@ -107,6 +108,7 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         autre_langue: "FR"
       },
       accueil: {
+        construction: "Site under construction",
         titre: "Rethinking the family",
         sous_titre: "From utopia to new strategies"
       },
