@@ -532,6 +532,97 @@ traduction.fr.translation.accueil.legendes = {
     note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
+  },
+  "avant1": {
+    type: "Documentation",
+    media: "Trace écrite",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "bienveillance": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "je-voudraie": {
+    type: "Documentation",
+    media: "TRACE ÉCRITE",
+    note: "Réflexion sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "utopie-loe": {
+    type: "Documentation",
+    media: "DESSIN",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "pied-des-andes": {
+    type: "Documentation",
+    media: "Dessin",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "moe_s-river": {
+    type: "Documentation",
+    media: "Dessin",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "deux-chevaux": {
+    type: "Documentation",
+    media: "Dessin",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "utopie-cecilia": {
+    type: "Documentation",
+    media: "Dessin",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "chevaux2": {
+    type: "Documentation",
+    media: "Dessin",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "bonhommes": {
+    type: "Documentation",
+    media: "Dessin",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "utopie-elsa": {
+    type: "Documentation",
+    media: "Dessin",
+    note: "Dessin sur le rêve de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "nuit-etoilee": {
+    type: "Documentation",
+    media: "DESSIN",
+    note: "Dessin sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
+  },
+  "maison-dans-les-arbres": {
+    type: "Documentation",
+    media: "DESSIN",
+    note: "Dessin sur l'utopie de la famille",
+    rencontre: "Rencontre L'UTOPIE",
+    annee: "2020"
   }
 };
 
@@ -701,7 +792,98 @@ traduction.en.translation.accueil.legendes = {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Exercice d’art performance",
-    rencontre: "Rencontre LA RÉALITÉ",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020"
+  },
+  "avant1": {
+    type: "Documentation",
+    media: "Written documentation",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "bienveillance": {
+    type: "Documentation",
+    media: "Written documentation",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "je-voudraie": {
+    type: "Documentation",
+    media: "Written documentation",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "utopie-loe": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "pied-des-andes": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "moe_s-river": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "deux-chevaux": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "utopie-cecilia": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "chevaux2": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "bonhommes": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "utopie-elsa": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "nuit-etoilee": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "maison-dans-les-arbres": {
+    type: "Documentation",
+    media: "Art documentation",
+    note: "Drawing of on the family’s dream",
+    rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   }
 };
