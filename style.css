@@ -123,6 +123,14 @@ main #animation-accueil ~ #presentation {
   background-color: #f2efea;
   transition: opacity 2s;
 }
+main #animation-accueil ~ #presentation #logo-presentation {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+main #animation-accueil ~ #presentation #logo-presentation img {
+  height: 100%;
+}
 main #animation-accueil ~ #presentation div {
   opacity: 0;
   transition: opacity 2s;
