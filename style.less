@@ -35,7 +35,7 @@ body {
   position: fixed;
   top: 10px;
   left: 2%;
-  width: 220px;
+  width: 125px;
 
   display: block;
 
@@ -57,9 +57,11 @@ body {
   text-align: center;
 
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 #langue {
+  cursor: pointer;
   position: fixed;
   top: 0;
   height: 45px;
@@ -155,7 +157,7 @@ main {
       transition: opacity 2s;
 
       #logo-presentation {
-        height: 50%;
+        height: 25%;
         display: flex;
         justify-content: center;
         
@@ -192,7 +194,7 @@ main {
 
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: left;
 
         p {
           margin: 0;
@@ -203,7 +205,7 @@ main {
           position: fixed;
           top: 200px;
           left: 250px;
-          transform: rotate(-10deg);
+          transform: rotate(-4deg);
           max-width: 50%;
           max-height: 50%;
         }
@@ -456,7 +458,7 @@ main {
       vertical-align: middle;
 
       &.focus {
-
+        filter: drop-shadow(5px 5px 0.85rem gray);
         width: 600px;
       }
     }
@@ -468,6 +470,7 @@ main {
       vertical-align: middle;
 
       &.focus {
+        filter: drop-shadow(5px 5px 0.85rem gray);
         width: 600px;
       }
     } 
@@ -483,7 +486,7 @@ main {
 
   #animation-info {
     position: relative;
-    top: 20%;
+    top: 150px;
     left: 18%;
     width: 64%;
 
@@ -505,10 +508,6 @@ main {
 }
 
 @media only screen and (max-width: 600px) {
-
-#container-logo {
-  width: 33%;
-}
 
   #menu {
     flex-direction: column;
@@ -545,6 +544,20 @@ main {
         left: 10%;
         width: 80%;
       }
+    }
+    #animation-info {
+
+      .contenu-a-propos {
+        flex-direction: column;
+
+        p {
+          width: 100%;
+        }
+      }
+    }
+
+    .container-contenu-modal {
+      font-size: 0.7em;
     }
   }
 }

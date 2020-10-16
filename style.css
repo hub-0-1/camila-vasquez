@@ -27,7 +27,7 @@ body .optima {
   position: fixed;
   top: 10px;
   left: 2%;
-  width: 220px;
+  width: 125px;
   display: block;
 }
 #container-logo #logo {
@@ -44,6 +44,7 @@ body .optima {
   color: white;
   text-align: center;
   text-transform: uppercase;
+  cursor: pointer;
 }
 #langue {
   position: fixed;
@@ -124,7 +125,7 @@ main #animation-accueil ~ #presentation {
   transition: opacity 2s;
 }
 main #animation-accueil ~ #presentation #logo-presentation {
-  height: 50%;
+  height: 25%;
   display: flex;
   justify-content: center;
 }
@@ -154,7 +155,7 @@ main #animation-accueil + #modal #container-contenu-modal {
   right: 15%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: left;
 }
 main #animation-accueil + #modal #container-contenu-modal p {
   margin: 0;
@@ -164,7 +165,7 @@ main #animation-accueil + #modal #container-contenu-modal #image-modal {
   position: fixed;
   top: 200px;
   left: 250px;
-  transform: rotate(-10deg);
+  transform: rotate(-4deg);
   max-width: 50%;
   max-height: 50%;
 }
@@ -358,6 +359,7 @@ main #animation-portraits .paysage {
   vertical-align: middle;
 }
 main #animation-portraits .paysage.focus {
+  filter: drop-shadow(5px 5px 0.85rem gray);
   width: 600px;
 }
 main #animation-portraits .portrait {
@@ -367,6 +369,7 @@ main #animation-portraits .portrait {
   vertical-align: middle;
 }
 main #animation-portraits .portrait.focus {
+  filter: drop-shadow(5px 5px 0.85rem gray);
   width: 600px;
 }
 main #animation-portraits #legende {
@@ -378,7 +381,7 @@ main #animation-portraits #legende {
 }
 main #animation-info {
   position: relative;
-  top: 20%;
+  top: 150px;
   left: 18%;
   width: 64%;
   font-size: 0.9em;
@@ -394,9 +397,6 @@ main #animation-info .contenu-a-propos p {
   width: 30%;
 }
 @media only screen and (max-width: 600px) {
-  #container-logo {
-    width: 33%;
-  }
   #menu {
     flex-direction: column;
     top: 20%;
@@ -422,6 +422,15 @@ main #animation-info .contenu-a-propos p {
     top: 75px;
     left: 10%;
     width: 80%;
+  }
+  main #animation-info .contenu-a-propos {
+    flex-direction: column;
+  }
+  main #animation-info .contenu-a-propos p {
+    width: 100%;
+  }
+  main .container-contenu-modal {
+    font-size: 0.7em;
   }
 }
 @media (orientation: portrait) {

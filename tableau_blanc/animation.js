@@ -26,7 +26,7 @@ window.onload = function () {
   document.getElementById("ambiance").addEventListener("ended", (e) => {
     document.getElementById("conclusion").style.display = "flex";
     [].forEach.call(document.querySelectorAll("path"), (path) => {
-      path.setAttribute("stroke", "rgb(241, 151, 49, 0.2)")
+      path.setAttribute("stroke", "rgb(250, 234, 118, 0.2)")
     });
   });
 }
@@ -74,6 +74,6 @@ function capter (e) {
 
   config.path_actuel.setAttribute("d", string_path);
   config.path_actuel.setAttribute("fill", "none");
-  config.path_actuel.setAttribute("stroke-width", "7");
-  config.path_actuel.setAttribute("stroke", "rgb(241, 151, 49)");
+  config.path_actuel.setAttribute("stroke-width", "3");
+  config.path_actuel.setAttribute("stroke", "rgb(250, 234, 118)");
 }
