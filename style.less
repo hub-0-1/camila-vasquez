@@ -140,8 +140,17 @@ main {
   #animation-accueil {
     transition: opacity 2s;
     overflow: hidden;
+
     .image-flottante {
       position: absolute;
+
+      &.paysage {
+        width: 20vh;
+      }
+
+      &.portrait {
+        height: 20vh;
+      }
     }
 
     & ~ #presentation {

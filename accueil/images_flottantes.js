@@ -4,12 +4,21 @@ function creer_image () {
 
   // Info de base
   img.src = src_image_aleatoire();
-  img.className = "image-flottante"
   img.alt = this.src;
-  img.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px";
   img.addEventListener("click", (e) => { show_modal(e.target); });
   img.setAttribute("data-r", 0);
   img.setAttribute("data-id-texte", img.src.match(/(\w+)\.(jpg|png)$/)[1]);
+
+  // Affichage
+  img.className = "image-flottante"
+  window.setTimeout(function () {
+    if (img.clientWidth > img.clientHeight) {
+      img.classList.add("paysage");
+    }
+    else {
+      img.classList.add("portrait");
+    }
+  }, 0);
 
   // Position initiale
   positionner_image(img);
@@ -22,7 +31,7 @@ function creer_image () {
 
   // Prochaine position d'apparition
   config.positionnement_actuel = (config.positionnement_actuel + 1) % config.images.positionnements.length;
-  
+
   // Supression de l'image apres un certain temps
   window.setTimeout(function () {
     img.remove();
@@ -61,8 +70,8 @@ function determiner_sens_rotation (image) {
 }
 
 function src_image_aleatoire () {
-  let index = Math.round(Math.random() * (config.images.sources.length - 1));
-  return config.images.sources[index];
+  config.index_source = ((config.index_source + 1 + Math.round(Math.random() * 10)) % (config.images.sources.length - 1));
+  return config.images.sources[config.index_source];
 }
 
 function animer_images () {

@@ -27,8 +27,8 @@ var config = {
     coords: { x: null, y: null },
     ajustement_vitesse_scroll: 3
   },
+  index_source: 0,
   ecran: {},
-  rapport_image_ecran: 6,
   vitesse_translation: 1.3,
   positionnement_actuel: 0,
 }

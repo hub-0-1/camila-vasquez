@@ -114,6 +114,12 @@ main #animation-accueil {
 main #animation-accueil .image-flottante {
   position: absolute;
 }
+main #animation-accueil .image-flottante.paysage {
+  width: 20vh;
+}
+main #animation-accueil .image-flottante.portrait {
+  height: 20vh;
+}
 main #animation-accueil ~ #presentation {
   position: fixed;
   top: 0;
