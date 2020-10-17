@@ -171,16 +171,40 @@ function reset_coords () {
 }
 
 function afficher_titres () {
+  document.getElementById("container-logo").style.display = "none";
+  document.getElementById("langue").style.display = "none";
+  document.getElementById("hamburger").style.display = "none";
+
+  document.getElementById("container-logo").style.opacity = 0;
+  document.getElementById("langue").style.opacity = 0;
+  document.getElementById("hamburger").style.opacity = 0;
+
   window.setTimeout(function () {
     document.getElementById("logo-presentation").style.opacity = 1;
+
     window.setTimeout(function () {
-      document.getElementById("titre").style.opacity = 1;
+      document.getElementById("logo-presentation").style.opacity = 0;
+
       window.setTimeout(function () {
-        document.getElementById("sous-titre").style.opacity = 1;
+        document.getElementById("logo-presentation").style.display = "none";
+        document.getElementById("titre").style.opacity = 1;
         window.setTimeout(function () {
-          document.getElementById("presentation").style.opacity = 0;
+          document.getElementById("sous-titre").style.opacity = 1;
+
+          document.getElementById("hamburger").style.display = "initial";
+          document.getElementById("langue").style.display = "initial";
+          document.getElementById("container-logo").style.display = "initial";
           window.setTimeout(function () {
-            document.getElementById("presentation").style.display = "none";
+
+            document.getElementById("presentation").style.opacity = 0;
+
+            document.getElementById("hamburger").style.opacity = 1;
+            document.getElementById("langue").style.opacity = 1;
+            document.getElementById("container-logo").style.opacity = 1;
+
+            window.setTimeout(function () {
+              document.getElementById("presentation").style.display = "none";
+            }, 2000);
           }, 2000);
         }, 2000);
       }, 2000);

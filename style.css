@@ -28,6 +28,7 @@ body .optima {
   top: 10px;
   left: 2%;
   width: 125px;
+  transition: opacity 2s;
   display: block;
 }
 #container-logo #logo {
@@ -43,6 +44,7 @@ body .optima {
   background-size: contain;
   color: white;
   text-align: center;
+  transition: opacity 2s;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -57,6 +59,7 @@ body .optima {
   color: white;
   text-align: center;
   cursor: pointer;
+  transition: opacity 2s;
   mix-blend-mode: darken;
   text-transform: uppercase;
 }
@@ -128,11 +131,25 @@ main #animation-accueil ~ #presentation #logo-presentation {
   height: 25%;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition: opacity 2s;
 }
 main #animation-accueil ~ #presentation #logo-presentation img {
   height: 100%;
 }
-main #animation-accueil ~ #presentation div {
+main #animation-accueil ~ #presentation #titre {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.7em;
+  text-align-last: justify;
+  letter-spacing: 0.17em;
+}
+main #animation-accueil ~ #presentation #sous-titre {
+  text-transform: uppercase;
+  font-size: 1.2em;
+}
+main #animation-accueil ~ #presentation span {
+  display: inline-block;
   opacity: 0;
   transition: opacity 2s;
 }
@@ -428,6 +445,11 @@ main #animation-info .contenu-a-propos p {
   }
   main #animation-info .contenu-a-propos p {
     width: 100%;
+  }
+  main #animation-accueil ~ #presentation #titre,
+  main #animation-accueil ~ #presentation #sous-titre {
+    text-align: center;
+    text-align-last: center;
   }
   main .container-contenu-modal {
     font-size: 0.7em;

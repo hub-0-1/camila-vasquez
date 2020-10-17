@@ -37,6 +37,7 @@ body {
   left: 2%;
   width: 125px;
 
+  transition: opacity 2s;
   display: block;
 
   #logo {
@@ -55,6 +56,7 @@ body {
   background-size: contain;
   color: white;
   text-align: center;
+  transition: opacity 2s;
 
   text-transform: uppercase;
   cursor: pointer;
@@ -74,6 +76,7 @@ body {
   text-align: center;
 
   cursor: pointer;
+  transition: opacity 2s;
 
   mix-blend-mode: darken;
   
@@ -160,13 +163,29 @@ main {
         height: 25%;
         display: flex;
         justify-content: center;
+        opacity: 0;
+        transition: opacity 2s;
         
         img {
           height: 100%;
         }
       }
 
-      & div {
+      & #titre {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.7em;
+        text-align-last: justify;
+        letter-spacing: 0.17em;
+      }
+
+      & #sous-titre {
+        text-transform: uppercase;
+        font-size: 1.2em;
+      }
+
+      & span {
+        display: inline-block;
         opacity: 0;
         transition: opacity 2s;
       }
@@ -545,6 +564,7 @@ main {
         width: 80%;
       }
     }
+
     #animation-info {
 
       .contenu-a-propos {
@@ -553,6 +573,13 @@ main {
         p {
           width: 100%;
         }
+      }
+    }
+
+    #animation-accueil ~ #presentation{
+      #titre, #sous-titre {
+        text-align: center;
+        text-align-last: center;
       }
     }
 
