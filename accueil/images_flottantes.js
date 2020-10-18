@@ -1,4 +1,4 @@
-function creer_image () {
+function creer_image (coords) {
   let img = document.createElement("img");
   config.images.liste.push(img);
 
@@ -21,52 +21,22 @@ function creer_image () {
   }, 0);
 
   // Position initiale
-  positionner_image(img);
+  let coordonnees = { 
+    x: Math.round(config.ecran.largeur * Math.random()) + (config.ecran.largeur * coords.x),
+    y: Math.round(config.ecran.hauteur * Math.random()) + (config.ecran.hauteur * coords.y)
+  };
+
+  img.style.left = coordonnees.x + -1 * config.images.parametres.translate.x + "px";
+  img.style.top = coordonnees.y + -1 * config.images.parametres.translate.y + "px";
 
   // Deplacement
-  determiner_vecteur_deplacement(img);
+  img.setAttribute("data-dx", -1 * ((Math.random() / 2) + 0.5) * config.images.parametres.multiplicateur_vecteur_translation);
+  img.setAttribute("data-dy", -1 * ((Math.random() / 2) + 0.5) * config.images.parametres.multiplicateur_vecteur_translation);
 
   // Rotation
-  determiner_sens_rotation(img);
-
-  // Prochaine position d'apparition
-  config.positionnement_actuel = (config.positionnement_actuel + 1) % config.images.positionnements.length;
-
-  // Supression de l'image apres un certain temps
-  window.setTimeout(function () {
-    img.remove();
-    delete img;
-  }, config.images.parametres.delais_suppression_image);
+  img.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1) * config.images.parametres.multiplicateur_vecteur_rotation);
 
   return img; 
-}
-
-function positionner_image (image) {
-  let coordonnees = {};
-  let pos_init = config.images.positionnements[config.positionnement_actuel];
-
-  if(pos_init.x == -1) { coordonnees.x = Math.round(config.ecran.largeur * Math.random()) - config.ecran.largeur; }
-  else if(pos_init.x == 0) { coordonnees.x = Math.round(config.ecran.largeur * Math.random()); }
-  else if(pos_init.x == 1) { coordonnees.x = Math.round(config.ecran.largeur * Math.random()) + config.ecran.largeur; }
-
-  if(pos_init.y == -1) { coordonnees.y = Math.round(config.ecran.hauteur * Math.random()) - config.ecran.hauteur; }
-  else if(pos_init.y == 0) { coordonnees.y = Math.round(config.ecran.hauteur * Math.random()); }
-  else if(pos_init.y == 1) { coordonnees.y = Math.round(config.ecran.hauteur * Math.random()) + config.ecran.hauteur; }
-
-  image.style.left = coordonnees.x + -1 * config.images.parametres.translate.x + "px";
-  image.style.top = coordonnees.y + -1 * config.images.parametres.translate.y + "px";
-}
-
-function determiner_vecteur_deplacement (image) {
-
-  let vecteur = { x: -1 * Math.random() / 2, y: -1 * Math.random() / 2 };
-
-  image.setAttribute("data-dx", vecteur.x * config.images.parametres.multiplicateur_vecteur_translation);
-  image.setAttribute("data-dy", vecteur.y * config.images.parametres.multiplicateur_vecteur_translation);
-}
-
-function determiner_sens_rotation (image) {
-  image.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1) * config.images.parametres.multiplicateur_vecteur_rotation);
 }
 
 function src_image_aleatoire () {

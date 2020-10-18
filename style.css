@@ -174,8 +174,8 @@ main #animation-accueil + #modal.active {
 }
 main #animation-accueil + #modal #container-contenu-modal {
   position: fixed;
-  bottom: 10%;
-  right: 15%;
+  bottom: 5%;
+  right: 5%;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -419,7 +419,7 @@ main #animation-info .contenu-a-propos {
 main #animation-info .contenu-a-propos p {
   width: 30%;
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
   #menu {
     flex-direction: column;
     top: 20%;
@@ -456,6 +456,14 @@ main #animation-info .contenu-a-propos p {
   main #animation-accueil ~ #presentation #sous-titre {
     text-align: center;
     text-align-last: center;
+  }
+  main #animation-accueil + #modal #container-contenu-modal {
+    align-items: center;
+    width: 90%;
+  }
+  main #animation-accueil + #modal #container-contenu-modal #image-modal {
+    position: initial;
+    margin-bottom: 10%;
   }
   main .container-contenu-modal {
     font-size: 0.7em;

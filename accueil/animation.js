@@ -1,26 +1,14 @@
 var config = {
   frame_rate: 30,
   images: {
-    nb_t0 : 9,
+    nb_lignes : 40,
+    nb_colonnes : 50,
     liste: [],
     parametres: {
       translate: { x: 0, y: 0 },
-      interval_apparition_image: 1000,
-      delais_suppression_image: 1000 * 450, // 30 secondes
-      multiplicateur_vecteur_translation: 0.7,
+      multiplicateur_vecteur_translation: 1.1,
       multiplicateur_vecteur_rotation: 0.2 
     },
-    positionnements: [
-      { x: 0, y: 0 },
-      { x: 1, y: 0 },
-      { x: 1, y: 1 },
-      { x: 0, y: 1 },
-      { x: -1, y: 1 },
-      { x: -1, y: 0 },
-      { x: -1, y: -1 },
-      { x: 0, y: -1 },
-      { x: 1, y: -1 }
-    ],
     sources: window.images
   },
   navigation: {
@@ -30,7 +18,6 @@ var config = {
   index_source: 0,
   ecran: {},
   vitesse_translation: 1.3,
-  positionnement_actuel: 0,
 }
 
 window.onload = function () {
@@ -39,14 +26,16 @@ window.onload = function () {
   init_traduction();
   init_menu();
 
-  // Element
+  // Elements
   let canva = document.getElementById("animation-accueil");
   config.canva = canva;
 
+  document.getElementById("modal").addEventListener("click", hide_modal);
+
   // Dimensions animation
   let bounding = canva.getBoundingClientRect();
-  config.ecran.largeur = bounding.width;
-  config.ecran.hauteur = bounding.height;
+  config.ecran.largeur = bounding.width / 2;
+  config.ecran.hauteur = bounding.height / 2;
 
   // Appliquer une transformation sur chaque image
   canva.addEventListener("wheel", translation_scroll);
@@ -56,14 +45,16 @@ window.onload = function () {
   canva.addEventListener("touchend", terminer_translation_touch);
 
   // Creer les premieres images
-  for(let i = 0; i < config.images.nb_t0; ++i) { canva.appendChild(creer_image()); }
-  document.getElementById("modal").addEventListener("click", hide_modal);
+  window.setTimeout(function () { 
+    for(let j = config.images.nb_lignes / -2; j < config.images.nb_lignes / 2; ++j) { 
+      for(let i = config.images.nb_colonnes / -2; i < config.images.nb_colonnes / 2; ++i) { 
+        canva.appendChild(creer_image({x: i, y: j})); 
+      }
+    }
+  }, 0);
 
   // Lancer l'animation
   window.setInterval(animer_images, config.frame_rate);
-  window.setInterval(function () { 
-    canva.appendChild(creer_image());
-  }, config.images.parametres.interval_apparition_image);
 
   // Afficher titres
   afficher_titres();
