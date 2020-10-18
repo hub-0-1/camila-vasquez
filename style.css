@@ -460,6 +460,7 @@ main #animation-info .contenu-a-propos p {
   main #animation-accueil + #modal #container-contenu-modal {
     align-items: center;
     width: 90%;
+    font-size: 0.75em;
   }
   main #animation-accueil + #modal #container-contenu-modal #image-modal {
     position: initial;
