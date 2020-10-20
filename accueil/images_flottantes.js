@@ -17,6 +17,7 @@ function creer_son (coords, source) {
   img.setAttribute("data-id-texte", source.match(/(\w+)\.mp3$/)[1]);
   img.setAttribute("data-son", source);
   img.className = "image-flottante paysage";
+  img.style.zIndex = 1;
 
   // Position initiale
   let coordonnees = { 
@@ -28,8 +29,8 @@ function creer_son (coords, source) {
   img.style.top = coordonnees.y + -1 * config.images.parametres.translate.y + "px";
 
   // Deplacement
-  img.setAttribute("data-dx", -1 * ((Math.random() / 2) + 0.5) * config.images.parametres.multiplicateur_vecteur_translation);
-  img.setAttribute("data-dy", -1 * ((Math.random() / 2) + 0.5) * config.images.parametres.multiplicateur_vecteur_translation);
+  img.setAttribute("data-dx", -1 * ((Math.random() / 2) + 0.2) * config.images.parametres.multiplicateur_vecteur_translation);
+  img.setAttribute("data-dy", -1 * ((Math.random() / 2) + 0.2) * config.images.parametres.multiplicateur_vecteur_translation);
 
   // Rotation
   img.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1) * config.images.parametres.multiplicateur_vecteur_rotation);
@@ -48,6 +49,7 @@ function creer_image(coords, source) {
   img.addEventListener("click", (e) => { show_modal(e.target); });
   img.setAttribute("data-r", 0);
   img.setAttribute("data-id-texte", img.src.match(/(\w+)\.(jpg|png)$/)[1]);
+  img.style.zIndex = 2;
 
   // Affichage
   img.className = "image-flottante"
