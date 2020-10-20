@@ -1,17 +1,17 @@
 var images = [
 
   // Sons
-  '/audio/accueil/bebe_01.mp3',
-  '/audio/accueil/bebe_02.mp3',
-  '/audio/accueil/chant_o1_10s_final.mp3',
-  '/audio/accueil/chant_o1_10s_final.mp3',
-  '/audio/accueil/conversation_01_22s_final.mp3',
-  '/audio/accueil/conversation_02_12s_final.mp3',
-  '/audio/accueil/jeu_01.mp3',
-  '/audio/accueil/jeu_02.mp3',
-  '/audio/accueil/post_pandemie_01_30s_finale.mp3',
-  '/audio/accueil/post_pandemie_02_30s_final.mp3',
-  '/audio/accueil/post_pandemie_03_30s_final.mp3',
+  //'/audio/accueil/bebe_01.mp3',
+  //'/audio/accueil/bebe_02.mp3',
+  //'/audio/accueil/chant_o1_10s_final.mp3',
+  //'/audio/accueil/chant_o1_10s_final.mp3',
+  //'/audio/accueil/conversation_01_22s_final.mp3',
+  //'/audio/accueil/conversation_02_12s_final.mp3',
+  //'/audio/accueil/jeu_01.mp3',
+  //'/audio/accueil/jeu_02.mp3',
+  //'/audio/accueil/post_pandemie_01_30s_finale.mp3',
+  //'/audio/accueil/post_pandemie_02_30s_final.mp3',
+  //'/audio/accueil/post_pandemie_03_30s_final.mp3',
 
   // flottantes documentation laboratoire
   '/images/accueil/flottantes_doc_labo/atelier_causerie_02.jpg',
