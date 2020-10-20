@@ -2,6 +2,8 @@ function creer_image (coords) {
   let img = document.createElement("img");
   config.images.liste.push(img);
 
+  // TODO : si .mp3, creer un son.
+
   // Info de base
   img.src = src_image_aleatoire();
   img.alt = this.src;
