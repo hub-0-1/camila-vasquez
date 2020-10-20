@@ -48,7 +48,7 @@ window.onload = function () {
   window.setTimeout(function () { 
     for(let j = config.images.nb_lignes / -2; j < config.images.nb_lignes / 2; ++j) { 
       for(let i = config.images.nb_colonnes / -2; i < config.images.nb_colonnes / 2; ++i) { 
-        canva.appendChild(creer_image({x: i, y: j})); 
+        canva.appendChild(creer_element({x: i, y: j})); 
       }
     }
   }, 0);
@@ -67,6 +67,12 @@ function hide_modal () {
     modal.style.display = "none";
   }, 2000);
   document.getElementById("animation-accueil").style.opacity = 1;
+}
+
+function jouer_son (image) {
+  let son = image.getAttribute("data-son");
+  var audio = new Audio(son);
+  audio.play();
 }
 
 function show_modal (image) {

@@ -1,12 +1,50 @@
-function creer_image (coords) {
+function creer_element (coords) {
+
+  let source = src_image_aleatoire();
+  return source.match(/\.mp3$/) ? creer_son(coords, source) : creer_image(coords, source);
+}
+
+function creer_son (coords, source) {
   let img = document.createElement("img");
   config.images.liste.push(img);
 
-  // TODO : si .mp3, creer un son.
+  // Selection d'une image aleatoire
+  img.src = "/images/accueil/sons/bouton_0" + Math.ceil(Math.random() * 10 % 8) + ".png";
+  img.alt = source;
+
+  img.addEventListener("click", (e) => { jouer_son(e.target); });
+  img.setAttribute("data-r", 0);
+  img.setAttribute("data-id-texte", source.match(/(\w+)\.mp3$/)[1]);
+  img.setAttribute("data-son", source);
+  img.className = "image-flottante paysage";
+
+  // Position initiale
+  let coordonnees = { 
+    x: Math.round(config.ecran.largeur * Math.random()) + (config.ecran.largeur * coords.x),
+    y: Math.round(config.ecran.hauteur * Math.random()) + (config.ecran.hauteur * coords.y)
+  };
+
+  img.style.left = coordonnees.x + -1 * config.images.parametres.translate.x + "px";
+  img.style.top = coordonnees.y + -1 * config.images.parametres.translate.y + "px";
+
+  // Deplacement
+  img.setAttribute("data-dx", -1 * ((Math.random() / 2) + 0.5) * config.images.parametres.multiplicateur_vecteur_translation);
+  img.setAttribute("data-dy", -1 * ((Math.random() / 2) + 0.5) * config.images.parametres.multiplicateur_vecteur_translation);
+
+  // Rotation
+  img.setAttribute("data-dr", (Math.random() > 0.5 ? 1 : -1) * config.images.parametres.multiplicateur_vecteur_rotation);
+
+  return img;
+}
+
+function creer_image(coords, source) {
+
+  let img = document.createElement("img");
+  config.images.liste.push(img);
 
   // Info de base
-  img.src = src_image_aleatoire();
-  img.alt = this.src;
+  img.src = source;
+  img.alt = source;
   img.addEventListener("click", (e) => { show_modal(e.target); });
   img.setAttribute("data-r", 0);
   img.setAttribute("data-id-texte", img.src.match(/(\w+)\.(jpg|png)$/)[1]);
