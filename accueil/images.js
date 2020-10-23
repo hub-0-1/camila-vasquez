@@ -60,10 +60,10 @@ var images = [
   '/images/accueil/flottantes_traces_ecrites/la_realite/14_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/08_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/11_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/non_retour/jackie_s-thoughts2.jpg',
+  '/images/accueil/flottantes_traces_ecrites/non_retour/jackies_thoughts1.jpg',
+  '/images/accueil/flottantes_traces_ecrites/non_retour/jackies_thoughts2.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/christian.jpg',
-  '/images/accueil/flottantes_traces_ecrites/non_retour/jackie_s-thoughts1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/non-retour-3.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose2.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/envie-d_etre.jpg',
@@ -462,14 +462,14 @@ traduction.fr.translation.accueil.legendes = {
     rencontre: "Rencontre LA RÉALITÉ",
     annee: "2020"
   },
-  "jackie_s-thoughts1": {
+  "jackies_thoughts1": {
     type: "Documentation",
     media: "TRACE ÉCRITE",
     note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "jackie_s-thoughts2": {
+  "jackies_thoughts2": {
     type: "Documentation",
     media: "TRACE ÉCRITE",
     note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
