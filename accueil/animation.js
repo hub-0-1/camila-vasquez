@@ -3,6 +3,7 @@ var config = {
   images: {
     nb_lignes : 40,
     nb_colonnes : 50,
+    coefficient_cachees: 20,
     liste: [],
     parametres: {
       translate: { x: 0, y: 0 },

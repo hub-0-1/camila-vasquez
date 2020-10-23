@@ -1,10 +1,20 @@
 function creer_element (coords) {
 
-  let source = src_image_aleatoire();
-  return source.match(/\.mp3$/) ? creer_son(coords, source) : creer_image(coords, source);
+  // Chances que l'image soit cachée
+  let val_alea = Math.random() + (Math.abs(coords.x) + Math.abs(coords.y)) / config.images.coefficient_cachees; 
+  if(val_alea > 1) {
+    let img = document.createElement("img");
+    img.style.display = "none";
+    return img;
+  }
+  else {
+    let source = src_image_aleatoire();
+    return source.match(/\.mp3$/) ? creer_son(coords, source) : creer_image(coords, source);
+  }
 }
 
 function creer_son (coords, source) {
+
   let img = document.createElement("img");
   config.images.liste.push(img);
 
