@@ -17,14 +17,15 @@ function creer_son (coords, source) {
 
   let img = document.createElement("img");
   config.images.liste.push(img);
+  nom_image = source.match(/(\w+)\.mp3$/)[1];
 
   // Selection d'une image aleatoire
-  img.src = "/images/accueil/sons/bouton_0" + Math.ceil(Math.random() * 10 % 8) + ".png";
+  img.src = "/images/accueil/sons/" + nom_image + ".png";
   img.alt = source;
 
   img.addEventListener("click", (e) => { jouer_son(e.target); });
   img.setAttribute("data-r", 0);
-  img.setAttribute("data-id-texte", source.match(/(\w+)\.mp3$/)[1]);
+  img.setAttribute("data-id-texte", nom_image);
   img.setAttribute("data-son", source);
   img.className = "image-flottante paysage";
   img.style.zIndex = 1;
