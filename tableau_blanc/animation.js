@@ -7,6 +7,7 @@ var config = {
 window.onload = function () {
 
   // Init
+  init_menu();
   init_traduction();
 
   config.svg = document.getElementById("dessin");

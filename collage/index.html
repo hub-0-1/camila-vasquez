@@ -37,10 +37,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
 
     <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
-    <script src="/js/traduction.js"></script>
     <script src="https://unpkg.com/iv-viewer/dist/iv-viewer.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/iv-viewer/dist/iv-viewer.css">
 
+    <script src="/js/menu.js"></script>
+    <script src="/js/traduction.js"></script>
+    <script src="/collage/animation.js"></script>
   </head>
   <body>
     <main>
@@ -51,28 +53,17 @@
     </main>
 
     <a id="container-logo" href="/"><img id="logo" class="icone" src="/images/logo.png"></a>
-  <script>
-    window.onload = function () {
+    <div id="menu">
+    <div class="item-menu"><div class="index">01.</div><a class="oeuvre" href="/lexique/" data-i18n="header.lexique"></a></div>
+    <div class="item-menu"><div class="index">02.</div><a class="oeuvre" href="/collage/" data-i18n="header.collage"></a></div>
+    <div class="item-menu"><div class="index">03.</div><a class="oeuvre" href="/temps_ensemble/" data-i18n="header.design_typo"></a></div>
+    <div class="item-menu"><div class="index">04.</div><a class="oeuvre" href="/portraits/" data-i18n="header.portraits"></a></div>
+    <div class="item-menu"><div class="index">05.</div><a class="oeuvre" href="/tableau_blanc/" data-i18n="header.tableau_blanc"></a></div>
+    <div class="item-menu"><div class="index">06.</div><a class="oeuvre" href="/info/" data-i18n="header.info"></a></div>
+  </div>
 
-      init_traduction();
-
-      const viewer = new ImageViewer(document.querySelector("#animation-cartographie img"), { 
-        snapView: false,
-        maxZoom: 2500
-      });
-
-      window.setTimeout(function () {
-        viewer.zoom(1000, { x: 500, y: 500});
-      }, 0);
-
-      window.setTimeout(function () {
-        document.getElementById("explications").style.opacity = 0;
-        window.setTimeout(function () {
-          document.getElementById("explications").style.display = "none";
-        }, 2000);
-      }, 2500);
-    }
-  </script>
+  <a id="container-logo" href="/"><img id="logo" class="icone" src="/images/logo.png"></a>
   <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
+  <div id="hamburger">Menu</div>
   </body>
 </html>
