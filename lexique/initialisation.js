@@ -33,19 +33,19 @@ var config = {
       y: { valeur: 200, unite: "vh" },
     },
     sources: [
-      '/images/lexique/apnee.png',
-      '/images/lexique/breches.png',
-      '/images/lexique/chambouler.png',
-      '/images/lexique/faire_peut.png',
-      '/images/lexique/jamais_travailler.png',
-      '/images/lexique/jouer_adultes.png',
-      '/images/lexique/montagne.png',
-      '/images/lexique/presence.png',
-      '/images/lexique/regarder_maison.png',
-      '/images/lexique/se_refugier.png',
-      '/images/lexique/mistifi.png',
-      '/images/lexique/inverser.png',
-      '/images/lexique/egal.png'
+      '/images/lexique/apnee_900x600.png',
+      '/images/lexique/breches_900x600.png',
+      '/images/lexique/chambouler_900x600.png',
+      '/images/lexique/faire_peut_900x600.png',
+      '/images/lexique/jamais_travailler_900x600.png',
+      '/images/lexique/jouer_adultes_900x600.png',
+      '/images/lexique/montagne_900x600.png',
+      '/images/lexique/presence_900x600.png',
+      '/images/lexique/regarder_maison_900x600.png',
+      '/images/lexique/se_refugier_900x600.png',
+      '/images/lexique/mistifi_900x600.png',
+      '/images/lexique/inverser_900x600.png',
+      '/images/lexique/egal_900x600.png'
     ],
     liste: []
   }

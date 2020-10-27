@@ -171,7 +171,7 @@ class Image {
     // Info de base
     this.element.src = this.source;
     this.element.className = "image-flottante";
-    this.element.alt = "Madonna";
+    this.element.alt = this.source;
 
     this.element.style.width = Math.round(config.ecran.largeur / config.rapport_image_ecran) + "px";
 
@@ -189,26 +189,22 @@ class Image {
     document.getElementById("modal-officiel").style.display = "initial";
     window.setTimeout(() => {
       afficher_definition_officielle(this.source, texte_original, e.target);
-      console.log(0);
     }, 0);
 
     // Cacher la definition officielle
     window.setTimeout(() => {
       cacher_definition_officielle();
       document.getElementById("modal-interpretation").style.display = "initial";
-      console.log(config.temps_apparition_definition * texte_original.length)
     }, config.temps_apparition_definition * texte_original.length);
 
     // Afficher la definition interpretative
     window.setTimeout(() => {
       afficher_definition_interpretation(this.source, texte_interpretation);
-      console.log(config.temps_apparition_definition * texte_original.length + 2000)
     }, config.temps_apparition_definition * texte_original.length + 2000);
 
     // Cacher la definition interpretative
     window.setTimeout(() => {
       cacher_definition_interpretation();
-      console.log(config.temps_apparition_definition * (texte_original.length + texte_interpretation.length) + 2000);
     }, (config.temps_apparition_definition * (texte_original.length + texte_interpretation.length)) + 2000);
   }
 }
