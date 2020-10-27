@@ -421,6 +421,9 @@ main #animation-info .contenu-a-propos {
 main #animation-info .contenu-a-propos p {
   width: 30%;
 }
+main #animation-info p {
+  margin: 0;
+}
 @media only screen and (max-width: 650px) {
   #menu {
     flex-direction: column;

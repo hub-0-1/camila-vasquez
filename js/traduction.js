@@ -91,7 +91,7 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
           titre: "Contact",
           p1: "Ce site web a été produit par la Galerie d’art Foreman et a été programmé par 0/1 - Hub numérique Estrie.",
           p2: "Les animations ont été créés par Carl C. Ferland.",
-          p3: "foreman.ubishops.ca/repenser-la-famille-de-lutopie-aux-nouvelles-strategies"
+          p3: "Pour de plus amples informations : foreman.ubishops.ca"
         }
       }
     }
@@ -162,7 +162,7 @@ Leo just stopped his shower; he comes into the living room in a towel and sits d
           titre: "Contact",
           p1: "This website was produced by the Foreman Art Gallery and programmed by the 0/1 - Hub numérique de l’Estrie.",
           p2: "The animations were created by Carl C. Ferland.",
-          p3: "foreman.ubishops.ca/repenser-la-famille-de-lutopie-aux-nouvelles-strategies"
+          p3: "For more information : foreman.ubishops.ca"
         }
       }
     }
