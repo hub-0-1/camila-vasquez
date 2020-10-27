@@ -35,7 +35,7 @@ var traduction = {
         lexique: "Bref lexique illustré non exhaustif",
         tableau_blanc: "Dessins sonores",
         portraits: "Portraits à l'aveugle",
-        collage: "Collage de collages",
+        collage: "Ça prend un village",
         info: "Informations",
         autre_langue: "EN"
       },
@@ -103,7 +103,7 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         lexique: "Not exhaustive short illustrated lexicon",
         tableau_blanc: "Sound drawings",
         portraits: "Blind portraits",
-        collage: "Collage of collages",
+        collage: "It takes a village",
         info: "Informations",
         autre_langue: "FR"
       },
