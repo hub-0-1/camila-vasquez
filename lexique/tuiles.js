@@ -182,15 +182,34 @@ class Image {
 
     let langue = document.getElementById("langue").getAttribute("data-langue");
     let texte = e.target.src.match(/\/lexique\/(\w+)\.png/)[1];
+    let texte_original = config.textes[langue][texte].original;
+    let texte_interpretation = config.textes[langue][texte].interpretation;
 
-    afficher_definition_officielle(this.source, config.textes[langue][texte].original, e.target);
-    window.setTimeout(cacher_definition_officielle, config.temps_apparition_definition);
-
+    // Afficher définition officielle;
+    document.getElementById("modal-officiel").style.display = "initial";
     window.setTimeout(() => {
-      afficher_definition_interpretation(this.source, config.textes[langue][texte].interpretation);
-    }, config.temps_apparition_definition + 2000);
+      afficher_definition_officielle(this.source, texte_original, e.target);
+      console.log(0);
+    }, 0);
 
-    window.setTimeout(cacher_definition_interpretation, (config.temps_apparition_definition * 2) + 2000);
+    // Cacher la definition officielle
+    window.setTimeout(() => {
+      cacher_definition_officielle();
+      document.getElementById("modal-interpretation").style.display = "initial";
+      console.log(config.temps_apparition_definition * texte_original.length)
+    }, config.temps_apparition_definition * texte_original.length);
+
+    // Afficher la definition interpretative
+    window.setTimeout(() => {
+      afficher_definition_interpretation(this.source, texte_interpretation);
+      console.log(config.temps_apparition_definition * texte_original.length + 2000)
+    }, config.temps_apparition_definition * texte_original.length + 2000);
+
+    // Cacher la definition interpretative
+    window.setTimeout(() => {
+      cacher_definition_interpretation();
+      console.log(config.temps_apparition_definition * (texte_original.length + texte_interpretation.length) + 2000);
+    }, (config.temps_apparition_definition * (texte_original.length + texte_interpretation.length)) + 2000);
   }
 }
 

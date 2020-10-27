@@ -6,7 +6,7 @@ var config = {
   souris: { x: null, y: null },
   touch: { x: null, y: null },
   vitesse_translation: 1.3,
-  temps_apparition_definition: 12500,
+  temps_apparition_definition: 25,
   positions_images_tuiles: [
     { x: "3%", y: "4%" },
     { x: "7%", y: "15%" },
