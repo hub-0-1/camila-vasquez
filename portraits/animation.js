@@ -8,6 +8,10 @@ window.onload = function () {
   [].forEach.call(document.querySelectorAll(".image"), (image) => {
     image.addEventListener("click", toggleFocus.bind(image));
   });
+
+  [].forEach.call(document.querySelectorAll("#portraits img"), (image) => {
+    image.style.opacity = 1;  
+  });
 }
 
 function toggleFocus () {

@@ -377,6 +377,10 @@ main #animation-portraits #portraits {
   transform: translateY(-50%);
   transition: transform 2s;
 }
+main #animation-portraits #portraits img {
+  opacity: 0;
+  transition: opacity 2s;
+}
 main #animation-portraits .paysage {
   display: inline-block;
   width: 450px;
