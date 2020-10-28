@@ -182,6 +182,7 @@ class Image {
 
     let langue = document.getElementById("langue").getAttribute("data-langue");
     let texte = e.target.src.match(/\/lexique\/(\w+)\.png/)[1];
+
     let texte_original = config.textes[langue][texte].original;
     let texte_interpretation = config.textes[langue][texte].interpretation;
 
