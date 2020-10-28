@@ -59,7 +59,7 @@ function creer_image(coords, source) {
   img.alt = source;
   img.addEventListener("click", (e) => { show_modal(e.target); });
   img.setAttribute("data-r", 0);
-  img.setAttribute("data-id-texte", img.src.match(/(\w+)\.(jpg|png)$/)[1]);
+  img.setAttribute("data-id-texte", img.src.match(/([\w-]+)\.(jpg|png)$/)[1]);
   img.style.zIndex = 2;
 
   // Affichage

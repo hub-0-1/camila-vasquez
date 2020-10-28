@@ -87,6 +87,15 @@ function show_modal (image) {
   modal.querySelector("#note-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".note");
   modal.querySelector("#rencontre-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".rencontre");
   modal.querySelector("#annee-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".annee");
+
+  if(traduction.fr.translation.accueil.legendes[image.getAttribute("data-id-texte")].credit) {
+    modal.querySelector("#credits-photo").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".credit");
+  }
+  else {
+    modal.querySelector("#credits-photo").removeAttribute("data-i18n");
+    modal.querySelector("#credits-photo").innerHTML = "";
+  }
+
   traduire();
 
   modal.style.display = "initial";

@@ -115,6 +115,7 @@ main #animation-accueil {
 }
 main #animation-accueil .image-flottante {
   position: absolute;
+  cursor: pointer;
 }
 main #animation-accueil .image-flottante.paysage {
   width: 20vh;

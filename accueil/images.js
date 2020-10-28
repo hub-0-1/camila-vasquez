@@ -292,98 +292,112 @@ traduction.fr.translation.accueil.legendes = {
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Exercice d’art performance",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe003": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Exercice d’art performance",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe006": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Portraits à l’aveugle au fusain",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe007": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Portraits à l’aveugle au fusain",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe008": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Portraits à l’aveugle au fusain",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe009": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "DESSINS SONORES",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe010": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "DESSINS SONORES",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe011": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "DESSINS SONORES",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe012": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "DESSINS SONORES",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe013": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Exercice d’écoute active d’une prestation musicale",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe014": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Exercice d’écoute active d’une prestation musicale",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe015": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Exercice d’écoute active d’une prestation musicale",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe018": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Exercice d’écoute active d’une prestation musicale",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "la_realite_image_fixe019": {
     type: "Documentation",
     media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
     note: "Arrivée",
     rencontre: "Rencontre LA RÉALITÉ",
-    annee: "2020"
+    annee: "2020",
+    credit: "Crédit photo: Emmanuelle Roberge"
   },
   "08_15_min": {
     type: "Documentation",
@@ -1069,10 +1083,115 @@ traduction.en.translation.accueil.legendes = {
   },
   "la_realite_image_fixe001": {
     type: "Documentation",
-    media: "IMAGE FIXE TIRÉE D’UN TOURNAGE VIDÉO",
-    note: "Exercice d’art performance",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Performance art exercice",
     rencontre: "LA RÉALITÉ meeting",
-    annee: "2020"
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe003": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Performance art exercice",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe006": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Performance art exercice",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe007": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Charcoal blind portraits",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe008": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Charcoal blind portraits",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe009": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Sound drawings",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe010": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Sound drawings",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe011": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Sound drawings",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe012": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Sound drawings",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe013": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Live music active listening exercice",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe014": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Live music active listening exercice",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe015": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Live music active listening exercice",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe018": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Live music active listening exercice",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
+  },
+  "la_realite_image_fixe019": {
+    type: "Documentation",
+    media: "FIX IMAGE TAKEN FROM VIDEO SESSION",
+    note: "Arrival",
+    rencontre: "LA RÉALITÉ meeting",
+    annee: "2020",
+    credit: "Photo credit : Emmanuelle Roberge"
   },
   "avant1": {
     type: "Documentation",
