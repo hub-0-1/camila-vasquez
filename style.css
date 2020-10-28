@@ -123,6 +123,18 @@ main #animation-accueil .image-flottante.paysage {
 main #animation-accueil .image-flottante.portrait {
   height: 20vh;
 }
+main #animation-accueil ~ #player {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  opacity: 0;
+  transition: opacity 2s;
+  display: none;
+}
+main #animation-accueil ~ #player img {
+  width: 100%;
+}
 main #animation-accueil ~ #presentation {
   position: fixed;
   top: 0;

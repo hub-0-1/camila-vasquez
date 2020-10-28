@@ -12,6 +12,7 @@ var config = {
     },
     sources: window.images
   },
+  sons: [],
   navigation: {
     coords: { x: null, y: null },
     ajustement_vitesse_scroll: 3
@@ -73,7 +74,24 @@ function hide_modal () {
 function jouer_son (image) {
   let son = image.getAttribute("data-son");
   var audio = new Audio(son);
+  config.sons.push(audio);
   audio.play();
+
+  document.querySelector("#player").style.display = "initial";
+  window.setTimeout(function () {
+    document.querySelector("#player").style.opacity = 1;
+  }, 0);
+}
+
+function arreter_sons () {
+  config.sons.forEach((son) => {
+    son.pause();
+  })
+
+  document.querySelector("#player").style.opacity = 0;
+  window.setTimeout(function () {
+    document.querySelector("#player").style.display = "none";
+  }, 2000);
 }
 
 function show_modal (image) {

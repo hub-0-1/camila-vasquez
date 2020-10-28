@@ -156,6 +156,20 @@ main {
       }
     }
 
+    & ~ #player {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      opacity: 0;
+      transition: opacity 2s;
+      display: none;
+
+      img {
+        width: 100%;
+      }
+    }
+
     & ~ #presentation {
       position: fixed;
       top: 0;
