@@ -17,10 +17,19 @@ window.onload = function () {
   config.svg.addEventListener("touchstart", commencer_dessin);
   config.svg.addEventListener("touchend", terminer_dessin);
 
-  // Lancer l'expérience
-  document.getElementById("lancement").addEventListener("click", (e) => {
+  // Afficher 
+  let temps_affichage_total = 1000 + 2 * 2000, buffer = 250;
+  afficher_et_cacher(document.getElementById("ligne1"), buffer, 1000, 2000);
+  afficher_et_cacher(document.getElementById("ligne2"), 2 * buffer + 1 * temps_affichage_total, 1000, 2000);
+  afficher_et_cacher(document.getElementById("ligne3"), 3 * buffer + 2 * temps_affichage_total, 1000, 2000);
+  afficher_et_cacher(document.getElementById("ligne4"), 4 * buffer + 3 * temps_affichage_total, 1000, 2000);
+  afficher(document.getElementById("ligne5"), 5 * buffer + 4 * temps_affichage_total);
+  afficher(document.getElementById("ligne6"), 6 * buffer + 5 * temps_affichage_total);
+
+  // Lancer l')expérience
+  document.getElementById("ligne6").addEventListener("click", (e) => {
     document.getElementById("ambiance").play();
-    document.getElementById("consignes").style.display = "none";
+    cacher(document.getElementById("consignes"), 0, 2000);
   });
 
   // Terminer l'expérience
@@ -77,4 +86,39 @@ function capter (e) {
   config.path_actuel.setAttribute("fill", "none");
   config.path_actuel.setAttribute("stroke-width", "3");
   config.path_actuel.setAttribute("stroke", "rgb(250, 234, 118)");
+}
+
+function cacher (element, delai, temps_transition) {
+  window.setTimeout(() => {
+    element.style.opacity = 0;
+    window.setTimeout(() => { element.style.display = "none"; }, temps_transition);
+  }, delai);
+}
+
+function afficher (element, delai) {
+  window.setTimeout(() => {
+    element.style.display = "initial";
+    element.style.opacity = 0;
+
+    // Présent, visible
+    window.setTimeout(() => { element.style.opacity = 1; }, 10);
+  }, delai);
+}
+
+function afficher_et_cacher (element, delai, temps, temps_transition) {
+
+  // Présent, non-visible
+  window.setTimeout(() => {
+    element.style.display = "initial";
+    element.style.opacity = 0;
+
+    // Présent, visible
+    window.setTimeout(() => { element.style.opacity = 1; }, 10);
+  }, delai);
+
+
+  // Présent, non-visible
+  window.setTimeout(() => { element.style.opacity = 0; }, delai + temps + temps_transition);
+
+  window.setTimeout(() => { element.style.display = "none"; }, delai + temps + (2 * temps_transition));
 }

@@ -427,9 +427,26 @@ main {
       #introduction, #lancement {
         font-family: 'Nunito Sans', sans-serif;
         font-size: 1.3em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         .couleur-trait {
           color: #f19731
+        }
+
+        span {
+          display: none;
+          opacity: 0;
+          transition: opacity 2s;
+        }
+
+        #ligne6 {
+          width: 100px;
+          img {
+            width: 100%;
+          }
         }
       }
 
@@ -474,7 +491,7 @@ main {
     top: 0%;
     left: 1%;
     right: 1%;
-    
+
     overflow: auto;
     &::-webkit-scrollbar {
       display: none;
@@ -598,6 +615,8 @@ main {
         top: 75px;
         left: 10%;
         width: 80%;
+
+
       }
     }
 

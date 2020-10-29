@@ -46,11 +46,11 @@ var traduction = {
       },
       tableau: {
         intro: {
-          ligne1: "Fermez les yeux",
-          ligne2: "Écoutez",
-          ligne3: "Bougez la souris en maintenant le clic enfoncé",
+          ligne1: "Écoutez",
+          ligne2: "Fermez les yeux",
+          ligne3: "Dessinez",
           ligne4: "Répondez au son spontanément",
-          ligne5: "À la fin, ouvrez les yeux et contemplez"
+          ligne5: "Pour commencer et pour arrêter, cliquez ici"
         },
         lancement: {
           ligne1: "Pour commencer",

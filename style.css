@@ -336,10 +336,28 @@ main #animation-tableau-blanc + #consignes #introduction,
 main #animation-tableau-blanc + #consignes #lancement {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 1.3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 main #animation-tableau-blanc + #consignes #introduction .couleur-trait,
 main #animation-tableau-blanc + #consignes #lancement .couleur-trait {
   color: #f19731;
+}
+main #animation-tableau-blanc + #consignes #introduction span,
+main #animation-tableau-blanc + #consignes #lancement span {
+  display: none;
+  opacity: 0;
+  transition: opacity 2s;
+}
+main #animation-tableau-blanc + #consignes #introduction #ligne6,
+main #animation-tableau-blanc + #consignes #lancement #ligne6 {
+  width: 100px;
+}
+main #animation-tableau-blanc + #consignes #introduction #ligne6 img,
+main #animation-tableau-blanc + #consignes #lancement #ligne6 img {
+  width: 100%;
 }
 main #animation-tableau-blanc + #consignes #lancement {
   text-transform: uppercase;
