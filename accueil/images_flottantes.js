@@ -27,7 +27,7 @@ function creer_son (coords, source) {
   img.setAttribute("data-r", 0);
   img.setAttribute("data-id-texte", nom_image);
   img.setAttribute("data-son", source);
-  img.className = "image-flottante paysage";
+  img.className = "image-flottante son";
   img.style.zIndex = 1;
 
   // Position initiale
