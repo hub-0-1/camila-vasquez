@@ -37,11 +37,11 @@ var images = [
   '/images/accueil/flottantes_doc_labo/la_realite_image_fixe015.jpg',
   '/images/accueil/flottantes_doc_labo/la_realite_image_fixe018.jpg',
   '/images/accueil/flottantes_doc_labo/la_realite_image_fixe019.jpg',
-  '/images/accueil/flottantes_doc_labo/post-pandemie_01.jpg',
-  '/images/accueil/flottantes_doc_labo/post-pandemie_02.jpg',
-  '/images/accueil/flottantes_doc_labo/post-pandemie_03.jpg',
-  '/images/accueil/flottantes_doc_labo/post-pandemie_04.jpg',
-  '/images/accueil/flottantes_doc_labo/post-pandemie_05.jpg',
+  '/images/accueil/flottantes_doc_labo/post_pandemie_01.jpg',
+  '/images/accueil/flottantes_doc_labo/post_pandemie_02.jpg',
+  '/images/accueil/flottantes_doc_labo/post_pandemie_03.jpg',
+  '/images/accueil/flottantes_doc_labo/post_pandemie_04.jpg',
+  '/images/accueil/flottantes_doc_labo/post_pandemie_05.jpg',
   '/images/accueil/flottantes_doc_labo/utopie_01.jpg',
   '/images/accueil/flottantes_doc_labo/utopie_03.jpg',
   '/images/accueil/flottantes_doc_labo/utopie_04.jpg',
@@ -64,27 +64,27 @@ var images = [
   '/images/accueil/flottantes_traces_ecrites/non_retour/jackies_thoughts2.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/christian.jpg',
-  '/images/accueil/flottantes_traces_ecrites/non_retour/non-retour-3.jpg',
+  '/images/accueil/flottantes_traces_ecrites/non_retour/non_retour_3.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose2.jpg',
-  '/images/accueil/flottantes_traces_ecrites/non_retour/envie-d_etre.jpg',
+  '/images/accueil/flottantes_traces_ecrites/non_retour/envie_d_etre.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/jane.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/gmail.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/realisations2.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/realisations1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/reflexions.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/utopie-loe.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/utopie_loe.jpg',
   '/images/accueil/flottantes_traces_ecrites/l_utopie/bienveillance.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/je-voudraie.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/pied-des-andes.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/moe_s-river.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/deux-chevaux.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/utopie-cecilia.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/je_voudraie.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/pied_des_andes.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/moe_s_river.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/deux_chevaux.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/utopie_cecilia.jpg',
   '/images/accueil/flottantes_traces_ecrites/l_utopie/chevaux2.jpg',
   '/images/accueil/flottantes_traces_ecrites/l_utopie/bonhommes.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/utopie-elsa.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/utopie_elsa.jpg',
   '/images/accueil/flottantes_traces_ecrites/l_utopie/avant1.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/nuit-etoilee.jpg',
-  '/images/accueil/flottantes_traces_ecrites/l_utopie/maison-dans-les-arbres.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/nuit_etoilee.jpg',
+  '/images/accueil/flottantes_traces_ecrites/l_utopie/maison_dans_les_arbres.jpg',
   '/images/accueil/flottantes_traces_ecrites/le_constat/0R.jpg',
   '/images/accueil/flottantes_traces_ecrites/le_constat/1R.jpg',
   '/images/accueil/flottantes_traces_ecrites/le_constat/2R.jpg',
@@ -252,35 +252,35 @@ traduction.fr.translation.accueil.legendes = {
     rencontre: "Rencontre L’UTOPIE",
     annee: "2020"
   },
-  "post-pandemie01": {
+  "post_pandemie01": {
     type: "Documentation",
     media: "Photographie",
     note: "Collation",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post-pandemie02": {
+  "post_pandemie02": {
     type: "Documentation",
     media: "Photographie",
     note: "Retrouvailles",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post-pandemie03": {
+  "post_pandemie03": {
     type: "Documentation",
     media: "Photographie",
     note: "Feu symbolique",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post-pandemie04": {
+  "post_pandemie04": {
     type: "Documentation",
     media: "Photographie",
     note: "Conversation sur la post-pandémie pour un non-retour à l’anormale",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post-pandemie05": {
+  "post_pandemie05": {
     type: "Documentation",
     media: "Photographie",
     note: "Conversation sur la post-pandémie pour un non-retour à l’anormale",
@@ -511,14 +511,14 @@ traduction.fr.translation.accueil.legendes = {
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "non-retour-3": {
+  "non_retour_3": {
     type: "Documentation",
     media: "TRACE ÉCRITE",
     note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "envie-d_etre": {
+  "envie_d_etre": {
     type: "Documentation",
     media: "TRACE ÉCRITE",
     note: "Réflexion sur la post-pandémie pour un non-retour à l’anormale",
@@ -574,42 +574,42 @@ traduction.fr.translation.accueil.legendes = {
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "je-voudraie": {
+  "je_voudraie": {
     type: "Documentation",
     media: "TRACE ÉCRITE",
     note: "Réflexion sur l'utopie de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "utopie-loe": {
+  "utopie_loe": {
     type: "Documentation",
     media: "DESSIN",
     note: "Dessin sur le rêve de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "pied-des-andes": {
+  "pied_des_andes": {
     type: "Documentation",
     media: "Dessin",
     note: "Dessin sur le rêve de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "moe_s-river": {
+  "moe_s_river": {
     type: "Documentation",
     media: "Dessin",
     note: "Dessin sur le rêve de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "deux-chevaux": {
+  "deux_chevaux": {
     type: "Documentation",
     media: "Dessin",
     note: "Dessin sur le rêve de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "utopie-cecilia": {
+  "utopie_cecilia": {
     type: "Documentation",
     media: "Dessin",
     note: "Dessin sur le rêve de la famille",
@@ -630,21 +630,21 @@ traduction.fr.translation.accueil.legendes = {
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "utopie-elsa": {
+  "utopie_elsa": {
     type: "Documentation",
     media: "Dessin",
     note: "Dessin sur le rêve de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "nuit-etoilee": {
+  "nuit_etoilee": {
     type: "Documentation",
     media: "DESSIN",
     note: "Dessin sur l'utopie de la famille",
     rencontre: "Rencontre L'UTOPIE",
     annee: "2020"
   },
-  "maison-dans-les-arbres": {
+  "maison_dans_les_arbres": {
     type: "Documentation",
     media: "DESSIN",
     note: "Dessin sur l'utopie de la famille",
@@ -1046,35 +1046,35 @@ traduction.en.translation.accueil.legendes = {
     rencontre: "L’UTOPIE meeting",
     annee: "2020"
   },
-  "post-pandemie01": {
+  "post_pandemie01": {
     type: "Documentation",
     media: "Photographic",
     note: "Snack",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post-pandemie02": {
+  "post_pandemie02": {
     type: "Documentation",
     media: "Photographic",
     note: "Reunion",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post-pandemie03": {
+  "post_pandemie03": {
     type: "Documentation",
     media: "Photographic",
     note: "Symbolic fire",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post-pandemie04": {
+  "post_pandemie04": {
     type: "Documentation",
     media: "Photographic",
     note: "Conversation on the post-pandemic for a non-return to the abnormal",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post-pandemie05": {
+  "post_pandemie05": {
     type: "Documentation",
     media: "Photographic",
     note: "Conversation on the post-pandemic for a non-return to the abnormal",
@@ -1207,42 +1207,42 @@ traduction.en.translation.accueil.legendes = {
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "je-voudraie": {
+  "je_voudraie": {
     type: "Documentation",
     media: "Written documentation",
     note: "Reflexion on the family’s utopia",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "utopie-loe": {
+  "utopie_loe": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "pied-des-andes": {
+  "pied_des_andes": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "moe_s-river": {
+  "moe_s_river": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "deux-chevaux": {
+  "deux_chevaux": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "utopie-cecilia": {
+  "utopie_cecilia": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
@@ -1263,21 +1263,21 @@ traduction.en.translation.accueil.legendes = {
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "utopie-elsa": {
+  "utopie_elsa": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "nuit-etoilee": {
+  "nuit_etoilee": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
     rencontre: "Meeting on L'UTOPIE",
     annee: "2020"
   },
-  "maison-dans-les-arbres": {
+  "maison_dans_les_arbres": {
     type: "Documentation",
     media: "Art documentation",
     note: "Drawing of on the family’s dream",
