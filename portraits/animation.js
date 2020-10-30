@@ -1,3 +1,7 @@
+var config = {
+  souris: { x: null, y: null }
+}
+
 window.onload = function () {
 
   init_menu();
@@ -10,8 +14,13 @@ window.onload = function () {
   });
 
   [].forEach.call(document.querySelectorAll("#portraits img"), (image) => {
-    image.style.opacity = 1;  
+    window.setTimeout(() => {
+      image.style.opacity = 1;
+    }, 10);
   });
+
+  document.querySelector("#animation-portraits").addEventListener("mousedown", commencer_translation);
+  document.querySelector("#animation-portraits").addEventListener("mouseup", terminer_translation);
 }
 
 function toggleFocus () {
@@ -29,5 +38,38 @@ function toggleFocus () {
       behavior: 'smooth'
     })
   }
+}
+
+function commencer_translation (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  config.souris.x = null;
+  config.souris.y = null;
+
+  document.querySelector("#animation-portraits").addEventListener("mousemove", translation);
+}
+
+function terminer_translation (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  document.querySelector("#animation-portraits").removeEventListener("mousemove", translation);
+}
+
+function translation (e) {
+  e.stopPropagation();
+  e.preventDefault();
+
+  let x0 = config.souris.x;
+
+  config.souris.x = e.clientX;
+
+  if(x0 == null) return;
+
+  let delta_x = config.souris.x - x0;
+
+  let actuel = document.querySelector("#animation-portraits").scrollLeft;
+  document.querySelector("#animation-portraits").scroll({left: actuel - delta_x});
 }
 
