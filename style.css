@@ -332,6 +332,7 @@ main #animation-tableau-blanc #stop-experience {
   right: 20px;
   bottom: 20px;
   width: 50px;
+  z-index: 10;
 }
 main #animation-tableau-blanc #stop-experience img {
   cursor: pointer;
@@ -404,9 +405,16 @@ main #animation-tableau-blanc ~ #conclusion {
 }
 main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion {
   font-family: 'Nunito Sans', sans-serif;
-  font-size: 1.3em;
-  width: 240px;
-  text-align: justify;
+  font-size: 1.1em;
+  width: 400px;
+  text-align: left;
+  text-transform: uppercase;
+  margin: 0;
+}
+main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion h3 {
+  color: black;
+  margin: 0;
+  font-style: italic;
 }
 main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .couleur-trait {
   color: #f19731;
