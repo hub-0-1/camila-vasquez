@@ -84,7 +84,7 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         a_propos: {
           titre: "À propos",
           p1: "est un laboratoire socio-artistique qui a eu lieu à Waterville de 2019 à 2020. Durant un an, un groupe de huit familles hétéroparentales, nucléaires, recomposées et monoparentales se sont réunies pour créer et réfléchir ensemble sur le sens que prend la famille et ses défis dans nos sociétés contemporaines.",
-          p2: "Le projet a été réalisé par l'artiste Camila Vásquez dans le cadre de la résidence d’artiste du Laboratoire communautaire d'art de la Galerie d'art Foreman et la résidence d'artiste du Centre culturel et communautaire de Waterville.",
+          p2: "Le projet a été réalisé par l'artiste Camila Vásquez dans le cadre de la résidence d’artiste du Laboratoire communautaire d'art de la Galerie d'art Foreman et la résidence d'artiste du Centre culturel et communautaire de Waterville, sur un territoire non-cédé, qui appartenait historiquement aux Abénaquis.",
           p3: "Le travail réalisé durant ce laboratoire a été mené par des personnes d'origine latinomaéricaine, asiatique, européenne et nord-américaine, résidant au Canada. Nous reconnaissons le contexte privilégié à partir duquel nous réfléchissons nos réalités, en tant qu’habitantes et habitants d'un pays développé, bénéficiant d'un cadre socio-économique stable. Nous espérons mettre en commun nos expériences avec celles des autres, en ce qu'il y a d'universel chez l'humain, tout en prenant en considération les multiples différences qui nous distinguent entre nous."
         },
         contact: {
@@ -155,7 +155,7 @@ Leo just stopped his shower; he comes into the living room in a towel and sits d
         a_propos: {
           titre: "À propos",
           p1: "(Rethinking the Family: From utopia to new strategies) is a socio-artistic laboratory which took place in Waterville from 2019 to 2020. During the year, a group of eight heteroparental, nuclear, blended, and single-parent families joined together to create and reflect on the meaning family takes and its challenges in our contemporary societies.",
-          p2: "The project was produced by artist Camila Vásquez as part of the Artist Residency at the Community Art Lab of the Foreman Art Gallery and as part of the Artist Residency at the Waterville Community and Cultural Center.",
+          p2: "The project was produced by artist Camila Vásquez as part of the Artist Residency at the Community Art Lab of the Foreman Art Gallery and as part of the Artist Residency at the Waterville Community and Cultural Center, from unceded Abenakis territory.",
           p3: "The work carried out during this laboratory was carried out by people of Latin American, Asian, European and North American origin, residing in Canada. We recognize the privileged context from which we reflect on our realities, as inhabitants of a developed country, benefiting from a stable socio-economic framework. We hope to find commonality in our experiences, in what is universal in humans, while taking into consideration the multiple differences that distinguish us from one another."
         },
         contact: {
