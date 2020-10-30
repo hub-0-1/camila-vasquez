@@ -37,7 +37,6 @@ function deplacement_span_infini (delta_x) {
   let rect_1 = span_1.getBoundingClientRect(), rect_2 = span_2.getBoundingClientRect();
 
   let pct_avancement = delta_x / (rect_1.width + rect_2.width);
-  console.log(delta_x, pct_avancement);
 
   // Si le texte est a moins de 10%
   if(pct_avancement < 0.1) {
@@ -80,7 +79,6 @@ function commencer_translation (e) {
   config.souris.y = null;
 
   document.querySelector("#texte").addEventListener("mousemove", translation);
-  console.log("///////////////");
 }
 
 function terminer_translation (e) {
