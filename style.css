@@ -363,7 +363,9 @@ main #animation-tableau-blanc + #consignes #lancement p {
 }
 main #animation-tableau-blanc + #consignes #introduction p .numero-ligne,
 main #animation-tableau-blanc + #consignes #lancement p .numero-ligne {
+  font-family: 'Belleza';
   font-style: italic;
+  font-weight: bold;
 }
 main #animation-tableau-blanc + #consignes #introduction p .numero-ligne:after,
 main #animation-tableau-blanc + #consignes #lancement p .numero-ligne:after {
