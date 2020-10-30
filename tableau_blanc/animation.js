@@ -24,20 +24,26 @@ window.onload = function () {
   afficher_et_cacher(document.getElementById("ligne3"), 3 * buffer + 2 * temps_affichage_total, 1000, 2000);
   afficher_et_cacher(document.getElementById("ligne4"), 4 * buffer + 3 * temps_affichage_total, 1000, 2000);
   afficher(document.getElementById("ligne5"), 5 * buffer + 4 * temps_affichage_total);
-  afficher(document.getElementById("ligne6"), 6 * buffer + 5 * temps_affichage_total);
+  afficher(document.getElementById("ligne6"), 5 * buffer + 4 * temps_affichage_total);
 
   // Lancer l')expérience
   document.getElementById("ligne6").addEventListener("click", (e) => {
     document.getElementById("ambiance").play();
     cacher(document.getElementById("consignes"), 0, 2000);
+    afficher(document.getElementById("stop-experience"), 10);
   });
 
   // Terminer l'expérience
-  document.getElementById("ambiance").addEventListener("ended", (e) => {
-    document.getElementById("conclusion").style.display = "flex";
-    [].forEach.call(document.querySelectorAll("path"), (path) => {
-      path.setAttribute("stroke", "rgb(250, 234, 118, 0.2)")
-    });
+  document.getElementById("ambiance").addEventListener("ended", terminer_experience);
+  document.getElementById("stop-experience").addEventListener("click", terminer_experience);
+}
+
+function terminer_experience () {
+  document.getElementById("ambiance").pause();
+  document.getElementById("conclusion").style.display = "flex";
+
+  [].forEach.call(document.querySelectorAll("path"), (path) => {
+    path.setAttribute("stroke", "rgb(250, 234, 118, 0.2)")
   });
 }
 

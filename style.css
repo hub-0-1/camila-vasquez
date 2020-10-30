@@ -321,6 +321,16 @@ main #animation-tableau-blanc svg {
   width: 100vw;
   height: 100vh;
 }
+main #animation-tableau-blanc #stop-experience {
+  display: none;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 50px;
+}
+main #animation-tableau-blanc #stop-experience img {
+  width: 100%;
+}
 main #animation-tableau-blanc + #consignes {
   position: fixed;
   top: 0;
@@ -345,11 +355,19 @@ main #animation-tableau-blanc + #consignes #introduction .couleur-trait,
 main #animation-tableau-blanc + #consignes #lancement .couleur-trait {
   color: #f19731;
 }
-main #animation-tableau-blanc + #consignes #introduction span,
-main #animation-tableau-blanc + #consignes #lancement span {
+main #animation-tableau-blanc + #consignes #introduction p,
+main #animation-tableau-blanc + #consignes #lancement p {
   display: none;
   opacity: 0;
   transition: opacity 2s;
+}
+main #animation-tableau-blanc + #consignes #introduction p .numero-ligne,
+main #animation-tableau-blanc + #consignes #lancement p .numero-ligne {
+  font-style: italic;
+}
+main #animation-tableau-blanc + #consignes #introduction p .numero-ligne:after,
+main #animation-tableau-blanc + #consignes #lancement p .numero-ligne:after {
+  content: " ";
 }
 main #animation-tableau-blanc + #consignes #introduction #ligne6,
 main #animation-tableau-blanc + #consignes #lancement #ligne6 {

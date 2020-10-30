@@ -46,21 +46,18 @@
     <main>
       <div id="animation-tableau-blanc" class="animation">
         <svg id="dessin"></svg> 
+        <div id="stop-experience"><img src="/images/arret_son.png"></div>
       </div>
       <div id="consignes">
         <div id="container-contenu-consignes">
-          <p id="introduction">
-          <span id="ligne1" data-i18n="tableau.intro.ligne1"></span>
-          <span id="ligne2" data-i18n="tableau.intro.ligne2"></span>
-          <span id="ligne3" data-i18n="tableau.intro.ligne3"></span>
-          <span id="ligne4" data-i18n="tableau.intro.ligne4"></span>
-          <span id="ligne5" data-i18n="tableau.intro.ligne5"></span>
-          <span id="ligne6"><img src="/images/arret_son.png"></span>
-          </p>
-          <h3 id="lancement">
-            <span data-i18n="tableau.lancement.ligne1"></span><br>
-            <span data-i18n="tableau.lancement.ligne2"></span> <span data-i18n="tableau.lancement.ligne3" class="couleur-trait" style="cursor: pointer;"></span>
-          </h3>
+          <div id="introduction">
+            <p id="ligne1"><span class="numero-ligne">1.</span><span data-i18n="tableau.intro.ligne1"></span></p>
+            <p id="ligne2"><span class="numero-ligne">2.</span><span data-i18n="tableau.intro.ligne2"></span></p>
+            <p id="ligne3"><span class="numero-ligne">3.</span><span data-i18n="tableau.intro.ligne3"></span></p>
+            <p id="ligne4"><span class="numero-ligne">4.</span><span data-i18n="tableau.intro.ligne4"></span></p>
+            <p id="ligne5"><span class="numero-ligne">5.</span><span data-i18n="tableau.intro.ligne5"></span></p>
+            <p id="ligne6"><img src="/images/arret_son.png"></p>
+          </div>
         </div>
         <audio id="ambiance">
           <source src="/audio/dessins_sonores_web.mp3" type="audio/mpeg">
