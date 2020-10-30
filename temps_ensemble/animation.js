@@ -1,5 +1,6 @@
 var config = {
-  souris: { x: null, y: null }
+  souris: { x: null, y: null },
+  derniere_update: 0
 }
 
 var rotation_scroller = 0;
@@ -31,6 +32,7 @@ function evenement_scroll (e) {
 }
 
 function deplacement_span_infini (delta_x) {
+
   let span_1 = texte.firstElementChild, span_2 = texte.lastElementChild;
   let rect_1 = span_1.getBoundingClientRect(), rect_2 = span_2.getBoundingClientRect();
 
@@ -48,6 +50,8 @@ function deplacement_span_infini (delta_x) {
     texte.appendChild(span_1);
     texte.scrollBy(-1 * rect_1.width, 0);
   }
+
+  config.derniere_update = Date.now();
 }
 
 function deplacer_scroller (e) {
@@ -76,6 +80,7 @@ function commencer_translation (e) {
   config.souris.y = null;
 
   document.querySelector("#texte").addEventListener("mousemove", translation);
+  console.log("///////////////");
 }
 
 function terminer_translation (e) {
@@ -89,6 +94,7 @@ function translation (e) {
   e.stopPropagation();
   e.preventDefault();
 
+
   let x0 = config.souris.x;
 
   config.souris.x = e.clientX;
@@ -97,7 +103,6 @@ function translation (e) {
 
   let delta_x = config.souris.x - x0;
 
-  deplacement_span_infini (delta_x);
   let actuel = document.querySelector("#texte").scrollLeft;
   document.querySelector("#texte").scroll({left: actuel - delta_x});
 }
