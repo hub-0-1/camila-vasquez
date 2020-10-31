@@ -448,7 +448,7 @@ main #animation-portraits #portraits {
 }
 main #animation-portraits #portraits img {
   opacity: 0;
-  transition: opacity 2s;
+  transition: all 2s;
 }
 main #animation-portraits .paysage {
   display: inline-block;
