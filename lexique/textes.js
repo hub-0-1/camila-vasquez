@@ -23,7 +23,7 @@ var textes = {
     egal: {
       mot: "Être égaux",
       original: "$égal, ale, aux$ @adj. et n.@ _1._ @(Personnes, choses)@ %Qui est de la même quantité, dimension, nature, qualité ou valeur.% _> identique, même ; équivalent._ @/ contr.@ _inégal ; différent._ _2._ @(Personnes)@ %Qui es sur le même rang ; qui a les mêmes droits et charges% _> pareil._",
-      interpretation: "$être égaux$ _1._ @loc.@ %Dans un couple hétérosexuel, partager de manière équitable autant les tâches domestiques que la charge mentale – qui peut être définie comme  « le travail de gestion, d’organisation et de planification qui est à la fois intangible, incontournable et constant, et qui a pour objectifs la satisfaction des besoins de chacun et la bonne marche de la résidence. ». – et ce, malgré la contradiction flagrante qui existe entre le discours et la pratique quant à l’égalité entre hommes et femmes à la maison.%"
+      interpretation: "$être égaux$ _1._ @loc.@ %Dans un couple hétérosexuel, partager de manière équitable autant les tâches domestiques que la charge mentale et ce, malgré la contradiction flagrante qui existe entre le discours et la pratique quant à l’égalité entre hommes et femmes à la maison.%<br><br>$Charge mentale :$ %qui peut être définie comme  « le travail de gestion, d’organisation et de planification qui est à la fois intangible, incontournable et constant, et qui a pour objectifs la satisfaction des besoins de chacun et la bonne marche de la résidence. »%"
     },
     faire_peut: {
       mot: "Faire",
@@ -100,7 +100,7 @@ var textes = {
     egal: {
       mot: "Equal",
       original: "$equal$ @adj., noun.@ _1._ @(People, things)@ %Which is of the same quantity, size, nature, quality or value.% _> identical, same; equivalent._ @/ antonym.@ _unequal; different._ _2._ @(People)@ %Who are in the same rank; who have the same rights and charges.%",
-      interpretation: "$to be equal$ _1._ @idiom.@ %In a heterosexual couple, sharing equally both the domestic tasks and the mental burden - which can be defined as 'the work of management, organization and planning which is at the same time intangible, unavoidable and constant, and which has for objectives the satisfaction of everyone's needs and the smooth running of the residence. '. - and this, despite the flagrant contradiction between discourse and practice regarding equality between men and women at home.%"
+      interpretation: "$to be equal$ _1._ @idiom.@ %In a heterosexual couple, sharing equally both the domestic tasks and the mental burden and this, despite the flagrant contradiction between discourse and practice regarding equality between men and women at home.%<br><br> $Mental burden :$ %which can be defined as 'the work of management, organization and planning which is at the same time intangible, unavoidable and constant, and which has for objectives the satisfaction of everyone's needs and the smooth running of the residence.'%"
     },
     faire_peut: {
       mot: "Do",
@@ -163,6 +163,7 @@ function parser (texte) {
   texte = texte.replace(/\$([^\$]+)\$/gi, "<span class='baskerville bold italic'>$1</span>");
   texte = texte.replace(/@([^@]+)@/gi, "<span class='optima'>$1</span>");
 
+  console.log(texte);
   return texte;
 }
 
