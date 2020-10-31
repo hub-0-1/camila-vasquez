@@ -163,7 +163,6 @@ function parser (texte) {
   texte = texte.replace(/\$([^\$]+)\$/gi, "<span class='baskerville bold italic'>$1</span>");
   texte = texte.replace(/@([^@]+)@/gi, "<span class='optima'>$1</span>");
 
-  console.log(texte);
   return texte;
 }
 

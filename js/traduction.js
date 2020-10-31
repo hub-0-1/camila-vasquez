@@ -1,27 +1,27 @@
 function init_traduction () {
 
+  if(document.cookie != "lang=fr") {
+    document.cookie = "lang=en";
+  }
+
   // Switcher
-  document.getElementById("langue").addEventListener("click", function (e) {
-    let nouvelle_langue = e.target.getAttribute("data-langue") == "fr" ? "en" : "fr";
-    traduire(nouvelle_langue);
-    e.target.setAttribute("data-langue", nouvelle_langue);
+  document.getElementById("langue").addEventListener("click", async function () {
+    document.cookie = document.cookie == "lang=fr" ? "lang=en" : "lang=fr";
+    let nouvelle_langue = document.cookie.match(/=(\w{2})/)[1];
+    await i18next.changeLanguage(nouvelle_langue);
+    traduire();
   })
 
   i18next.init({
-    lng: "fr",
-    fallbackLng: "fr",
+    lng: document.cookie.match(/=(\w{2})/)[1],
+    fallbackLng: document.cookie.match(/=(\w{2})/)[1],
     resources: traduction
   }, function () {
     traduire();
   });
 }
 
-async function traduire (lng) {
-
-  // Si on modifie le langage
-  if (lng) await i18next.changeLanguage(lng);
-
-  // Faire les traductions
+function traduire () {
   [].forEach.call(document.querySelectorAll("[data-i18n]"), (el) => {
     el.innerHTML = i18next.t(el.getAttribute("data-i18n"));
   })
