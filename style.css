@@ -97,7 +97,7 @@ body .optima {
 #menu .item-menu .oeuvre {
   text-transform: uppercase;
   text-align: left;
-  max-width: 65%;
+  width: 65%;
 }
 main {
   width: 100vw;
