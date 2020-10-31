@@ -590,12 +590,17 @@ main {
   }
 
   #animation-info {
-    position: relative;
+    display: none;
+    opacity: 0;
+    transition: opacity 2s;
+
+    position: fixed;
     top: 150px;
     left: 18%;
     width: 64%;
 
     font-size: 0.9em;
+    overflow: auto;
 
     h2 {
       text-transform: uppercase;

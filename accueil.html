@@ -74,6 +74,24 @@
         <img src="/images/arret_son.png">
       </div>
 
+      <div id="animation-info" class="animation" onclick="cacher_info();"> 
+        <div id="textes-info">
+          <h2 data-i18n="info.a_propos.titre"></h2>
+          <div class="contenu-a-propos">
+            <p>
+              <span style="font-style: italic;">Repenser la famille : de l'utopie aux nouvelles stratégies</span>
+              <span data-i18n="info.a_propos.p1"></span>
+            </p>
+            <p data-i18n="info.a_propos.p2"></p>
+            <p data-i18n="info.a_propos.p3"></p>
+          </div>
+          <h2 data-i18n="info.contact.titre"></h2>
+          <p><a href="mailto:camilarosario.vasquez@gmail.com" style="text-decoration: underline;">camilarosario.vasquez@gmail.com</a></p>
+          <p data-i18n="info.contact.p1"></p>
+          <p data-i18n="info.contact.p2"></p>
+          <a href="http://foreman.ubishops.ca/repenser-la-famille-de-lutopie-aux-nouvelles-strategies" data-i18n="info.contact.p3" style="text-decoration: underline;"></a>
+        </div>
+      </div>
     </main>
 
     <div id="menu">
@@ -82,7 +100,7 @@
       <div class="item-menu"><div class="index">03.</div><a class="oeuvre" href="/temps_ensemble/" data-i18n="header.design_typo"></a></div>
       <div class="item-menu"><div class="index">04.</div><a class="oeuvre" href="/portraits/" data-i18n="header.portraits"></a></div>
       <div class="item-menu"><div class="index">05.</div><a class="oeuvre" href="/tableau_blanc/" data-i18n="header.tableau_blanc"></a></div>
-      <div class="item-menu"><div class="index">06.</div><a class="oeuvre" href="/info/" data-i18n="header.info"></a></div>
+      <div class="item-menu"><div class="index">06.</div><a class="oeuvre" href="#info" data-i18n="header.info" onclick="afficher_info();"></a></div>
     </div>
 
     <a id="container-logo" href="/" style="display: none;"><img id="logo" class="icone" src="/images/logo.png"></a>
