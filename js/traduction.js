@@ -1,7 +1,7 @@
 function init_traduction () {
 
-  if(document.cookie != "lang=fr") {
-    document.cookie = "lang=en";
+  if(document.cookie != "lang=en") {
+    document.cookie = "lang=fr";
   }
 
   // Switcher
@@ -114,11 +114,11 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
       },
       tableau: {
         intro: {
-          ligne1: "Close your eyes",
-          ligne2: "Listen",
-          ligne3: "Move the mouse while maintaining your click",
+          ligne1: "Listen",
+          ligne2: "Close your eyes",
+          ligne3: "Draw",
           ligne4: "Spontaniously respond to the sound",
-          ligne5: "At the end, open your eyes and see"
+          ligne5: "To begin and to end, click here"
         },
         lancement: {
           ligne1: "To start",
