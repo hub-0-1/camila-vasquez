@@ -323,6 +323,7 @@ main #animation-cartographie + #explications {
   transition: opacity 2s;
   justify-content: center;
   align-items: center;
+  text-transform: uppercase;
   background-color: #f2efea;
 }
 main #animation-tableau-blanc svg {
