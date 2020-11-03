@@ -1,5 +1,6 @@
 function init_traduction () {
 
+  // Defaut
   if(document.cookie != "lang=en") {
     document.cookie = "lang=fr";
   }

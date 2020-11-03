@@ -1549,5 +1549,166 @@ traduction.en.translation.accueil.legendes = {
     note: "Objective observation exercise of a family moment for 15 minutes",
     rencontre: "Meeting on LA RÉALITÉ",
     annee: "2020"
+  },
+  "traces_ecrites_org_2576": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2570": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2565": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2489": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2501": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2514": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2504": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2498": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2472": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2537": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2508": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2534": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2525": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2519": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2524": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2487": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting LE CONSTAT",
+    rencontre: "Meeting on L’UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2526": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2532": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2543": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2580": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2546": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Return on the meeting L'UTOPIE",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2584": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
+  },
+  "traces_ecrites_org_2586": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflexion on the family’s utopia",
+    rencontre: "Meeting on L'UTOPIE",
+    annee: "2020"
   }
 };
