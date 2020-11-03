@@ -2,11 +2,15 @@ function init_traduction () {
 
   // Defaut
   if(document.cookie != "lang=en") {
+    
+    // Reset cookies
+    document.cookie.split(";").forEach(function(c) { document.cookie = c.replace(/^ +/, "").replace(/=.*/, "=;expires=" + new Date().toUTCString() + ";path=/");  });
     document.cookie = "lang=fr";
   }
 
   // Switcher
   document.getElementById("langue").addEventListener("click", async function () {
+    console.log(document.cookie);
     document.cookie = document.cookie == "lang=fr" ? "lang=en" : "lang=fr";
     let nouvelle_langue = document.cookie.match(/=(\w{2})/)[1];
     await i18next.changeLanguage(nouvelle_langue);
