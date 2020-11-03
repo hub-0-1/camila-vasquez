@@ -49,17 +49,17 @@ var images = [
   '/images/accueil/flottantes_doc_labo/utopie_07.jpg',
 
   // flottantes traces ecrites
-  '/images/accueil/flottantes_traces_ecrites/la_realite/17_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/la_realite/15_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/la_realite/18_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/la_realite/16_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/la_realite/13_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/la_realite/14_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/08_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/09_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/10_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/11_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/12_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/13_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/14_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/15_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/16_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/17_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/18_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/jackies_thoughts1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/jackies_thoughts2.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose1.jpg',
@@ -1480,4 +1480,74 @@ traduction.en.translation.accueil.legendes = {
     rencontre: "Meeting on LA RÉALITÉ",
     annee: "2020"
   },
+  "09_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "10_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "11_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "12_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "13_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "14_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "15_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "16_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "17_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  },
+  "18_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
+    annee: "2020"
+  }
 };
