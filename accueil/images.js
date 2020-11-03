@@ -49,17 +49,17 @@ var images = [
   '/images/accueil/flottantes_doc_labo/utopie_07.jpg',
 
   // flottantes traces ecrites
-  '/images/accueil/flottantes_traces_ecrites/la_realite/12_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/17_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/la_realite/10_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/15_15_min.jpg',
-  '/images/accueil/flottantes_traces_ecrites/la_realite/09_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/18_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/16_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/13_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/14_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/08_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/09_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/10_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/la_realite/11_15_min.jpg',
+  '/images/accueil/flottantes_traces_ecrites/la_realite/12_15_min.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/jackies_thoughts1.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/jackies_thoughts2.jpg',
   '/images/accueil/flottantes_traces_ecrites/non_retour/rose1.jpg',
@@ -118,11 +118,11 @@ var images = [
   '/images/accueil/flottantes_traces_ecrites/traces_photographiees/traces_ecrites_org_2584.png',
   '/images/accueil/flottantes_traces_ecrites/traces_photographiees/traces_ecrites_org_2586.png',
   '/images/accueil/flottantes_traces_ecrites/les_strategies/01_strategies.jpg',
-  '/images/accueil/flottantes_traces_ecrites/les_strategies/06_strategies.jpg',
-  '/images/accueil/flottantes_traces_ecrites/les_strategies/04_strategies.jpg',
-  '/images/accueil/flottantes_traces_ecrites/les_strategies/03_strategies.jpg',
   '/images/accueil/flottantes_traces_ecrites/les_strategies/02_strategies.jpg',
-  '/images/accueil/flottantes_traces_ecrites/les_strategies/05_strategies.jpg'
+  '/images/accueil/flottantes_traces_ecrites/les_strategies/03_strategies.jpg',
+  '/images/accueil/flottantes_traces_ecrites/les_strategies/04_strategies.jpg',
+  '/images/accueil/flottantes_traces_ecrites/les_strategies/05_strategies.jpg',
+  '/images/accueil/flottantes_traces_ecrites/les_strategies/06_strategies.jpg'
 ];
 
 traduction.fr.translation.accueil.legendes = {
@@ -1429,6 +1429,55 @@ traduction.en.translation.accueil.legendes = {
     media: "WRITTEN DOCUMENTATION",
     note: "Reflection on the post-pandemic for a non-return to abnormal",
     rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "01_strategies": {
+    type: "Written documentation",
+    media: "TIPS TO SHARE WITH THE FAMILY DURING THE LOCKDOWN",
+    note: "Collaborative online exercise to replace LES STRATEGIES meeting which did not take place because of the pandemic",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "02_strategies": {
+    type: "Written documentation",
+    media: "TIPS TO SHARE WITH THE FAMILY DURING THE LOCKDOWN",
+    note: "Collaborative online exercise to replace LES STRATEGIES meeting which did not take place because of the pandemic",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "03_strategies": {
+    type: "Written documentation",
+    media: "TIPS TO SHARE WITH THE FAMILY DURING THE LOCKDOWN",
+    note: "Collaborative online exercise to replace LES STRATEGIES meeting which did not take place because of the pandemic",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "04_strategies": {
+    type: "Written documentation",
+    media: "TIPS TO SHARE WITH THE FAMILY DURING THE LOCKDOWN",
+    note: "Collaborative online exercise to replace LES STRATEGIES meeting which did not take place because of the pandemic",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "05_strategies": {
+    type: "Written documentation",
+    media: "TIPS TO SHARE WITH THE FAMILY DURING THE LOCKDOWN",
+    note: "Collaborative online exercise to replace LES STRATEGIES meeting which did not take place because of the pandemic",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "06_strategies": {
+    type: "Written documentation",
+    media: "TIPS TO SHARE WITH THE FAMILY DURING THE LOCKDOWN",
+    note: "Collaborative online exercise to replace LES STRATEGIES meeting which did not take place because of the pandemic",
+    rencontre: "-",
+    annee: "2020"
+  },
+  "08_15_min": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Objective observation exercise of a family moment for 15 minutes",
+    rencontre: "Meeting on LA RÉALITÉ",
     annee: "2020"
   },
 };
