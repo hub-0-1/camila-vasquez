@@ -1346,5 +1346,89 @@ traduction.en.translation.accueil.legendes = {
     note: "Paired exercise of mirror drawing and writing beliefs about family life to reformulate and transform",
     rencontre: "Meeting on LE CONSTAT",
     annee: "2019"
-  }
+  },
+  "christian": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "envie_d_etre": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "gmail": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "jackies_thoughts1": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "jackies_thoughts2": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "jane": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "non_retour_3": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "realisations1": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "realisations2": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "reflexions": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "rose1": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
+  "rose2": {
+    type: "Documentation",
+    media: "WRITTEN DOCUMENTATION",
+    note: "Reflection on the post-pandemic for a non-return to abnormal",
+    rencontre: "Meeting on LA POST-PANDÉMIE",
+    annee: "2020"
+  },
 };
