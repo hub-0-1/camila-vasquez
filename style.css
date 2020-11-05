@@ -201,7 +201,7 @@ main #animation-accueil + #modal #container-contenu-modal {
   right: 5%;
   display: flex;
   flex-direction: column;
-  align-items: left;
+  max-width: 30%;
 }
 main #animation-accueil + #modal #container-contenu-modal p {
   margin: 0;
@@ -212,7 +212,7 @@ main #animation-accueil + #modal #container-contenu-modal #image-modal {
   top: 200px;
   left: 250px;
   transform: rotate(-4deg);
-  max-width: 50%;
+  max-width: 40%;
   max-height: 50%;
 }
 main #animation-accueil + #modal #container-contenu-modal #type-texte {
