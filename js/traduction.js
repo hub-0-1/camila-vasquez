@@ -50,6 +50,7 @@ var traduction = {
         sous_titre: "de l'utopie aux nouvelles stratégies"
       },
       tableau: {
+        titre: "Dessins sonores",
         intro: {
           ligne1: "Écoutez",
           ligne2: "Fermez les yeux",
@@ -61,7 +62,8 @@ var traduction = {
           ligne1: "Pour commencer",
           ligne2: "Cliquez",
           ligne3: "Ici"
-        }
+        },
+        conclusion: "Est une invitation à entrer en relation avec l’environnement sonore de la vie quotidienne autrement, afin d'aiguiser le sens de l'écoute et de ne pas réagir aux bruits uniquement de façon automatique."
       },
       cartographie: {
         explication: "Zoomez et explorez"
@@ -118,6 +120,7 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         sous_titre: "From utopia to new strategies"
       },
       tableau: {
+        titre: "Sound drawings",
         intro: {
           ligne1: "Listen",
           ligne2: "Close your eyes",
@@ -129,7 +132,8 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
           ligne1: "To start",
           ligne2: "Click",
           ligne3: "Here"
-        }
+        },
+        conclusion: "Is an invitation to enter in relationship with the sounds surrounding you in your everyday life in an experience designed to sharpen your listening skills and to stop you from reacting to sounds in automatically."
       },
       cartographie: {
         explication: "Zoom and explore"
