@@ -252,35 +252,35 @@ traduction.fr.translation.accueil.legendes = {
     rencontre: "Rencontre L’UTOPIE",
     annee: "2020"
   },
-  "post_pandemie01": {
+  "post_pandemie_01": {
     type: "Documentation",
     media: "Photographie",
     note: "Collation",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post_pandemie02": {
+  "post_pandemie_02": {
     type: "Documentation",
     media: "Photographie",
     note: "Retrouvailles",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post_pandemie03": {
+  "post_pandemie_03": {
     type: "Documentation",
     media: "Photographie",
     note: "Feu symbolique",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post_pandemie04": {
+  "post_pandemie_04": {
     type: "Documentation",
     media: "Photographie",
     note: "Conversation sur la post-pandémie pour un non-retour à l’anormale",
     rencontre: "Rencontre LA POST-PANDÉMIE",
     annee: "2020"
   },
-  "post_pandemie05": {
+  "post_pandemie_05": {
     type: "Documentation",
     media: "Photographie",
     note: "Conversation sur la post-pandémie pour un non-retour à l’anormale",
@@ -1046,35 +1046,35 @@ traduction.en.translation.accueil.legendes = {
     rencontre: "L’UTOPIE meeting",
     annee: "2020"
   },
-  "post_pandemie01": {
+  "post_pandemie_01": {
     type: "Documentation",
     media: "Photographic",
     note: "Snack",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post_pandemie02": {
+  "post_pandemie_02": {
     type: "Documentation",
     media: "Photographic",
     note: "Reunion",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post_pandemie03": {
+  "post_pandemie_03": {
     type: "Documentation",
     media: "Photographic",
     note: "Symbolic fire",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post_pandemie04": {
+  "post_pandemie_04": {
     type: "Documentation",
     media: "Photographic",
     note: "Conversation on the post-pandemic for a non-return to the abnormal",
     rencontre: "LA POST-PANDÉMIE meeting",
     annee: "2020"
   },
-  "post_pandemie05": {
+  "post_pandemie_05": {
     type: "Documentation",
     media: "Photographic",
     note: "Conversation on the post-pandemic for a non-return to the abnormal",
