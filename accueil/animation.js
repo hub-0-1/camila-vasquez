@@ -106,6 +106,7 @@ function show_modal (image) {
   modal.querySelector("#rencontre-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".rencontre");
   modal.querySelector("#annee-texte").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".annee");
 
+  console.log(image);
   if(traduction.fr.translation.accueil.legendes[image.getAttribute("data-id-texte")].credit) {
     modal.querySelector("#credits-photo").setAttribute("data-i18n", "accueil.legendes." + image.getAttribute("data-id-texte") + ".credit");
   }
