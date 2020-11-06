@@ -180,7 +180,7 @@ class Image {
 
   afficher_definitions (e) {
 
-    let langue = document.getElementById("langue").getAttribute("data-langue");
+    let langue = i18next.language;
     let texte = e.target.src.match(/\/lexique\/(\w+)\.png/)[1];
 
     let texte_original = config.textes[langue][texte].original;
