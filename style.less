@@ -622,6 +622,25 @@ main {
       margin: 0;
     }
   }
+
+  #animation-video {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      text-transform: uppercase;
+    }
+    
+    #container-video {
+      width: 60%;
+
+      video {
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 650px) {
@@ -700,6 +719,12 @@ main {
 
     .container-contenu-modal {
       font-size: 0.7em;
+    }
+
+    #animation-video {
+      #container-video {
+        width: 100%;
+      }  
     }
   }
 }

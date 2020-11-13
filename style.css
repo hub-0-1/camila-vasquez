@@ -502,6 +502,21 @@ main #animation-info .contenu-a-propos p {
 main #animation-info p {
   margin: 0;
 }
+main #animation-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main #animation-video h2 {
+  text-transform: uppercase;
+}
+main #animation-video #container-video {
+  width: 60%;
+}
+main #animation-video #container-video video {
+  width: 100%;
+}
 @media only screen and (max-width: 650px) {
   #menu {
     flex-direction: column;
@@ -551,6 +566,9 @@ main #animation-info p {
   }
   main .container-contenu-modal {
     font-size: 0.7em;
+  }
+  main #animation-video #container-video {
+    width: 100%;
   }
 }
 @media (orientation: portrait) {
