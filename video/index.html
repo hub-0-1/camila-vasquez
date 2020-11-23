@@ -36,13 +36,14 @@
     <link rel="stylesheet" href="/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet"> 
 
+    <script src="https://unpkg.com/i18next@19.6.3/dist/umd/i18next.min.js"></script>
     <script src="/js/menu.js"></script>
     <script src="/js/traduction.js"></script>
   </head>
   <body>
     <main>
       <div id="animation-video" class="animation">
-        <h2>Nom du video</h2>
+        <h2 data-i18n="video.nom"></h2>
         <div id="container-video">
           <video src="/videos/jack.mp4" controls>
           </video>
@@ -64,4 +65,8 @@
   <div id="langue" data-i18n="header.autre_langue" data-langue="fr"></div>
   <div id="hamburger">Menu</div>
   </body>
+  <script>
+    init_menu();
+    init_traduction();
+  </script>
 </html>

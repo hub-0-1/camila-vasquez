@@ -100,6 +100,9 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
           p2: "Les animations ont été créés par Carl C. Ferland.",
           p3: "Pour de plus amples informations : foreman.ubishops.ca"
         }
+      },
+      video: {
+        nom: "Nom du vidéo"
       }
     }
   },
@@ -173,6 +176,9 @@ Leo just stopped his shower; he comes into the living room in a towel and sits d
           p2: "The animations were created by Carl C. Ferland.",
           p3: "For more information : foreman.ubishops.ca"
         }
+      },
+      video: {
+        nom: "Name of the video"
       }
     }
   }
