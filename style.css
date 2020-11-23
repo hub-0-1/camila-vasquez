@@ -423,7 +423,8 @@ main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion h3 {
 main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .couleur-trait {
   color: #f19731;
 }
-main #animation-portraits {
+main #animation-portraits,
+main #animation-galerie {
   position: fixed;
   top: 0%;
   left: 1%;
@@ -435,10 +436,12 @@ main #animation-portraits {
   scrollbar-width: none;
   /* Firefox */
 }
-main #animation-portraits::-webkit-scrollbar {
+main #animation-portraits::-webkit-scrollbar,
+main #animation-galerie::-webkit-scrollbar {
   display: none;
 }
-main #animation-portraits #portraits {
+main #animation-portraits #portraits,
+main #animation-galerie #portraits {
   position: absolute;
   top: 50%;
   width: max-content;
@@ -447,31 +450,37 @@ main #animation-portraits #portraits {
   transform: translateY(-50%);
   transition: transform 2s;
 }
-main #animation-portraits #portraits img {
+main #animation-portraits #portraits img,
+main #animation-galerie #portraits img {
   opacity: 0;
   transition: all 2s;
 }
-main #animation-portraits .paysage {
+main #animation-portraits .paysage,
+main #animation-galerie .paysage {
   display: inline-block;
   width: 450px;
   transition: 2s all;
   vertical-align: middle;
 }
-main #animation-portraits .paysage.focus {
+main #animation-portraits .paysage.focus,
+main #animation-galerie .paysage.focus {
   filter: drop-shadow(5px 5px 0.85rem gray);
   width: 600px;
 }
-main #animation-portraits .portrait {
+main #animation-portraits .portrait,
+main #animation-galerie .portrait {
   display: inline-block;
   width: 350px;
   transition: 2s all;
   vertical-align: middle;
 }
-main #animation-portraits .portrait.focus {
+main #animation-portraits .portrait.focus,
+main #animation-galerie .portrait.focus {
   filter: drop-shadow(5px 5px 0.85rem gray);
   width: 600px;
 }
-main #animation-portraits #legende {
+main #animation-portraits #legende,
+main #animation-galerie #legende {
   font-size: initial;
   margin-top: -12px;
   text-align: justify;

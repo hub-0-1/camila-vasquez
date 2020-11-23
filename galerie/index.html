@@ -40,38 +40,19 @@
     <script src="/js/menu.js"></script>
     <script src="/js/traduction.js"></script>
 
-    <script src="/accueil/images.js"></script>
-    <script src="/accueil/animation.js"></script>
-    <script src="/accueil/images_flottantes.js"></script>
+    <script src="/galerie/animation.js"></script>
   </head>
   <body>
-
     <main>
-      <div id="animation-accueil" class="animation"> </div>
-      <div id="modal">
-        <div id="container-contenu-modal">
-          <img id="image-modal" src="#">
-          <p id="type-texte"></p>
-          <p id="media-texte"></p>
-          <p id="note-texte"></p>
-          <p id="rencontre-texte"></p>
-          <p id="annee-texte"></p>
-          <p id="credits-photo"></p>
-        </div>
-      </div>
+      <div id="animation-galerie" class="animation">
+        <div id="portraits">
+          <img src="/images/portraits/boucle/Gaspar_3_images.gif" class="image portrait">
+          <img src="/images/portraits/Blanche_par_Pascal.jpg" class="image paysage">
+          <img src="/images/portraits/boucle/Cecilia_4_images.gif" class="image portrait">
+          <img src="/images/portraits/Camila_par_Jaya.jpg" class="image paysage">
 
-      <div id="presentation">
-        <div id="logo-presentation">
-          <img src="/images/logo_md_alpha.gif">
+          <div id="legende" data-i18n="galerie.legende" style="display: none;"></div>
         </div>
-        <div>
-          <h1 id="titre">Repenser la famille</h1>
-          <h2 id="sous-titre" data-i18n="accueil.sous_titre"></h2>
-        </div>
-      </div>
-
-      <div id="player" onclick="arreter_sons()">
-        <img src="/images/arret_son.png">
       </div>
     </main>
   </body>
