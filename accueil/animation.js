@@ -25,8 +25,8 @@ var config = {
 window.onload = function () {
 
   // Traduire les elements texte
-  init_traduction();
   init_menu();
+  init_traduction();
 
   // Elements
   let canva = document.getElementById("animation-accueil");

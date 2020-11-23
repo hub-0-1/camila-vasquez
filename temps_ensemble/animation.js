@@ -10,8 +10,8 @@ var dernier_x = 0;
 
 window.onload = function () {
 
-  init_traduction();
   init_menu();
+  init_traduction();
 
   let texte = document.getElementById("texte");
   texte.scroll({ left: 1, top: 0 });
