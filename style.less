@@ -526,7 +526,8 @@ main {
     }
   }
 
-  #animation-portraits, #animation-galerie {
+  #animation-portraits, #animation-galerie, #animation-retour {
+
     position: fixed;
     top: 0%;
     left: 1%;
@@ -557,31 +558,71 @@ main {
         opacity: 0;
         transition: all 2s;
       }
-    }
 
-    .paysage {
-      display: inline-block;
-      width: 450px;
-      transition: 2s all;
-      vertical-align: middle;
+      .paysage {
+        display: inline-block;
+        width: 450px;
+        transition: 2s all;
+        vertical-align: middle;
 
-      &.focus {
-        filter: drop-shadow(5px 5px 0.85rem gray);
-        width: 600px;
+        &.focus {
+          filter: drop-shadow(5px 5px 0.85rem gray);
+          width: 600px;
+        }
+      }
+
+      .portrait {
+        display: inline-block;
+        width: 350px;
+        transition: 2s all;
+        vertical-align: middle;
+
+        &.focus {
+          filter: drop-shadow(5px 5px 0.85rem gray);
+          width: 600px;
+        }
       }
     }
 
-    .portrait {
-      display: inline-block;
-      width: 350px;
-      transition: 2s all;
-      vertical-align: middle;
+    #retour {
+      position: absolute;
+      top: 50%;
+      width: max-content;
+      font-size: 0;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
 
-      &.focus {
-        filter: drop-shadow(5px 5px 0.85rem gray);
-        width: 600px;
+      transition: transform 2s;
+
+      img {
+        opacity: 0;
+        transition: all 2s;
       }
-    } 
+
+      .paysage {
+        display: inline-block;
+        height: 250px;
+        transition: 2s all;
+        vertical-align: middle;
+
+        &.focus {
+          filter: drop-shadow(5px 5px 0.85rem gray);
+          height: 450px;
+        }
+      }
+
+      .portrait {
+        display: inline-block;
+        height: 350px;
+        transition: 2s all;
+        vertical-align: middle;
+
+        &.focus {
+          filter: drop-shadow(5px 5px 0.85rem gray);
+          height: 450px;
+        }
+      }
+    }
 
     #legende {
       font-size: initial;
@@ -632,7 +673,7 @@ main {
     h2 {
       text-transform: uppercase;
     }
-    
+
     #container-video {
       width: 60%;
 

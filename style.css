@@ -424,7 +424,8 @@ main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .coule
   color: #f19731;
 }
 main #animation-portraits,
-main #animation-galerie {
+main #animation-galerie,
+main #animation-retour {
   position: fixed;
   top: 0%;
   left: 1%;
@@ -437,11 +438,13 @@ main #animation-galerie {
   /* Firefox */
 }
 main #animation-portraits::-webkit-scrollbar,
-main #animation-galerie::-webkit-scrollbar {
+main #animation-galerie::-webkit-scrollbar,
+main #animation-retour::-webkit-scrollbar {
   display: none;
 }
 main #animation-portraits #portraits,
-main #animation-galerie #portraits {
+main #animation-galerie #portraits,
+main #animation-retour #portraits {
   position: absolute;
   top: 50%;
   width: max-content;
@@ -451,36 +454,87 @@ main #animation-galerie #portraits {
   transition: transform 2s;
 }
 main #animation-portraits #portraits img,
-main #animation-galerie #portraits img {
+main #animation-galerie #portraits img,
+main #animation-retour #portraits img {
   opacity: 0;
   transition: all 2s;
 }
-main #animation-portraits .paysage,
-main #animation-galerie .paysage {
+main #animation-portraits #portraits .paysage,
+main #animation-galerie #portraits .paysage,
+main #animation-retour #portraits .paysage {
   display: inline-block;
   width: 450px;
   transition: 2s all;
   vertical-align: middle;
 }
-main #animation-portraits .paysage.focus,
-main #animation-galerie .paysage.focus {
+main #animation-portraits #portraits .paysage.focus,
+main #animation-galerie #portraits .paysage.focus,
+main #animation-retour #portraits .paysage.focus {
   filter: drop-shadow(5px 5px 0.85rem gray);
   width: 600px;
 }
-main #animation-portraits .portrait,
-main #animation-galerie .portrait {
+main #animation-portraits #portraits .portrait,
+main #animation-galerie #portraits .portrait,
+main #animation-retour #portraits .portrait {
   display: inline-block;
   width: 350px;
   transition: 2s all;
   vertical-align: middle;
 }
-main #animation-portraits .portrait.focus,
-main #animation-galerie .portrait.focus {
+main #animation-portraits #portraits .portrait.focus,
+main #animation-galerie #portraits .portrait.focus,
+main #animation-retour #portraits .portrait.focus {
   filter: drop-shadow(5px 5px 0.85rem gray);
   width: 600px;
 }
+main #animation-portraits #retour,
+main #animation-galerie #retour,
+main #animation-retour #retour {
+  position: absolute;
+  top: 50%;
+  width: max-content;
+  font-size: 0;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  transition: transform 2s;
+}
+main #animation-portraits #retour img,
+main #animation-galerie #retour img,
+main #animation-retour #retour img {
+  opacity: 0;
+  transition: all 2s;
+}
+main #animation-portraits #retour .paysage,
+main #animation-galerie #retour .paysage,
+main #animation-retour #retour .paysage {
+  display: inline-block;
+  height: 250px;
+  transition: 2s all;
+  vertical-align: middle;
+}
+main #animation-portraits #retour .paysage.focus,
+main #animation-galerie #retour .paysage.focus,
+main #animation-retour #retour .paysage.focus {
+  filter: drop-shadow(5px 5px 0.85rem gray);
+  height: 450px;
+}
+main #animation-portraits #retour .portrait,
+main #animation-galerie #retour .portrait,
+main #animation-retour #retour .portrait {
+  display: inline-block;
+  height: 350px;
+  transition: 2s all;
+  vertical-align: middle;
+}
+main #animation-portraits #retour .portrait.focus,
+main #animation-galerie #retour .portrait.focus,
+main #animation-retour #retour .portrait.focus {
+  filter: drop-shadow(5px 5px 0.85rem gray);
+  height: 450px;
+}
 main #animation-portraits #legende,
-main #animation-galerie #legende {
+main #animation-galerie #legende,
+main #animation-retour #legende {
   font-size: initial;
   margin-top: -12px;
   text-align: justify;
