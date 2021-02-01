@@ -508,7 +508,7 @@ main #animation-portraits #retour .paysage,
 main #animation-galerie #retour .paysage,
 main #animation-retour #retour .paysage {
   display: inline-block;
-  height: 250px;
+  height: 500px;
   transition: 2s all;
   vertical-align: middle;
 }
@@ -516,13 +516,13 @@ main #animation-portraits #retour .paysage.focus,
 main #animation-galerie #retour .paysage.focus,
 main #animation-retour #retour .paysage.focus {
   filter: drop-shadow(5px 5px 0.85rem gray);
-  height: 450px;
+  height: 700px;
 }
 main #animation-portraits #retour .portrait,
 main #animation-galerie #retour .portrait,
 main #animation-retour #retour .portrait {
   display: inline-block;
-  height: 350px;
+  height: 575px;
   transition: 2s all;
   vertical-align: middle;
 }
@@ -530,7 +530,7 @@ main #animation-portraits #retour .portrait.focus,
 main #animation-galerie #retour .portrait.focus,
 main #animation-retour #retour .portrait.focus {
   filter: drop-shadow(5px 5px 0.85rem gray);
-  height: 450px;
+  height: 700px;
 }
 main #animation-portraits #legende,
 main #animation-galerie #legende,
