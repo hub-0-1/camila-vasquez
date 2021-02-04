@@ -95,6 +95,7 @@ body {
   right: 2%;
 
   display: none;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
 
@@ -107,11 +108,18 @@ body {
     display: flex;
   }
 
+  .wrapper-menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 25px 0;
+  }
+
   .item-menu {
     display: flex;
     height: 100%;
     justify-content: space-evenly;
-    width: 16%;
+    width: 25%;
 
     .index {
       font-weight: bold;
@@ -601,25 +609,25 @@ main {
 
       .paysage {
         display: inline-block;
-        height: 500px;
+        height: 600px;
         transition: 2s all;
         vertical-align: middle;
 
         &.focus {
           filter: drop-shadow(5px 5px 0.85rem gray);
-          height: 700px;
+          height: 800px;
         }
       }
 
       .portrait {
         display: inline-block;
-        height: 575px;
+        height: 700px;
         transition: 2s all;
         vertical-align: middle;
 
         &.focus {
           filter: drop-shadow(5px 5px 0.85rem gray);
-          height: 700px;
+          height: 800px;
         }
       }
     }
