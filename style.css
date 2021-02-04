@@ -509,14 +509,14 @@ main #animation-portraits #retour img,
 main #animation-galerie #retour img,
 main #animation-retour #retour img {
   opacity: 0;
-  transition: all 2s;
+  transition: all 0.5s;
 }
 main #animation-portraits #retour .paysage,
 main #animation-galerie #retour .paysage,
 main #animation-retour #retour .paysage {
   display: inline-block;
   height: 600px;
-  transition: 2s all;
+  transition: 0.5s all;
   vertical-align: middle;
 }
 main #animation-portraits #retour .paysage.focus,
@@ -530,7 +530,7 @@ main #animation-galerie #retour .portrait,
 main #animation-retour #retour .portrait {
   display: inline-block;
   height: 700px;
-  transition: 2s all;
+  transition: 0.5s all;
   vertical-align: middle;
 }
 main #animation-portraits #retour .portrait.focus,
