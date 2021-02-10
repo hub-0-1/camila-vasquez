@@ -515,7 +515,7 @@ main #animation-portraits #retour .paysage,
 main #animation-galerie #retour .paysage,
 main #animation-retour #retour .paysage {
   display: inline-block;
-  height: 600px;
+  height: 625px;
   transition: 0.5s all;
   vertical-align: middle;
 }
@@ -538,6 +538,11 @@ main #animation-galerie #retour .portrait.focus,
 main #animation-retour #retour .portrait.focus {
   filter: drop-shadow(5px 5px 0.85rem gray);
   height: 800px;
+}
+main #animation-portraits #retour #legende,
+main #animation-galerie #retour #legende,
+main #animation-retour #retour #legende {
+  margin: 0;
 }
 main #animation-portraits #legende,
 main #animation-galerie #legende,
