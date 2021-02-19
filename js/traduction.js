@@ -89,21 +89,21 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         legende: "JACKIE DESSINÉE PAR ILIANA – PASCAL DESSINÉ PAR MARIE – JANE PAR JAYA – JAYA DESSINÉE PAR CAMILA – LÉO PAR OCTAVIO – DE MANO LOÉ – MARILYN DESSINÉE PAR PHILIPPE – NAMASTÉ DE JAYA – NICO PAR ARIEL – OCTAVIO DESSINÉ PAR GEORGE – PHILIPPE DESSINÉ PAR MARILYN – PASCAL DESSINÉ PAR JACKIE – LUCIE PAR JANE – SATIA PAR ARIEL – JOAQUIM PAR CATHERINE – MANO DESSINÉ PAR MACARENA – CHRISTIAN PAR YUKO – CECILIA PAR GASPAR – ELSA PAR NAMASTÉ – M.S PILETTE ARTISTE PASCAL GEMME – LÉO PAR CAMILA – GEORGE DESSINÉ PAR PHILIPPE – YUKO PAR CHRISTIAN BLANCHE DESSINÉE PAR DIMITRI – CATHERINE DESSINÉE PAR PHILIPPE – DELLA DESSINÉE PAR MARIE – EDUARDO DE MANO – ELOHAN – GEORGE LOÉ – ILIANA PAR OCTAVIO – JACKIE ARTISTE PASCAL G. – JANE PAR EDUARDO – JAYA PAR NAMASTÉ – LÉO PAR ARIEL – MARIE-SOLEIL PAR MARILYN – NAMASTÉ ELSA – NICOLAS DESSINÉ PAR CAMILA – CHRISTIAN – DIEGO PAR CECILIA– ELSA PAR MACARENA – GASPAR DESSINÉ BLANCHE – JOAQUIM – LUCIE PAR MATHIEU – SATIA – YUKO – ARIEL DESSINÉ PAR NAMASTÉ – CECILIA PAR CATHERINE – DIMITRI DESSINÉ PAR JACKIE – LOÉ DESSINÉ PAR ILIANA – MACARENA DESSINÉE PAR GASPAR – CAMILA PAR JAYA – OCTAVIO DESSINÉ PAR DIMITRI – PASCAL DESSINÉ PAR BLANCHE – PHILIPPE DESSINÉ PAR GEORGE – ARIEL PAR CAMILA – CATHERINE DESSINÉE PAR MATHIEU – DELLA PAR CECILIA – DIMITRI DESSINÉ PAR BLANCHE – DIEGO PAR CAMILA – DIMITRI PAR OCTAVIO – EDUARDO PAR MARILYN – GASPAR PAR CECILIA – ILIANA LOÉ – JACKIE DESSINÉE PAR DIMITRI – JANE PAR MATHIEU"
       },
       retour: {
-        legende: "VIVE L’ENNUI!\n" +
+        legende: "Vive l’ennui!\n" +
             "Durant le confinement, une jeune maman voit s’écouler les journées, sans pouvoir les distinguer. Au fil du temps, elle apprend à contempler son enfant et à l’apprécier. \n" +
-            "IT TAKES A VILLAGE\n" +
+            "It takes a Village\n" +
             "Une nouvelle famille watervilloise a solidifié son appartenance au village en partageant davantage avec son voisinage. Ça prend un village pour élever une enfant!\n" +
-            "LE CONFINEMENT HEUREUX, UN PRIVILÈGE DE CLASSE?\n" +
+            "Le confinement heureux, un privilège de classe?\n" +
             "Valoriser des expériences comme des immenses cadeaux n’était pas le cas pour tout le monde.\n" +
-            "LE TEMPS N’EST PLUS DE L’ARGENT!\n" +
+            "Le temps n’est plus de l’argent!\n" +
             "Des gens d’ordinaire « dans le jus » prenaient soudainement le temps d’appeler et de parler largement. \n" +
-            "ABANDONNER CERTAINS ESPOIRS POUR EN RETROUVER D’AUTRES\n" +
+            "Abandonner certains espoirs pour en retrouver d’autres\n" +
             "Quels changements la pandémie allait apporter à nos vies personnelles et au monde entier?\n" +
-            "OÙ SONT LES FREINS?\n" +
+            "Où sont les freins?\n" +
             "Pour la première fois dans l’Histoire, l’humanité s’était arrêtée en entier et en même temps. La machine capitaliste avait un frein que nous ignorions avant. \n" +
-            "L’ÉCOLE DU MOMENT PRÉSENT, INSCRIVEZ-VOUS DÈS MAINTENANT!\n" +
+            "L’école du moment présent, inscrivez-vous dès maintenant!\n" +
             "Être dans le moment présent, quand on ne sait pas ce qui nous attend, était un des plus beaux défis et un des plus difficiles.\n" +
-            "ON ARRÊTE TOUT, ON RÉFLÉCHIT EST C’EST PAS TRISTE!\n" +
+            "On arrête tout, on réfléchit est c’est pas triste!\n" +
             "L’arrêt presque total du confinement ressemblait à la bande dessinée L’An 01 de Gébé qui avait imaginé un moment historique où soudainement, la population décide de s’arrêter et réfléchir.\n"
       },
       info: {
@@ -185,7 +185,7 @@ Leo just stopped his shower; he comes into the living room in a towel and sits d
       },
       retour: {
         legende: "Hooray for Boredom! \n" +
-            "During the lockdown, a young mother watches the days go by to the point where she can no longer distinguish them. She learns how to just enjoy observing her child, “to sit with boredom”.\n" +
+            "During the lockdown, a young mother watches the days go by. She learns how to just enjoy observing her child, “to sit with boredom”.\n" +
             "\n" +
             "It Takes a Village\n" +
             "A family that had recently moved to Waterville discovered that simple gestures with neighbours allowed them to solidify their sense of belonging in the village.\n" +
@@ -197,7 +197,7 @@ Leo just stopped his shower; he comes into the living room in a towel and sits d
             "People who were normally swamped with things to do suddenly could take the time to reach out and really talk.\n" +
             "\n" +
             "Giving up certain hopes in order to discover others\n" +
-            "What changes the pandemic would bring to our own lives and to the world as a whole?.\n" +
+            "What changes the pandemic would bring to our own lives and to the world as a whole?\n" +
             "\n" +
             "Where are the brakes? \n" +
             "For the first time in History, all of humanity came to a stop at the same time. The machine of capitalism had an emergency brake that we hadn’t known about before.\n" +
@@ -206,7 +206,7 @@ Leo just stopped his shower; he comes into the living room in a towel and sits d
             "Among the hardest of challenges, but also the most beautiful, was learning how to stay in the present moment when we didn’t know what was coming next.\n" +
             "\n" +
             "We stop everything, we think things through, and it’s not sad!\n" +
-            "The almost total stoppage during the lockdown looked like the comic book L’An 01 by Gébé, which had imagined a unique moment where the population decides that they are going to stop everything and think things through.\n"
+            "The almost total stoppage during the lockdown looked like the comic book L’An 01 by Gébé, which had imagined a moment where the population decides that they are going to stop everything and think things through.\n"
       },
       info: {
         a_propos: {
