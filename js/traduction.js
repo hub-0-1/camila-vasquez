@@ -42,6 +42,7 @@ var traduction = {
         portraits: "Portraits à l'aveugle",
         collage: "Ça prend un village",
         retour: "Pas de retour à l'anormale",
+        video: "Vidéo documentaire",
         info: "Informations",
         autre_langue: "EN"
       },
@@ -134,6 +135,7 @@ Léo se déshabille en riant pour sa douche. Il prend ses vêtements propres et 
         portraits: "Blind portraits",
         collage: "It takes a village",
         retour: "No return to the abnormal",
+        video: "Video documentary",
         info: "Informations",
         autre_langue: "FR"
       },

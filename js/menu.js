@@ -12,7 +12,8 @@ function init_menu () {
       <div class="wrapper-menu">
         <div class="item-menu"><div class="index">05.</div><a class="oeuvre" href="/tableau_blanc/" data-i18n="header.tableau_blanc"></a></div>
         <div class="item-menu"><div class="index">06.</div><a class="oeuvre" href="/retour/" data-i18n="header.retour"></a></div>
-        <div class="item-menu"><div class="index">07.</div><a class="oeuvre" href="#info" data-i18n="header.info" onclick="afficher_info();"></a></div>
+        <div class="item-menu"><div class="index">07.</div><a class="oeuvre" href="/video/" data-i18n="header.video"></a></div>
+        <div class="item-menu"><div class="index">08.</div><a class="oeuvre" href="#info" data-i18n="header.info" onclick="afficher_info();"></a></div>
       </div>
     </div>
 
