@@ -431,6 +431,10 @@ main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion h3 {
 main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .couleur-trait {
   color: #f19731;
 }
+main #animation-video {
+  width: 90vw;
+  height: 90vh;
+}
 main #animation-portraits,
 main #animation-galerie,
 main #animation-retour {
