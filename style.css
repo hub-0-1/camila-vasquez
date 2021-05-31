@@ -432,8 +432,13 @@ main #animation-tableau-blanc ~ #conclusion #container-contenu-conclusion .coule
   color: #f19731;
 }
 main #animation-video {
-  width: 90vw;
-  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main #animation-video video {
+  width: 85vw;
+  background-color: beige;
 }
 main #animation-portraits,
 main #animation-galerie,
